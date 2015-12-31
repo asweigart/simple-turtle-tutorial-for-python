@@ -26,17 +26,53 @@ Turtle graphics is a popular way for introducing programming to kids. Virtual tu
 
 The original Turtle software was developed by Wally Feurzig and Seymour Papert in 1966.
 
-This tutorial only covers Python's turtle.py module. It does not cover the Python programming language.
+This tutorial only explains Python's turtle.py module. It does not explain the Python programming language.
+
+## Quickstart
+
+TODO - explain how to install python, run IDLE
+
+In IDLE, click on File > New File. Then enter the following:
+
+```python
+from turtle import *
+
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+```
+
+Click on File > Save and save this program. Then press F5 to run the program. The output of this program will look like this:
+
+[<img src="square.png" class="screenshot" />](square_spiral.png)
+
+The instructions in your program tell the "turtle" how to move. The turtle draws a line behind it as it moves. This program draws a square. The steps given to the program are:
+
+1. Move forward 100 steps. (In the beginning, the turtle is facing to the right.)
+1. Turn 90 degrees to the left.
+1. Move forward 100 steps.
+1. Turn 90 degrees to the left.
+1. Move forward 100 steps.
+1. Turn 90 degrees to the left.
+1. Move forward 100 steps. The turtle has ended up where it started.
+
+With these seven steps, the turtle draws a square. The `from turtle import *` is an instruction needed at the beginning of all of your turtle programs. It imports the turtle module so you can do the turtle instructions.
+
+There are many instructions like left() and forward(). These instructions are called functions. This tutorial explains many of the functions in the turtle module. When you learn more of these functions, you will be able to draw many different shapes and beautiful pictures!
 
 ## Examples
 
 A square spiral program:
 
 ```python
-import turtle
-for i in range(500):
-    turtle.forward(i)
-    turtle.left(91)
+from turtle import *
+for i in range(500): # this "for" loop will repeat these functions 500 times
+    forward(i)
+    left(91)
 ```
 
 [<img src="square_spiral.png" class="screenshot" />](square_spiral.png)
@@ -44,13 +80,13 @@ for i in range(500):
 A colorful hexagon spiral program:
 
 ```python
-import turtle
+from turtle import *
 colors = ['red', 'purple', 'blue', 'green', 'yellow', 'orange']
 for x in range(360):
-    turtle.pencolor(colors[x % 6])
-    turtle.width(x / 100 + 1)
-    turtle.forward(x)
-    turtle.left(59)
+    pencolor(colors[x % 6])
+    width(x / 100 + 1)
+    forward(x)
+    left(59)
 ```
 
 [<img src="colorful_hex.png" class="screenshot" />](colorful_hex.png)
@@ -58,41 +94,28 @@ for x in range(360):
 A blue flowers program:
 
 ```python
-import turtle
+from turtle import *
 import random
 
 for n in range(60):
-    turtle.penup()
-    turtle.goto(random.randint(-400, 400), random.randint(-400, 400))
-    turtle.pendown()
+    penup()
+    goto(random.randint(-400, 400), random.randint(-400, 400))
+    pendown()
 
     red_amount   = random.randint( 0,  30) / 100.0
     blue_amount  = random.randint(50, 100) / 100.0
     green_amount = random.randint( 0,  30) / 100.0
-    turtle.pencolor((red_amount, green_amount, blue_amount))
+    pencolor((red_amount, green_amount, blue_amount))
 
     circle_size = random.randint(10, 40)
-    turtle.pensize(random.randint(1, 5))
+    pensize(random.randint(1, 5))
 
     for i in range(6):
-        turtle.circle(circle_size)
-        turtle.left(60)
+        circle(circle_size)
+        left(60)
 ```
 
 [<img src="blue_flowers.png" class="screenshot" />](blue_flowers.png)
-
-## Beginning with turtle.py
-
-For every program you write, you must first run import turtle. After this, you may call functions by putting turtle. in front of the function name. This example imports the turtle module and moves the turtle forward 100 steps:
-
-```python
-import turtle
-turtle.forward(100)
-```
-
-Type these two lines of code to check if the turtle module is working for you. The window that opens will look like this:
-
-[<img src="import_and_forward.png" class="screenshot" />](import_and_forward.png)
 
 ## Moving
 
@@ -117,10 +140,10 @@ This example moves the turtle forward, then turns right by 90 degrees, then move
 This example moves the turtle forward, then turns left by 90 degrees, then moves forward again:
 
 ```python
-import turtle
-turtle.forward(100)
-turtle.right(90)
-turtle.forward(100)
+from turtle import *
+forward(100)
+right(90)
+forward(100)
 ```
 
 [<img src="turn_right.png" class="screenshot" />](turn_right.png)
@@ -132,10 +155,10 @@ The left() function will change the current direction counter-clockwise or anti-
 This example moves the turtle forward, then turns left by 90 degrees, then moves forward again:
 
 ```python
-import turtle
-turtle.forward(100)
-turtle.left(90)
-turtle.forward(100)
+from turtle import *
+forward(100)
+left(90)
+forward(100)
 ```
 
 [<img src="turn_left.png" class="screenshot" />](turn_left.png)
@@ -147,12 +170,12 @@ The goto() function will immediately move the turtle to the given *x* and *y* co
 This example moves the to several x and y coordinates while drawing a line behind it:
 
 ```python
-import turtle
+from turtle import *
 
-turtle.goto(50, 50)
-turtle.goto(-50, 50)
-turtle.goto(100, -50)
-turtle.goto(-50, -50)
+goto(50, 50)
+goto(-50, 50)
+goto(100, -50)
+goto(-50, -50)
 ```
 
 [<img src="goto.png" class="screenshot" />](goto.png)
@@ -170,13 +193,13 @@ The goto() function will immediately move the turtle to the given *y *coordinate
 The setheading() function will change the current direction to the *heading* angle. If you imagine being above the turtle looking down, the turtle turning left looks like it is turning counter-clockwise or anti-clockwise. The turtle will not move; it will only change the heading it is facing.
 
 ```python
-import turtle
+from turtle import *
 
 for angle in range(0, 360, 15):
-    turtle.setheading(angle)
-    turtle.forward(100)
-    turtle.write(str(angle) + '°')
-    turtle.backward(100)
+    setheading(angle)
+    forward(100)
+    write(str(angle) + '°')
+    backward(100)
 ```
 
 [<img src="setheading.png" class="screenshot" />](setheading.png)
@@ -186,20 +209,20 @@ for angle in range(0, 360, 15):
 The undo() function will undo the turtle's last action. It will be as though the last action was never made. For example, if the last action was a call to the forward(100) function, calling undo will move the turtle backwards 100 steps and erase any line that was drawn. The undo() function can be called many times to erase more and more of the turtle
 
 ```python
-import turtle
+from turtle import *
 
 for i in range(10):
-    turtle.forward(100)
-    turtle.left(90)
-    turtle.forward(10)
-    turtle.left(90)
-    turtle.forward(100)
-    turtle.right(90)
-    turtle.forward(10)
-    turtle.right(90)
+    forward(100)
+    left(90)
+    forward(10)
+    left(90)
+    forward(100)
+    right(90)
+    forward(10)
+    right(90)
 
 for i in range(30):
-    turtle.undo()
+    undo()
 ```
 
 [<img src="undo_before.png" class="screenshot" />](undo_before.png) [<img src="undo_after.png" class="screenshot" />](undo_after.png)
@@ -210,12 +233,12 @@ for i in range(30):
 The home() function will move the turtle to it's original position at the coordinates (0, 0) and set it's direction to 0 degrees. Calling home() is the same as calling goto(0, 0) and setheading(0). If the pen is down (see pendown() and penup()) a line will be drawn as the turtle moves back home.
 
 ```python
-import turtle
+from turtle import *
 
-turtle.forward(100)
-turtle.right(90)
-turtle.forward(100)
-turtle.home()
+forward(100)
+right(90)
+forward(100)
+home()
 ```
 
 [<img src="home.png" class="screenshot" />](home.png)
@@ -241,24 +264,24 @@ The pensize() function sets the width of the line that the turtle draws as it mo
 The pencolor() function sets the color of the line that the turtle draws. The pencolor() function can be passed a string of the color, such as 'red' or 'black'. Or, the pencolor() function can be passed an "RGB color tuple" (see the [Color](#color) section).
 
 ```python
-import turtle
+from turtle import *
 
-turtle.pensize(20)
-turtle.pencolor('red')
-turtle.forward(50)
-turtle.pencolor(0, 1.0, 0)
-turtle.forward(50)
-turtle.pencolor((0, 0.5, 0.5))
-turtle.forward(50)
+pensize(20)
+pencolor('red')
+forward(50)
+pencolor(0, 1.0, 0)
+forward(50)
+pencolor((0, 0.5, 0.5))
+forward(50)
 
-turtle.pensize(10)
-turtle.goto(-400, 50)
+pensize(10)
+goto(-400, 50)
 
 for red in range(4):
     for green in range(4):
         for blue in range(4):
-            turtle.pencolor(red / 4.0, green / 4.0, blue / 4.0)
-            turtle.forward(10)
+            pencolor(red / 4.0, green / 4.0, blue / 4.0)
+            forward(10)
 ```
 
 [<img src="pencolor.png" class="screenshot" />](pencolor.png)
@@ -437,23 +460,23 @@ RGB Color Tuple: <input type="text" id="RGBTupleField" />
 The turtle can draw the outline of a shape and then fill it in with color using the fill functions. The filling process starts when the begin_color() function is called. The turtle can move around as normal. When the end_fill() function is called, the shape the turtle was drawing will be filled with the fill color. The fill color is separate from the pen color.
 
 ```python
-import turtle
+from turtle import *
 
-turtle.fillcolor('purple')
-turtle.pensize(10)
-turtle.pencolor('black')
-turtle.forward(100)
+fillcolor('purple')
+pensize(10)
+pencolor('black')
+forward(100)
 
-turtle.begin_fill()
-turtle.forward(100)
-turtle.left(90)
-turtle.forward(100)
-turtle.left(90)
-turtle.forward(100)
-turtle.left(90)
-turtle.forward(100)
-turtle.left(90)
-turtle.end_fill()
+begin_fill()
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
+end_fill()
 ```
 
 [<img src="fill.png" class="screenshot" />](fill.png)
@@ -476,14 +499,14 @@ The end_fill() function will stop recording the moves for the filled-in shape an
 ### stamp()
 
 ```python
-import turtle
+from turtle import *
 
-turtle.penup()
+penup()
 
 for i in range(30, -1, -1):
-    turtle.stamp()
-    turtle.left(i)
-    turtle.forward(20)
+    stamp()
+    left(i)
+    forward(20)
 ```
 
 [<img src="stamp.png" class="screenshot" />](stamp.png)
@@ -529,35 +552,35 @@ for i in range(30, -1, -1):
 ### onkey()
 
 ```python
-import turtle
+from turtle import *
 
 def up():
-    turtle.setheading(90)
-    turtle.forward(100)
+    setheading(90)
+    forward(100)
 
 def down():
-    turtle.setheading(270)
-    turtle.forward(100)
+    setheading(270)
+    forward(100)
 
 def left():
-    turtle.setheading(180)
-    turtle.forward(100)
+    setheading(180)
+    forward(100)
 
 def right():
-    turtle.setheading(0)
-    turtle.forward(100)
+    setheading(0)
+    forward(100)
 
-turtle.listen()
+listen()
 
-turtle.onkey(up, 'Up')
-turtle.onkey(down, 'Down')
-turtle.onkey(left, 'Left')
-turtle.onkey(right, 'Right')
+onkey(up, 'Up')
+onkey(down, 'Down')
+onkey(left, 'Left')
+onkey(right, 'Right')
 
-turtle.onkey(up, 'w')
-turtle.onkey(down, 's')
-turtle.onkey(left, 'a')
-turtle.onkey(right, 'd')
+onkey(up, 'w')
+onkey(down, 's')
+onkey(left, 'a')
+onkey(right, 'd')
 ```
 
 [<img src="onkey.png" class="screenshot" />](onkey.png)
@@ -568,17 +591,17 @@ up, right, down, down, left, left, up
 ### onkeypress()
 
 ```python
-import turtle
+from turtle import *
 
 def blue_screen():
-    turtle.bgcolor(0.7, 1.0, 1.0)
+    bgcolor(0.7, 1.0, 1.0)
 
 def white_screen():
-    turtle.bgcolor(1.0, 1.0, 1.0)
+    bgcolor(1.0, 1.0, 1.0)
 
-turtle.listen()
-turtle.onkeypress(blue_screen, 'space')
-turtle.onkey(white_screen, 'space')
+listen()
+onkeypress(blue_screen, 'space')
+onkey(white_screen, 'space')
 ```
 
 ### onclick()

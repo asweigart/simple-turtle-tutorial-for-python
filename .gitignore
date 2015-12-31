@@ -1,0 +1,7 @@
+dist
+_build
+*.pyc
+__pycache__
+simple-turtle-tutorial-for-python.egg-info
+simple_turtle_tutorial.html
+_deleteme.py
