@@ -300,155 +300,144 @@ Red, green, and blue are the three primary colors of light.
 
 The float value 0.0 represents no brightness of that color. The float value 1.0 represents full brightness of that color. So the color red is represented by the RGB color tuple (1.0, 0, 0). The color purple is half-bright red and half-bright blue, so it is represented by the RGB color tuple (0.5, 0.0, 0.5). Full brightness of red and blue makes pink: (1.0, 0.0, 1.0)
 
-Move the mouse over these colors to view their RGB colortuples:
+Here are some RGB color tuples:
 
-<script type="text/javascript">
-function setColor(color)
-{
-var iLen = String(color).length;
-color = String(color).substring(iLen, iLen - 6);
-r = parseInt( String(color).substring(0,2), 16 ) / 255;
-g = parseInt( String(color).substring(2,4), 16 ) / 255;
-b = parseInt( String(color).substring(4,6), 16 ) / 255;
-document.getElementById("RGBTupleField").value = "(" + r.toFixed(2) + ", " + g.toFixed(2) + ", " + b.toFixed(2) + ")";
-};
-</script>
 
 <table>
 <tbody><tr>
-<td class="color_td" style="background:#330000" onmouseover="setColor('#330000')">&nbsp;</td>
-<td class="color_td" style="background:#331900" onmouseover="setColor('#331900')">&nbsp;</td>
-<td class="color_td" style="background:#333300" onmouseover="setColor('#333300')">&nbsp;</td>
-<td class="color_td" style="background:#193300" onmouseover="setColor('#193300')">&nbsp;</td>
-<td class="color_td" style="background:#003300" onmouseover="setColor('#003300')">&nbsp;</td>
-<td class="color_td" style="background:#003319" onmouseover="setColor('#003319')">&nbsp;</td>
-<td class="color_td" style="background:#003333" onmouseover="setColor('#003333')">&nbsp;</td>
-<td class="color_td" style="background:#001933" onmouseover="setColor('#001933')">&nbsp;</td>
-<td class="color_td" style="background:#000033" onmouseover="setColor('#000033')">&nbsp;</td>
-<td class="color_td" style="background:#190033" onmouseover="setColor('#190033')">&nbsp;</td>
-<td class="color_td" style="background:#330033" onmouseover="setColor('#330033')">&nbsp;</td>
-<td class="color_td" style="background:#330019" onmouseover="setColor('#330019')">&nbsp;</td>
-<td class="color_td" style="background:#000000" onmouseover="setColor('#000000')">&nbsp;</td>
+<td class="color_td" style="background:#330000; color: #FFFFFF">(0.2, 0.0, 0.0)</td>
+<td class="color_td" style="background:#331900; color: #FFFFFF">(0.2, 0.1, 0.0)</td>
+<td class="color_td" style="background:#333300; color: #FFFFFF">(0.2, 0.2, 0.0)</td>
+<td class="color_td" style="background:#193300; color: #FFFFFF">(0.1, 0.2, 0.0)</td>
+<td class="color_td" style="background:#003300; color: #FFFFFF">(0.0, 0.2, 0.0)</td>
+<td class="color_td" style="background:#003319; color: #FFFFFF">(0.0, 0.2, 0.1)</td>
+<td class="color_td" style="background:#003333; color: #FFFFFF">(0.0, 0.2, 0.2)</td>
+<td class="color_td" style="background:#001933; color: #FFFFFF">(0.0, 0.1, 0.2)</td>
+<td class="color_td" style="background:#000033; color: #FFFFFF">(0.0, 0.0, 0.2)</td>
+<td class="color_td" style="background:#190033; color: #FFFFFF">(0.1, 0.0, 0.2)</td>
+<td class="color_td" style="background:#330033; color: #FFFFFF">(0.2, 0.0, 0.2)</td>
+<td class="color_td" style="background:#330019; color: #FFFFFF">(0.2, 0.0, 0.1)</td>
+<td class="color_td" style="background:#000000; color: #FFFFFF">(0.0, 0.0, 0.0)</td>
 </tr>
 <tr>
-<td class="color_td" style="background:#660000" onmouseover="setColor('#660000')">&nbsp;</td>
-<td class="color_td" style="background:#663300" onmouseover="setColor('#663300')">&nbsp;</td>
-<td class="color_td" style="background:#666600" onmouseover="setColor('#666600')">&nbsp;</td>
-<td class="color_td" style="background:#336600" onmouseover="setColor('#336600')">&nbsp;</td>
-<td class="color_td" style="background:#006600" onmouseover="setColor('#006600')">&nbsp;</td>
-<td class="color_td" style="background:#006633" onmouseover="setColor('#006633')">&nbsp;</td>
-<td class="color_td" style="background:#006666" onmouseover="setColor('#006666')">&nbsp;</td>
-<td class="color_td" style="background:#003366" onmouseover="setColor('#003366')">&nbsp;</td>
-<td class="color_td" style="background:#000066" onmouseover="setColor('#000066')">&nbsp;</td>
-<td class="color_td" style="background:#330066" onmouseover="setColor('#330066')">&nbsp;</td>
-<td class="color_td" style="background:#660066" onmouseover="setColor('#660066')">&nbsp;</td>
-<td class="color_td" style="background:#660033" onmouseover="setColor('#660033')">&nbsp;</td>
-<td class="color_td" style="background:#202020" onmouseover="setColor('#202020')">&nbsp;</td>
+<td class="color_td" style="background:#660000; color: #FFFFFF">(0.4, 0.0, 0.0)</td>
+<td class="color_td" style="background:#663300; color: #FFFFFF">(0.4, 0.2, 0.0)</td>
+<td class="color_td" style="background:#666600; color: #FFFFFF">(0.4, 0.4, 0.0)</td>
+<td class="color_td" style="background:#336600; color: #FFFFFF">(0.2, 0.4, 0.0)</td>
+<td class="color_td" style="background:#006600; color: #FFFFFF">(0.0, 0.4, 0.0)</td>
+<td class="color_td" style="background:#006633; color: #FFFFFF">(0.0, 0.4, 0.2)</td>
+<td class="color_td" style="background:#006666; color: #FFFFFF">(0.0, 0.4, 0.4)</td>
+<td class="color_td" style="background:#003366; color: #FFFFFF">(0.0, 0.2, 0.4)</td>
+<td class="color_td" style="background:#000066; color: #FFFFFF">(0.0, 0.0, 0.4)</td>
+<td class="color_td" style="background:#330066; color: #FFFFFF">(0.2, 0.0, 0.4)</td>
+<td class="color_td" style="background:#660066; color: #FFFFFF">(0.4, 0.0, 0.4)</td>
+<td class="color_td" style="background:#660033; color: #FFFFFF">(0.4, 0.0, 0.2)</td>
+<td class="color_td" style="background:#202020; color: #FFFFFF">(0.13, 0.13, 0.13)</td>
 </tr>
 <tr>
-<td class="color_td" style="background:#990000" onmouseover="setColor('#990000')">&nbsp;</td>
-<td class="color_td" style="background:#994C00" onmouseover="setColor('#994C00')">&nbsp;</td>
-<td class="color_td" style="background:#999900" onmouseover="setColor('#999900')">&nbsp;</td>
-<td class="color_td" style="background:#4C9900" onmouseover="setColor('#4C9900')">&nbsp;</td>
-<td class="color_td" style="background:#009900" onmouseover="setColor('#009900')">&nbsp;</td>
-<td class="color_td" style="background:#00994C" onmouseover="setColor('#00994C')">&nbsp;</td>
-<td class="color_td" style="background:#009999" onmouseover="setColor('#009999')">&nbsp;</td>
-<td class="color_td" style="background:#004C99" onmouseover="setColor('#004C99')">&nbsp;</td>
-<td class="color_td" style="background:#000099" onmouseover="setColor('#000099')">&nbsp;</td>
-<td class="color_td" style="background:#4C0099" onmouseover="setColor('#4C0099')">&nbsp;</td>
-<td class="color_td" style="background:#990099" onmouseover="setColor('#990099')">&nbsp;</td>
-<td class="color_td" style="background:#99004C" onmouseover="setColor('#99004C')">&nbsp;</td>
-<td class="color_td" style="background:#404040" onmouseover="setColor('#404040')">&nbsp;</td>
+<td class="color_td" style="background:#990000; color: #FFFFFF">(0.6, 0.0, 0.0)</td>
+<td class="color_td" style="background:#994C00; color: #FFFFFF">(0.6, 0.3, 0.0)</td>
+<td class="color_td" style="background:#999900; color: #FFFFFF">(0.6, 0.6, 0.0)</td>
+<td class="color_td" style="background:#4C9900; color: #FFFFFF">(0.3, 0.6, 0.0)</td>
+<td class="color_td" style="background:#009900; color: #FFFFFF">(0.0, 0.6, 0.0)</td>
+<td class="color_td" style="background:#00994C; color: #FFFFFF">(0.0, 0.6, 0.3)</td>
+<td class="color_td" style="background:#009999; color: #FFFFFF">(0.0, 0.6, 0.6)</td>
+<td class="color_td" style="background:#004C99; color: #FFFFFF">(0.0, 0.3, 0.6)</td>
+<td class="color_td" style="background:#000099; color: #FFFFFF">(0.0, 0.0, 0.6)</td>
+<td class="color_td" style="background:#4C0099; color: #FFFFFF">(0.3, 0.0, 0.6)</td>
+<td class="color_td" style="background:#990099; color: #FFFFFF">(0.6, 0.0, 0.6)</td>
+<td class="color_td" style="background:#99004C; color: #FFFFFF">(0.6, 0.0, 0.3)</td>
+<td class="color_td" style="background:#404040; color: #FFFFFF">(0.25, 0.25, 0.25)</td>
 </tr>
 <tr>
-<td class="color_td" style="background:#CC0000" onmouseover="setColor('#CC0000')">&nbsp;</td>
-<td class="color_td" style="background:#CC6600" onmouseover="setColor('#CC6600')">&nbsp;</td>
-<td class="color_td" style="background:#CCCC00" onmouseover="setColor('#CCCC00')">&nbsp;</td>
-<td class="color_td" style="background:#66CC00" onmouseover="setColor('#66CC00')">&nbsp;</td>
-<td class="color_td" style="background:#00CC00" onmouseover="setColor('#00CC00')">&nbsp;</td>
-<td class="color_td" style="background:#00CC66" onmouseover="setColor('#00CC66')">&nbsp;</td>
-<td class="color_td" style="background:#00CCCC" onmouseover="setColor('#00CCCC')">&nbsp;</td>
-<td class="color_td" style="background:#0066CC" onmouseover="setColor('#0066CC')">&nbsp;</td>
-<td class="color_td" style="background:#0000CC" onmouseover="setColor('#0000CC')">&nbsp;</td>
-<td class="color_td" style="background:#6600CC" onmouseover="setColor('#6600CC')">&nbsp;</td>
-<td class="color_td" style="background:#CC00CC" onmouseover="setColor('#CC00CC')">&nbsp;</td>
-<td class="color_td" style="background:#CC0066" onmouseover="setColor('#CC0066')">&nbsp;</td>
-<td class="color_td" style="background:#606060" onmouseover="setColor('#606060')">&nbsp;</td>
+<td class="color_td" style="background:#CC0000; color: #FFFFFF">(0.8, 0.0, 0.0)</td>
+<td class="color_td" style="background:#CC6600; color: #FFFFFF">(0.8, 0.4, 0.0)</td>
+<td class="color_td" style="background:#CCCC00; color: #FFFFFF">(0.8, 0.8, 0.0)</td>
+<td class="color_td" style="background:#66CC00; color: #FFFFFF">(0.4, 0.8, 0.0)</td>
+<td class="color_td" style="background:#00CC00; color: #FFFFFF">(0.0, 0.8, 0.0)</td>
+<td class="color_td" style="background:#00CC66; color: #FFFFFF">(0.0, 0.8, 0.4)</td>
+<td class="color_td" style="background:#00CCCC; color: #FFFFFF">(0.0, 0.8, 0.8)</td>
+<td class="color_td" style="background:#0066CC; color: #FFFFFF">(0.0, 0.4, 0.8)</td>
+<td class="color_td" style="background:#0000CC; color: #FFFFFF">(0.0, 0.0, 0.8)</td>
+<td class="color_td" style="background:#6600CC; color: #FFFFFF">(0.4, 0.0, 0.8)</td>
+<td class="color_td" style="background:#CC00CC; color: #FFFFFF">(0.8, 0.0, 0.8)</td>
+<td class="color_td" style="background:#CC0066; color: #FFFFFF">(0.8, 0.0, 0.4)</td>
+<td class="color_td" style="background:#606060; color: #FFFFFF">(0.38, 0.38, 0.38)</td>
 </tr>
 <tr>
-<td class="color_td" style="background:#FF0000" onmouseover="setColor('#FF0000')">&nbsp;</td>
-<td class="color_td" style="background:#FF8000" onmouseover="setColor('#FF8000')">&nbsp;</td>
-<td class="color_td" style="background:#FFFF00" onmouseover="setColor('#FFFF00')">&nbsp;</td>
-<td class="color_td" style="background:#80FF00" onmouseover="setColor('#80FF00')">&nbsp;</td>
-<td class="color_td" style="background:#00FF00" onmouseover="setColor('#00FF00')">&nbsp;</td>
-<td class="color_td" style="background:#00FF80" onmouseover="setColor('#00FF80')">&nbsp;</td>
-<td class="color_td" style="background:#00FFFF" onmouseover="setColor('#00FFFF')">&nbsp;</td>
-<td class="color_td" style="background:#0080FF" onmouseover="setColor('#0080FF')">&nbsp;</td>
-<td class="color_td" style="background:#0000FF" onmouseover="setColor('#0000FF')">&nbsp;</td>
-<td class="color_td" style="background:#7F00FF" onmouseover="setColor('#7F00FF')">&nbsp;</td>
-<td class="color_td" style="background:#FF00FF" onmouseover="setColor('#FF00FF')">&nbsp;</td>
-<td class="color_td" style="background:#FF007F" onmouseover="setColor('#FF007F')">&nbsp;</td>
-<td class="color_td" style="background:#808080" onmouseover="setColor('#808080')">&nbsp;</td>
+<td class="color_td" style="background:#FF0000">(1.0, 0.0, 0.0)</td>
+<td class="color_td" style="background:#FF8000">(1.0, 0.5, 0.0)</td>
+<td class="color_td" style="background:#FFFF00">(1.0, 1.0, 0.0)</td>
+<td class="color_td" style="background:#80FF00">(0.5, 1.0, 0.0)</td>
+<td class="color_td" style="background:#00FF00">(0.0, 1.0, 0.0)</td>
+<td class="color_td" style="background:#00FF80">(0.0, 1.0, 0.5)</td>
+<td class="color_td" style="background:#00FFFF">(0.0, 1.0, 1.0)</td>
+<td class="color_td" style="background:#0080FF">(0.0, 0.5, 1.0)</td>
+<td class="color_td" style="background:#0000FF">(0.0, 0.0, 1.0)</td>
+<td class="color_td" style="background:#7F00FF">(0.5, 0.0, 1.0)</td>
+<td class="color_td" style="background:#FF00FF">(1.0, 0.0, 1.0)</td>
+<td class="color_td" style="background:#FF007F">(1.0, 0.0, 0.5)</td>
+<td class="color_td" style="background:#808080">(0.5, 0.5, 0.5)</td>
 </tr>
 <tr>
-<td class="color_td" style="background:#FF3333" onmouseover="setColor('#FF3333')">&nbsp;</td>
-<td class="color_td" style="background:#FF9933" onmouseover="setColor('#FF9933')">&nbsp;</td>
-<td class="color_td" style="background:#FFFF33" onmouseover="setColor('#FFFF33')">&nbsp;</td>
-<td class="color_td" style="background:#99FF33" onmouseover="setColor('#99FF33')">&nbsp;</td>
-<td class="color_td" style="background:#33FF33" onmouseover="setColor('#33FF33')">&nbsp;</td>
-<td class="color_td" style="background:#33FF99" onmouseover="setColor('#33FF99')">&nbsp;</td>
-<td class="color_td" style="background:#33FFFF" onmouseover="setColor('#33FFFF')">&nbsp;</td>
-<td class="color_td" style="background:#3399FF" onmouseover="setColor('#3399FF')">&nbsp;</td>
-<td class="color_td" style="background:#3333FF" onmouseover="setColor('#3333FF')">&nbsp;</td>
-<td class="color_td" style="background:#9933FF" onmouseover="setColor('#9933FF')">&nbsp;</td>
-<td class="color_td" style="background:#FF33FF" onmouseover="setColor('#FF33FF')">&nbsp;</td>
-<td class="color_td" style="background:#FF3399" onmouseover="setColor('#FF3399')">&nbsp;</td>
-<td class="color_td" style="background:#A0A0A0" onmouseover="setColor('#A0A0A0')">&nbsp;</td>
+<td class="color_td" style="background:#FF3333">(1.0, 0.2, 0.2)</td>
+<td class="color_td" style="background:#FF9933">(1.0, 0.6, 0.2)</td>
+<td class="color_td" style="background:#FFFF33">(1.0, 1.0, 0.2)</td>
+<td class="color_td" style="background:#99FF33">(0.6, 1.0, 0.2)</td>
+<td class="color_td" style="background:#33FF33">(0.2, 1.0, 0.2)</td>
+<td class="color_td" style="background:#33FF99">(0.2, 1.0, 0.6)</td>
+<td class="color_td" style="background:#33FFFF">(0.2, 1.0, 1.0)</td>
+<td class="color_td" style="background:#3399FF">(0.2, 0.6, 1.0)</td>
+<td class="color_td" style="background:#3333FF">(0.2, 0.2, 1.0)</td>
+<td class="color_td" style="background:#9933FF">(0.6, 0.2, 1.0)</td>
+<td class="color_td" style="background:#FF33FF">(1.0, 0.2, 1.0)</td>
+<td class="color_td" style="background:#FF3399">(1.0, 0.2, 0.6)</td>
+<td class="color_td" style="background:#A0A0A0">(0.63, 0.63, 0.63)</td>
 </tr>
 <tr>
-<td class="color_td" style="background:#FF6666" onmouseover="setColor('#FF6666')">&nbsp;</td>
-<td class="color_td" style="background:#FFB266" onmouseover="setColor('#FFB266')">&nbsp;</td>
-<td class="color_td" style="background:#FFFF66" onmouseover="setColor('#FFFF66')">&nbsp;</td>
-<td class="color_td" style="background:#B2FF66" onmouseover="setColor('#B2FF66')">&nbsp;</td>
-<td class="color_td" style="background:#66FF66" onmouseover="setColor('#66FF66')">&nbsp;</td>
-<td class="color_td" style="background:#66FFB2" onmouseover="setColor('#66FFB2')">&nbsp;</td>
-<td class="color_td" style="background:#66FFFF" onmouseover="setColor('#66FFFF')">&nbsp;</td>
-<td class="color_td" style="background:#66B2FF" onmouseover="setColor('#66B2FF')">&nbsp;</td>
-<td class="color_td" style="background:#6666FF" onmouseover="setColor('#6666FF')">&nbsp;</td>
-<td class="color_td" style="background:#B266FF" onmouseover="setColor('#B266FF')">&nbsp;</td>
-<td class="color_td" style="background:#FF66FF" onmouseover="setColor('#FF66FF')">&nbsp;</td>
-<td class="color_td" style="background:#FF66B2" onmouseover="setColor('#FF66B2')">&nbsp;</td>
-<td class="color_td" style="background:#C0C0C0" onmouseover="setColor('#C0C0C0')">&nbsp;</td>
+<td class="color_td" style="background:#FF6666">(1.0, 0.4, 0.4)</td>
+<td class="color_td" style="background:#FFB266">(1.0, 0.7, 0.4)</td>
+<td class="color_td" style="background:#FFFF66">(1.0, 1.0, 0.4)</td>
+<td class="color_td" style="background:#B2FF66">(0.7, 1.0, 0.4)</td>
+<td class="color_td" style="background:#66FF66">(0.4, 1.0, 0.4)</td>
+<td class="color_td" style="background:#66FFB2">(0.4, 1.0, 0.7)</td>
+<td class="color_td" style="background:#66FFFF">(0.4, 1.0, 1.0)</td>
+<td class="color_td" style="background:#66B2FF">(0.4, 0.7, 1.0)</td>
+<td class="color_td" style="background:#6666FF">(0.4, 0.4, 1.0)</td>
+<td class="color_td" style="background:#B266FF">(0.7, 0.4, 1.0)</td>
+<td class="color_td" style="background:#FF66FF">(1.0, 0.4, 1.0)</td>
+<td class="color_td" style="background:#FF66B2">(1.0, 0.4, 0.7)</td>
+<td class="color_td" style="background:#C0C0C0">(0.75, 0.75, 0.75)</td>
 </tr>
 <tr>
-<td class="color_td" style="background:#FF9999" onmouseover="setColor('#FF9999')">&nbsp;</td>
-<td class="color_td" style="background:#FFCC99" onmouseover="setColor('#FFCC99')">&nbsp;</td>
-<td class="color_td" style="background:#FFFF99" onmouseover="setColor('#FFFF99')">&nbsp;</td>
-<td class="color_td" style="background:#CCFF99" onmouseover="setColor('#CCFF99')">&nbsp;</td>
-<td class="color_td" style="background:#99FF99" onmouseover="setColor('#99FF99')">&nbsp;</td>
-<td class="color_td" style="background:#99FFCC" onmouseover="setColor('#99FFCC')">&nbsp;</td>
-<td class="color_td" style="background:#99FFFF" onmouseover="setColor('#99FFFF')">&nbsp;</td>
-<td class="color_td" style="background:#99CCFF" onmouseover="setColor('#99CCFF')">&nbsp;</td>
-<td class="color_td" style="background:#9999FF" onmouseover="setColor('#9999FF')">&nbsp;</td>
-<td class="color_td" style="background:#CC99FF" onmouseover="setColor('#CC99FF')">&nbsp;</td>
-<td class="color_td" style="background:#FF99FF" onmouseover="setColor('#FF99FF')">&nbsp;</td>
-<td class="color_td" style="background:#FF99CC" onmouseover="setColor('#FF99CC')">&nbsp;</td>
-<td class="color_td" style="background:#E0E0E0" onmouseover="setColor('#E0E0E0')">&nbsp;</td>
+<td class="color_td" style="background:#FF9999">(1.0, 0.6, 0.6)</td>
+<td class="color_td" style="background:#FFCC99">(1.0, 0.8, 0.6)</td>
+<td class="color_td" style="background:#FFFF99">(1.0, 1.0, 0.6)</td>
+<td class="color_td" style="background:#CCFF99">(0.8, 1.0, 0.6)</td>
+<td class="color_td" style="background:#99FF99">(0.6, 1.0, 0.6)</td>
+<td class="color_td" style="background:#99FFCC">(0.6, 1.0, 0.8)</td>
+<td class="color_td" style="background:#99FFFF">(0.6, 1.0, 1.0)</td>
+<td class="color_td" style="background:#99CCFF">(0.6, 0.8, 1.0)</td>
+<td class="color_td" style="background:#9999FF">(0.6, 0.6, 1.0)</td>
+<td class="color_td" style="background:#CC99FF">(0.8, 0.6, 1.0)</td>
+<td class="color_td" style="background:#FF99FF">(1.0, 0.6, 1.0)</td>
+<td class="color_td" style="background:#FF99CC">(1.0, 0.6, 0.8)</td>
+<td class="color_td" style="background:#E0E0E0">(0.88, 0.88, 0.88)</td>
 </tr>
 <tr>
-<td class="color_td" style="background:#FFCCCC" onmouseover="setColor('#FFCCCC')">&nbsp;</td>
-<td class="color_td" style="background:#FFE5CC" onmouseover="setColor('#FFE5CC')">&nbsp;</td>
-<td class="color_td" style="background:#FFFFCC" onmouseover="setColor('#FFFFCC')">&nbsp;</td>
-<td class="color_td" style="background:#E5FFCC" onmouseover="setColor('#E5FFCC')">&nbsp;</td>
-<td class="color_td" style="background:#CCFFCC" onmouseover="setColor('#CCFFCC')">&nbsp;</td>
-<td class="color_td" style="background:#CCFFE5" onmouseover="setColor('#CCFFE5')">&nbsp;</td>
-<td class="color_td" style="background:#CCFFFF" onmouseover="setColor('#CCFFFF')">&nbsp;</td>
-<td class="color_td" style="background:#CCE5FF" onmouseover="setColor('#CCE5FF')">&nbsp;</td>
-<td class="color_td" style="background:#CCCCFF" onmouseover="setColor('#CCCCFF')">&nbsp;</td>
-<td class="color_td" style="background:#E5CCFF" onmouseover="setColor('#E5CCFF')">&nbsp;</td>
-<td class="color_td" style="background:#FFCCFF" onmouseover="setColor('#FFCCFF')">&nbsp;</td>
-<td class="color_td" style="background:#FFCCE5" onmouseover="setColor('#FFCCE5')">&nbsp;</td>
-<td class="color_td" style="background:#FFFFFF" onmouseover="setColor('#FFFFFF')">&nbsp;</td>
+<td class="color_td" style="background:#FFCCCC">(1.0, 0.8, 0.8)</td>
+<td class="color_td" style="background:#FFE5CC">(1.0, 0.9, 0.8)</td>
+<td class="color_td" style="background:#FFFFCC">(1.0, 1.0, 0.8)</td>
+<td class="color_td" style="background:#E5FFCC">(0.9, 1.0, 0.8)</td>
+<td class="color_td" style="background:#CCFFCC">(0.8, 1.0, 0.8)</td>
+<td class="color_td" style="background:#CCFFE5">(0.8, 1.0, 0.9)</td>
+<td class="color_td" style="background:#CCFFFF">(0.8, 1.0, 1.0)</td>
+<td class="color_td" style="background:#CCE5FF">(0.8, 0.9, 1.0)</td>
+<td class="color_td" style="background:#CCCCFF">(0.8, 0.8, 1.0)</td>
+<td class="color_td" style="background:#E5CCFF">(0.9, 0.8, 1.0)</td>
+<td class="color_td" style="background:#FFCCFF">(1.0, 0.8, 1.0)</td>
+<td class="color_td" style="background:#FFCCE5">(1.0, 0.8, 0.9)</td>
+<td class="color_td" style="background:#FFFFFF">(1.0, 1.0, 1.0)</td>
 </tr>
 </tbody></table>
 
