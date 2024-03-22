@@ -22,17 +22,14 @@
 
 ## Introduction
 
-Turtle graphics is a popular way for introducing programming to kids. Virtual turtles can be programmed to move around the screen. The turtle draws lines as it moves. The "turtle" could look like the turtle animal, an arrow, or be invisibile. The user can write turtle programs that draw beautiful shapes and learn to program at the same time.
+Turtle graphics is a popular way to teach programming. A drawing pen cursor (called the "turtle") can be programmed to move around the screen. The turtle draws lines as it moves. You can write programs that draw beautiful shapes and learn to program at the same time.
 
-The original Turtle software was developed by Wally Feurzig and Seymour Papert in 1966.
-
-This tutorial only explains Python's turtle.py module. It does not explain the Python programming language.
+This tutorial only explains Python's turtle.py module. It does not explain the Python programming language. This guide assumes you know basic Python concepts: variables, operators, for loops, function calls, and random numbers. This guide assumes you have Python installed and are writing Python code using IDLE, Mu, Visual Studio Code, or some other code editor.
 
 ## Quickstart
 
-TODO - explain how to install python, run IDLE
 
-In IDLE, click on File > New File. Then enter the following:
+Let's write a program that draws a square. In a new file enter the following Python code:
 
 ```python
 from turtle import *
@@ -46,11 +43,11 @@ left(90)
 forward(100)
 ```
 
-Click on File > Save and save this program. Then press F5 to run the program. The output of this program will look like this:
+When you run this program, a new window will appear and you will see the an arrow cursor. This arrow is the drawing turtle. The program tells the turtle where to move, and the turtle draws lines while moving:
 
 [<img src="square.png" class="screenshot" />](square_spiral.png)
 
-The instructions in your program tell the "turtle" how to move. The turtle draws a line behind it as it moves. This program draws a square. The steps given to the program are:
+The steps given to the program are:
 
 1. Move forward 100 steps. (In the beginning, the turtle is facing to the right.)
 1. Turn 90 degrees to the left.
@@ -58,15 +55,15 @@ The instructions in your program tell the "turtle" how to move. The turtle draws
 1. Turn 90 degrees to the left.
 1. Move forward 100 steps.
 1. Turn 90 degrees to the left.
-1. Move forward 100 steps. The turtle has ended up where it started.
+1. Move forward 100 steps. (The turtle has ended up where it started.)
 
 With these seven steps, the turtle draws a square. The `from turtle import *` is an instruction needed at the beginning of all of your turtle programs. It imports the turtle module so you can do the turtle instructions.
 
-There are many instructions like left() and forward(). These instructions are called functions. This tutorial explains many of the functions in the turtle module. When you learn more of these functions, you will be able to draw many different shapes and beautiful pictures!
+There are many instructions like `left()` and `forward()`. These instructions are called functions. This tutorial explains many of the functions in the turtle module. When you learn more of these functions, you will be able to draw many different shapes and beautiful pictures!
 
 ## Examples
 
-A square spiral program:
+This is a square spiral program:
 
 ```python
 from turtle import *
@@ -77,7 +74,7 @@ for i in range(500): # this "for" loop will repeat these functions 500 times
 
 [<img src="square_spiral.png" class="screenshot" />](square_spiral.png)
 
-A colorful hexagon spiral program:
+This is a hexagon spiral program:
 
 ```python
 from turtle import *
@@ -91,7 +88,7 @@ for x in range(360):
 
 [<img src="colorful_hex.png" class="screenshot" />](colorful_hex.png)
 
-A blue flowers program:
+This is a program that draws blue flowers:
 
 ```python
 from turtle import *
@@ -186,7 +183,7 @@ The goto() function will immediately move the turtle to the given *x* coordinate
 
 ### sety(*y*)
 
-The goto() function will immediately move the turtle to the given *y *coordinate. The turtle's x coordinate will stay the same. If the pen is down (see pendown() and penup()) a line will be drawn from the previous coordinates to the new coordinates.
+The goto() function will immediately move the turtle to the given *y* coordinate. The turtle's x coordinate will stay the same. If the pen is down (see pendown() and penup()) a line will be drawn from the previous coordinates to the new coordinates.
 
 ### setheading(*heading*)
 
@@ -298,7 +295,7 @@ The reset()) function will erase all the line drawings on the screen and return 
 
 Red, green, and blue are the three primary colors of light.
 
-The float value 0.0 represents no brightness of that color. The float value 1.0 represents full brightness of that color. So the color red is represented by the RGB color tuple (1.0, 0, 0). The color purple is half-bright red and half-bright blue, so it is represented by the RGB color tuple (0.5, 0.0, 0.5). Full brightness of red and blue makes pink: (1.0, 0.0, 1.0)
+The float value 0.0 represents none of that color. The float value 1.0 represents a full color. So the color red is represented by the RGB color tuple (1.0, 0, 0). The color purple is half-red and half-blue, so it is represented by the RGB color tuple (0.5, 0.0, 0.5). Full red and blue makes pink: (1.0, 0.0, 1.0)
 
 Here are some RGB color tuples:
 
