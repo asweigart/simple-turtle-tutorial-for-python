@@ -5,20 +5,9 @@
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-1. [Hexagon Spiral Examples](#examples)
-1. [Beginning with turtle.py](#beginning-with-turtle.py)
-1. [Moving](#moving)
-1. [Drawing](#drawing)
-1. [Color](#color)
-1. [Filling in Shapes](#filling-in-shapes)
-1. [Stamping](#stamping)
-1. [Animation](#animation)
-1. [Turtle Status](#turtle-status)
-1. [Input](#input)
-1. [Events](#events)
-1. [The Turtle](#the-turtle)
-1. [The World](#the-world)
+1. [Introduction](#Introduction)
+1. [Drawing a Square](#Drawing-a-Square)
+
 
 ## Introduction
 
@@ -26,7 +15,9 @@ Turtle graphics is a simple way to learn programming by making drawings with cod
 
 This tutorial only explains how to use Python's turtle.py module. It does not teach the Python language itself. You should already know some basic Python ideas, like variables, operators, loops, function calls, importing modules, and random numbers. You also need Python installed and a code editor like IDLE, Mu, or Visual Studio Code.
 
-If you do not know Python, you can still copy and run the example programs on your computer.
+If you do not know how to program or how to program in the Python language, you can still copy and run the example programs on your computer. You can install the *Python interpreter* software from [https://python.org](https://python.org). *Code editors* are the apps that you type Python code in. IDLE and Visual Studio Code are examples of code editors. These code editors also make it easy to have the Python interpreter run your Python programs. You can write your Python code in files that end with the *.py* file extension so you know the file is intended to be run by the Python interpeter.
+
+Programs written in the Python language can be called Python programs. Not all Python programs use the `turtle` module to make drawings. But we will call our Python programs that use the `turtle` module, "Turtle programs".
 
 ## Drawing a Square
 
@@ -36,23 +27,29 @@ Let's write a program that draws a simple square. Create a new file and save it 
 ```python
 from turtle import *
 
-# Everything after # is a "comment" and ignored by Python.
+# This is a comment.
+# Everything after # is a "comment" and is not run as code.
 # Use comments to make notes to yourself about your code.
 
 forward(100)  # Move the turtle forward 100 steps.
 left(90)  # Turn the turtle left by 90 degrees.
+
+# Move forward and turn three more times:
 forward(100)
 left(90)
 forward(100)
 left(90)
 forward(100)
 left(90)
+
+done()  # Without this, the Turtle window may immediately close before you can see the picture.
 ```
 
-Save the file after entering the code. Then run the program. (In IDLE, you can press F5 or click the Run > Run Module menu item. In other editors, the steps to run a program may be different.) When you run this program, a new window will appear and you will see the an arrow cursor. This arrow is the turtle:
+Save the file after entering the code. Then run the program. (In IDLE, you can press F5 or click the Run > Run Module menu item. In Visual Studio Code, click the Run > Run Without Debugging menu item. In other editors, the steps to run a program may be different.)
+
+When you run this program, a new window will appear and you will see the an arrow cursor. This arrow is the turtle:
 
 [<img src="turtle_cursor.png" class="screenshot" />](turtle_cursor.png)
-
 
 The program tells the turtle where to move, and the turtle draws lines while moving:
 
@@ -68,19 +65,42 @@ The steps given to the program are:
 1. Turn 90 degrees to the left.
 1. Move forward 100 steps. (The turtle is where it started.)
 1. Turn 90 degrees to the left. (The turtle is facing the original direction.)
+1. The program is done but the Turtle window should remain open so the user can look at the drawing.
 
-With these eight steps, the turtle draws a square. The `from turtle import *` is an instruction needed at the beginning of all of your turtle programs. It imports the `turtle` module so you can do the turtle instructions.
+With these nine steps, the turtle draws a square. Here is what you need to understand about each instruction in the program:
 
-There are many instructions like `left()` and `forward()`. These instructions are called *functions*. This tutorial explains many of the functions in the `turtle` module. When you learn more of these functions, you will be able to draw many different shapes and beautiful pictures!
+* The `from turtle import *` is an instruction needed at the beginning of all of your turtle programs. It imports the `turtle` module so you can do the turtle instructions.
+
+* Blank lines are skipped by the Python interpreter.
+
+* The instructions that begin with a # hashtag are *comments*. Everything on the line after the # hashtag is ignored by Python. Comments let you write notes to yourself about what the program does.
+
+* You can skip typing the comments when copying the code in this tutorial. But including the comments may help you remember what the code does when you look at the program later.
+
+* `forward()` is a function and `forward(100)` is a function call. A *function* is like a mini-program that contains code. Your program can run the code in functions by making a *function call*. Function calls can have values passed to them, like the `100` in `forward(100)`. These are called *function arguments* or just *arguments*.
+
+* The `forward(100)` makes the turtle move forward in its current direction by 100 steps.
+
+* The `left()` function makes the turtle turn its direction its left. "Left" means counterclockwise because imagine we are looking down at the turtle. The `left(90)` function call in our program makes the turtle turn left 90 degrees.
+
+* (If you want the turtle to turn right, there is also a `right()` function your programs can call.)
+
+* The `done()` function pauses the program until you close the Turtle window. In some code editors like IDLE, you don't need this in your program. In other code editors like Visual Studio Code, the window will immediately close at the end of the program without it. You should always add `done()` at the end of your Turtle programs so the user can see the drawing.
+
+* The `done()` function call has no arguments, but you still need to type the `()` parentheses after `done`.
+
+There are many functions like `left()`, `forward()`, and `done()`. This tutorial explains many of the functions in the `turtle` module. When you learn more of these functions, you will be able to draw many different shapes and beautiful pictures!
+
+But let's make some more simple Turtle programs first.
 
 ### Drawing a Smaller Square
 
-We can change `forward(100)` to `forward(25)` to draw a smaller square. Create and save a new file with the name *smaller_square.py*. Change the four function calls to `forward(100)` to look like this:
+We can change `forward(100)` to `forward(25)` to draw a smaller square. Create and save a new file with the name *square_smaller.py*. Change the four function calls to `forward(100)` to look like this:
 
 ```python
 from turtle import *
 
-forward(25)
+forward(25)  # Now the turtle moves forward only 25 steps.
 left(90)
 forward(25)
 left(90)
@@ -88,13 +108,14 @@ forward(25)
 left(90)
 forward(25)
 left(90)
+done()
 ```
 
 When you run the program, it draws a smaller square because the lines are only 25 steps long instead of 100 steps.
 
 [<img src="smaller_square.png" class="screenshot" />](smaller_square.png)
 
-Remember that you must change all four places with `forward(100)` to `forward(25)`, or else the square will come out wrong. For example, I made program named *smaller_square_bug.py* that only made the change in three places:
+Remember that you must change all four places with `forward(100)` to `forward(25)`, or else the square will come out wrong. For example, I made program named *square_smaller_bug.py* that only made the change in three places:
 
 ```python
 from turtle import *
@@ -103,10 +124,11 @@ forward(25)
 left(90)
 forward(25)
 left(90)
-forward(100)
+forward(100)  # Uh oh, we forgot to change this line!
 left(90)
 forward(25)
 left(90)
+done()
 ```
 
 This program has a *bug* in it, and draws the square wrong:
@@ -117,176 +139,217 @@ Your computer does exactly what you tell it to do. But it is up to you to make s
 
 ### Drawing a Square with a Variable Size
 
-Instead of typing `25` in `forward(25)`, let's create a *variable* instead. The name of the variable is `square_size`, and the value in the variable is `25`:
+Instead of typing `25` in `forward(25)`, let's create a *variable* instead. Write the following code and save it as *square_variable.py*. The name of the variable is `line_length`, and the value in the variable is `25`:
 
 ```python
 from turtle import *
 
-square_size = 25
-forward(square_size)
+line_length = 25  # This variable stores the number 25.
+forward(line_length)  # The turtle moves 25 steps because line_length is 25.
 left(90)
-forward(square_size)
+forward(line_length)
 left(90)
-forward(square_size)
+forward(line_length)
 left(90)
-forward(square_size)
+forward(line_length)
 left(90)
+done()
 ```
 
 When we run this program, it draws the same square as before:
 
 [<img src="smaller_square.png" class="screenshot" />](smaller_square.png)
 
-However, now we only have one thing to change if we want to change the size of the square. Try changing the `square_size` variable to a few other sizes, like `square_size = 300` or `square_size = 5`.
+However, now we only have one thing to change if we want to change the size of the square. Try changing the `line_length` variable to a few other sizes, like `line_length = 300` or `line_length = 5`.
 
 ### Draw a Square with a Loop
 
-Let's rewrite this program using a `for` loop instead. Save the file with the new name, *square_for_loop.py*. We can tell the program to call `forward(square_size)` and `left(90)` four times:
+Let's rewrite this program using a `for` loop instead. Save the file with the new name, *square_for_loop.py*. We can tell the program to call `forward(line_length)` and `left(90)` four times:
 
 ```python
 from turtle import *
 
-square_size = 100
-for i in range(4):
-    forward(square_size)
+# The indented lines of code run 4 times:
+for i in range(4):  
+    forward(100)
     left(90)
+done()
 ```
 
-The indented code after `for i in range(4):` will run four times because we pass `4` to the `range()` function. 
+The indented code after `for i in range(4):` will run four times because we pass `4` to the `range()` function.
 
-This makes the same square drawing as before:
+Be sure to have exactly four spaces of indentation before the `forward(line_length)` and `left(90)` lines of code! If they have different amounts of indentation, you will get an error that says `IndentationError: unindent does not match any outer indentation level`.
+
+This program makes the same square drawing as before:
 
 [<img src="square.png" class="screenshot" />](square.png)
 
-Let's change the code so that the turtle turns left by 91 degrees instead of 90 degrees:
+Let's change the code so that the turtle turns left by 86 degrees instead of 90 degrees. Save this program as *square_for_loop_86.py*:
 
 ```python
 from turtle import *
 
-for i in range(4):
+for i in range(4):  
     forward(100)
-    left(91)
+    left(86)  # Turn left 86 degrees instead of 90.
+done()
 ```
 
 This draws a slightly different image that is not quite a square:
 
 [<img src="square.png" class="screenshot" />](square_spiral.png)
 
-Instead of doing the loop 4 times, let's do the loop 50 times:
+Instead of turning left 86 degrees in the loop 4 times, let's do the loop 50 times. Make the following program and save it as *square_circle_86.py*:
 
 ```python
 from turtle import *
 
-for i in range(50):
+speed('fastest')
+for i in range(50):  # Loop 50 times instead of 4.
     forward(100)
-    left(91)
+    left(86)
+done()
 ```
+
+This program does a lot more drawing than our previous programs, so we call the new `speed()` function and pass it the argument `'fastest'` to make the turtle move faster. Unlike `100` or `86`, this value is a *text string* and it must start and end with a quote character: `'fastest'` or `"fastest"`
 
 This produces something that looks quite different from a simple square:
 
 [<img src="square.png" class="screenshot" />](square_spiral.png)
 
-By experimenting with different code and numbers, we can make all sorts of images. We can also have Python make random numbers for the left turns. This program makes turns between 80 and 100 degrees:
+By experimenting with different code and numbers, we can make all sorts of images. We can also have Python make random numbers for the left turns. Write the following code and save it as *square_random.py*. This program makes turns between 80 and 100 degrees:
 
 ```python
 from turtle import *
 import random
 
+speed('fastest')
 for i in range(50):
     forward(100)
+    # Turn left a random number of degrees between 80 and 100:
     left(random.randint(80, 100))
+done()
 ```
 
 Because this program uses random numbers, the picture will look different each time you run the program:
 
+[<img src="square.png" class="screenshot" />](square_spiral.png)
+[<img src="square.png" class="screenshot" />](square_spiral.png)
 [<img src="square.png" class="screenshot" />](square_spiral.png)
 
 There are a lot of different images we can learn to make with Turtle!
 
 ## Square Spirals Examples
 
-This is a square spiral program:
+Let's create a square spiral program. Open a new file and save it as *spiral.py*. Enter the following code.
 
 ```python
 from turtle import *
-for i in range(500): # this "for" loop will repeat these functions 500 times
-    forward(i)
+
+speed('fastest')
+for i in range(300):
+    forward(i)  # Use the i variable for the function argument.
     left(91)
+done()
 ```
 
 [<img src="square_spiral.png" class="screenshot" />](square_spiral.png)
 
 
+*spiral_red.py*
+
 ```python
 from turtle import *
-pencolor('red')
-for i in range(360):
+
+speed('fastest')
+pencolor('red')  # Make the lines red.
+for i in range(300):
     forward(i)
-    left(59)
+    left(91)
+done()
 ```
 
+Try changing 91 to 30, 45, 60, 90, 120, 150, and 46, 61, 91, 120, 151. Finally, try 179 and 180.
 
+*spiral_color.py*
 
 ```python
 from turtle import *
 import random
 
+colors = ['red', 'orange', 'yellow', 'blue', 'green', 'purple']
+
 speed('fastest')
-for x in range(360):
-    pencolor(random.choice(['red', 'purple', 'blue', 'green', 'yellow', 'orange']))
-    forward(x)
-    left(59)
+for i in range(300):
+    pencolor(random.choice(colors))
+    forward(i)
+    left(91)
+done()
 ```
 
+*spiral_black_bg.py*
 
 ```python
 from turtle import *
 import random
 
+colors = ['red', 'orange', 'yellow', 'blue', 'green', 'purple']
+
 speed('fastest')
-pensize(10)
+pensize(3)
 bgcolor('black')
-for x in range(360):
-    pencolor(random.choice(['red', 'purple', 'blue', 'green', 'yellow', 'orange']))
-    forward(x)
-    left(59)
+for i in range(300):
+    pencolor(random.choice(colors))
+    forward(i)
+    left(91)
+done()
 ```
 
 
+
+
+
+
+*spiral_pretty.py*
+
 ```python
 from turtle import *
+
 speed('fastest')
-pensize(5)
+pensize(3)
+bgcolor('black')
 
 pencolor('red')
 for i in range(60):
     forward(i)
-    left(59)
+    left(91)
 
 pencolor('orange')
 for i in range(60):
     forward(60 + i)
-    left(59)
+    left(91)
 
 pencolor('yellow')
 for i in range(60):
     forward(120 + i)
-    left(59)
+    left(91)
 
 pencolor('green')
 for i in range(60):
     forward(180 + i)
-    left(59)
+    left(91)
 
 pencolor('blue')
 for i in range(60):
     forward(240 + i)
-    left(59)
+    left(91)
 
 pencolor('purple')
 for i in range(60):
     forward(300 + i)
-    left(59)
+    left(91)
+
+done()
 ```
 
 
@@ -306,36 +369,59 @@ for i in range(60):
 
 ## Interactive Square Drawing
 
+*click_square.py*
+
+```python
+from turtle import *
+
+speed('fastest')
+
+def draw_square(x, y):
+    goto(x, y)  # TODO
+    for i in range(4):
+        forward(100)
+        left(90)
+
+# When the turtle window is clicked, call draw_square():
+getscreen().onclick(draw_square)
+done()
+```
+
+
+
+
+
+
+*click_square_no_line.py*
 
 
 ```python
 from turtle import *
-import random
 
-tracer(1000, 0)
+speed('fastest')
 
 def draw_square(x, y):
-    penup()
+    penup()  # TODO 
     goto(x, y)
-    pendown()
-    setheading(0)
+    pendown()  # TODO
     for i in range(4):
         forward(100)
         left(90)
     update()
 
-# When the turtle window is clicked, call draw_square():
 getscreen().onclick(draw_square)
-
-listen()  # Put the turtle window in focus.
-done()  # Make turtle wait for clicks.
+done()
 ```
+
+
+
+
 
 ```python
 from turtle import *
 import random
 
-tracer(1000, 0)
+tracer(1000, 0)  # TODO
 
 def draw_spiral(x, y):
     penup()
@@ -349,10 +435,7 @@ def draw_spiral(x, y):
         left(turn_radius)
     update()
 
-# When the turtle window is clicked, call draw_spiral():
 getscreen().onclick(draw_spiral)
-
-listen()  # Put the turtle window in focus.
 done()  # Make turtle wait for clicks.
 ```
 
