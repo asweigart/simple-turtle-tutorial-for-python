@@ -58,7 +58,7 @@ Save the file after entering the code. Then run the program. (In IDLE, you can p
 
 When you run this program, a new window will appear with the following drawing:
 
-[<img src="screenshot_first_square.png" class="screenshot" />](screenshot_first_square.png)
+[<img src="screenshot_first_square.png" style="width: 300px" class="screenshot" />](screenshot_first_square.png)
 
 The steps given to the program are:
 
