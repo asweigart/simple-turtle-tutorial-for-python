@@ -3,6 +3,8 @@
 
 # A Simple Tutorial for Python's turtle.py Module
 
+This is a Turtle programming tutorial written by Al Sweigart, author of *Automate the Boring Stuff with Python* and other books. You can read all of his books for free online at [https://inventwithpython.com](https://inventwithpython.com)
+
 ## Table of Contents
 
 1. [Introduction](#Introduction)
