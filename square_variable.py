@@ -1,3 +1,4 @@
+# square_varaible.py
 from turtle import *
 
 line_length = 25  # This variable stores the number 25.

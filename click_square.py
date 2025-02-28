@@ -1,3 +1,4 @@
+# click_square.py
 from turtle import *
 
 speed('fastest')

@@ -1,3 +1,4 @@
+# spiral_black_bg.py
 from turtle import *
 import random
 
@@ -10,4 +11,5 @@ for i in range(300):
     pencolor(random.choice(colors))
     forward(i)
     left(91)
+hideturtle()
 done()

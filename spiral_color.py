@@ -1,3 +1,4 @@
+# spiral_color.py
 from turtle import *
 import random
 
@@ -8,4 +9,5 @@ for x in range(300):
     pencolor(random.choice(colors))
     forward(x)
     left(91)
+hideturtle()
 done()

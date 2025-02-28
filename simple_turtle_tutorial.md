@@ -7,6 +7,12 @@
 
 1. [Introduction](#Introduction)
 1. [Drawing a Square](#Drawing-a-Square)
+1. [Drawing a Smaller Square](#Drawing-a-Smaller-Square)
+1. [Drawing a Square with a Variable Size](#Drawing-a-Square-with-a-Variable-Size)
+1. [Draw a Square with a Loop](#Draw-a-Square-with-a-Loop)
+1. [Square Spirals Examples](#Square-Spirals-Examples)
+1. [Interactive Square Drawing](#Interactive-Square-Drawing)
+
 
 
 ## Introduction
@@ -25,6 +31,7 @@ Programs written in the Python language can be called Python programs. Not all P
 Let's write a program that draws a simple square. Create a new file and save it as `first_square.py`. Enter the following Python code:
 
 ```python
+# first_square.py
 from turtle import *
 
 # This is a comment.
@@ -47,13 +54,9 @@ done()  # Without this, the Turtle window may immediately close before you can s
 
 Save the file after entering the code. Then run the program. (In IDLE, you can press F5 or click the Run > Run Module menu item. In Visual Studio Code, click the Run > Run Without Debugging menu item. In other editors, the steps to run a program may be different.)
 
-When you run this program, a new window will appear and you will see the an arrow cursor. This arrow is the turtle:
+When you run this program, a new window will appear with the following drawing:
 
-[<img src="turtle_cursor.png" class="screenshot" />](turtle_cursor.png)
-
-The program tells the turtle where to move, and the turtle draws lines while moving:
-
-[<img src="square.png" class="screenshot" />](square.png)
+[<img src="screenshot_first_square.png" class="screenshot" />](screenshot_first_square.png)
 
 The steps given to the program are:
 
@@ -69,11 +72,13 @@ The steps given to the program are:
 
 With these nine steps, the turtle draws a square. Here is what you need to understand about each instruction in the program:
 
+* The `# first_square.py` is a *comment* (see below) that is ignored by Python. You don't need to copy this part. It is here only to help identify the program names in this tutorial.
+
 * The `from turtle import *` is an instruction needed at the beginning of all of your turtle programs. It imports the `turtle` module so you can do the turtle instructions.
 
 * Blank lines are skipped by the Python interpreter.
 
-* The instructions that begin with a # hashtag are *comments*. Everything on the line after the # hashtag is ignored by Python. Comments let you write notes to yourself about what the program does.
+* The instructions that begin with a `#` hashtag are *comments*. Everything on the line after the `#` hashtag is ignored by Python. Comments let you write notes to yourself about what the program does.
 
 * You can skip typing the comments when copying the code in this tutorial. But including the comments may help you remember what the code does when you look at the program later.
 
@@ -98,6 +103,7 @@ But let's make some more simple Turtle programs first.
 We can change `forward(100)` to `forward(25)` to draw a smaller square. Create and save a new file with the name *square_smaller.py*. Change the four function calls to `forward(100)` to look like this:
 
 ```python
+# square_smaller.py
 from turtle import *
 
 forward(25)  # Now the turtle moves forward only 25 steps.
@@ -113,11 +119,12 @@ done()
 
 When you run the program, it draws a smaller square because the lines are only 25 steps long instead of 100 steps.
 
-[<img src="smaller_square.png" class="screenshot" />](smaller_square.png)
+[<img src="screenshot_square_smaller.png" class="screenshot" />](screenshot_square_smaller.png)
 
 Remember that you must change all four places with `forward(100)` to `forward(25)`, or else the square will come out wrong. For example, I made program named *square_smaller_bug.py* that only made the change in three places:
 
 ```python
+# square_smaller_bug.py
 from turtle import *
 
 forward(25)
@@ -133,7 +140,7 @@ done()
 
 This program has a *bug* in it, and draws the square wrong:
 
-[<img src="smaller_square_bug.png" class="screenshot" />](smaller_square_bug.png)
+[<img src="screenshot_square_smaller_bug.png" class="screenshot" />](screenshot_square_smaller_bug.png)
 
 Your computer does exactly what you tell it to do. But it is up to you to make sure what you *want* the computer to do is what you *told* the computer to do. If your program has a bug, carefully read your code and try to figure out what it is doing.
 
@@ -142,6 +149,7 @@ Your computer does exactly what you tell it to do. But it is up to you to make s
 Instead of typing `25` in `forward(25)`, let's create a *variable* instead. Write the following code and save it as *square_variable.py*. The name of the variable is `line_length`, and the value in the variable is `25`:
 
 ```python
+# square_variable.py
 from turtle import *
 
 line_length = 25  # This variable stores the number 25.
@@ -167,6 +175,7 @@ However, now we only have one thing to change if we want to change the size of t
 Let's rewrite this program using a `for` loop instead. Save the file with the new name, *square_for_loop.py*. We can tell the program to call `forward(line_length)` and `left(90)` four times:
 
 ```python
+# square_for_loop.py
 from turtle import *
 
 # The indented lines of code run 4 times:
@@ -182,11 +191,12 @@ Be sure to have exactly four spaces of indentation before the `forward(line_leng
 
 This program makes the same square drawing as before:
 
-[<img src="square.png" class="screenshot" />](square.png)
+[<img src="screenshot_first_square.png" class="screenshot" />](screenshot_first_square.png)
 
 Let's change the code so that the turtle turns left by 86 degrees instead of 90 degrees. Save this program as *square_for_loop_86.py*:
 
 ```python
+# square_for_loop_86.py
 from turtle import *
 
 for i in range(4):  
@@ -197,29 +207,34 @@ done()
 
 This draws a slightly different image that is not quite a square:
 
-[<img src="square.png" class="screenshot" />](square_spiral.png)
+[<img src="screenshot_square_for_loop_86.png" class="screenshot" />](screenshot_square_for_loop_86.png)
 
 Instead of turning left 86 degrees in the loop 4 times, let's do the loop 50 times. Make the following program and save it as *square_circle_86.py*:
 
 ```python
+# square_circle_86.py
 from turtle import *
 
 speed('fastest')
 for i in range(50):  # Loop 50 times instead of 4.
     forward(100)
     left(86)
+hideturtle()
 done()
 ```
 
-This program does a lot more drawing than our previous programs, so we call the new `speed()` function and pass it the argument `'fastest'` to make the turtle move faster. Unlike `100` or `86`, this value is a *text string* and it must start and end with a quote character: `'fastest'` or `"fastest"`
+This program does a lot more drawing than our previous programs, so we call the new `speed()` function and pass it the argument `'fastest'` to make the turtle move faster. Unlike `100` or `86`, this value is a *text string* and it must start and end with a quote character: `'fastest'` or `"fastest"`.
+
+This program also calls the `hideturtle()` function to make the turtle arrow disappear at the end of the program.
 
 This produces something that looks quite different from a simple square:
 
-[<img src="square.png" class="screenshot" />](square_spiral.png)
+[<img src="screenshot_square_circle_86.png" class="screenshot" />](screenshot_square_circle_86.png)
 
 By experimenting with different code and numbers, we can make all sorts of images. We can also have Python make random numbers for the left turns. Write the following code and save it as *square_random.py*. This program makes turns between 80 and 100 degrees:
 
 ```python
+# square_random.py
 from turtle import *
 import random
 
@@ -228,14 +243,15 @@ for i in range(50):
     forward(100)
     # Turn left a random number of degrees between 80 and 100:
     left(random.randint(80, 100))
+hideturtle()
 done()
 ```
 
 Because this program uses random numbers, the picture will look different each time you run the program:
 
-[<img src="square.png" class="screenshot" />](square_spiral.png)
-[<img src="square.png" class="screenshot" />](square_spiral.png)
-[<img src="square.png" class="screenshot" />](square_spiral.png)
+[<img src="screenshot_square_random1.png" class="screenshot" />](screenshot_square_random1.png)
+[<img src="screenshot_square_random2.png" class="screenshot" />](screenshot_square_random2.png)
+[<img src="screenshot_square_random3.png" class="screenshot" />](screenshot_square_random3.png)
 
 There are a lot of different images we can learn to make with Turtle!
 
@@ -244,21 +260,24 @@ There are a lot of different images we can learn to make with Turtle!
 Let's create a square spiral program. Open a new file and save it as *spiral.py*. Enter the following code.
 
 ```python
+# spiral.py
 from turtle import *
 
 speed('fastest')
 for i in range(300):
     forward(i)  # Use the i variable for the function argument.
     left(91)
+hideturtle()
 done()
 ```
 
-[<img src="square_spiral.png" class="screenshot" />](square_spiral.png)
+[<img src="screenshot_spiral.png" class="screenshot" />](screenshot_spiral.png)
 
 
 *spiral_red.py*
 
 ```python
+# spiral_red.py
 from turtle import *
 
 speed('fastest')
@@ -266,14 +285,18 @@ pencolor('red')  # Make the lines red.
 for i in range(300):
     forward(i)
     left(91)
+hideturtle()
 done()
 ```
+
+[<img src="screenshot_spiral_red.png" class="screenshot" />](screenshot_spiral_red.png)
 
 Try changing 91 to 30, 45, 60, 90, 120, 150, and 46, 61, 91, 120, 151. Finally, try 179 and 180.
 
 *spiral_color.py*
 
 ```python
+# spiral_color.py
 from turtle import *
 import random
 
@@ -284,12 +307,17 @@ for i in range(300):
     pencolor(random.choice(colors))
     forward(i)
     left(91)
+hideturtle()
 done()
 ```
+
+[<img src="screenshot_spiral_color.png" class="screenshot" />](screenshot_spiral_color.png)
+
 
 *spiral_black_bg.py*
 
 ```python
+# spiral_black_bg.py
 from turtle import *
 import random
 
@@ -302,9 +330,11 @@ for i in range(300):
     pencolor(random.choice(colors))
     forward(i)
     left(91)
+hideturtle()
 done()
 ```
 
+[<img src="screenshot_spiral_black_bg.png" class="screenshot" />](screenshot_spiral_black_bg.png)
 
 
 
@@ -313,6 +343,7 @@ done()
 *spiral_pretty.py*
 
 ```python
+# spiral_pretty.py
 from turtle import *
 
 speed('fastest')
@@ -352,6 +383,8 @@ for i in range(60):
 done()
 ```
 
+[<img src="screenshot_spiral_pretty.png" class="screenshot" />](screenshot_spiral_pretty.png)
+
 
 
 
@@ -372,6 +405,7 @@ done()
 *click_square.py*
 
 ```python
+# click_square.py
 from turtle import *
 
 speed('fastest')

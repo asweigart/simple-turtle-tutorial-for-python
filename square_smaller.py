@@ -1,3 +1,4 @@
+# square_smaller.py
 from turtle import *
 
 forward(25)  # Now the turtle moves forward only 25 steps.

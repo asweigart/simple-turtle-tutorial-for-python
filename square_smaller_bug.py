@@ -1,3 +1,4 @@
+# square_smaller_buy.py
 from turtle import *
 
 forward(25)
