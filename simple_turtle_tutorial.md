@@ -58,7 +58,7 @@ Save the file after entering the code. Then run the program. (In IDLE, you can p
 
 When you run this program, a new window will appear with the following drawing:
 
-[<img src="screenshot_first_square.png" style="width: 300px" class="screenshot" />](screenshot_first_square.png)
+[<img src="screenshot_first_square.png" style="width: 400px"  />](screenshot_first_square.png)
 
 The steps given to the program are:
 
@@ -121,7 +121,7 @@ done()
 
 When you run the program, it draws a smaller square because the lines are only 25 steps long instead of 100 steps.
 
-[<img src="screenshot_square_smaller.png" class="screenshot" />](screenshot_square_smaller.png)
+[<img src="screenshot_square_smaller.png" style="width: 400px"  />](screenshot_square_smaller.png)
 
 Remember that you must change all four places with `forward(100)` to `forward(25)`, or else the square will come out wrong. For example, I made program named *square_smaller_bug.py* that only made the change in three places:
 
@@ -142,7 +142,7 @@ done()
 
 This program has a *bug* in it, and draws the square wrong:
 
-[<img src="screenshot_square_smaller_bug.png" class="screenshot" />](screenshot_square_smaller_bug.png)
+[<img src="screenshot_square_smaller_bug.png" style="width: 400px"  />](screenshot_square_smaller_bug.png)
 
 Your computer does exactly what you tell it to do. But it is up to you to make sure what you *want* the computer to do is what you *told* the computer to do. If your program has a bug, carefully read your code and try to figure out what it is doing.
 
@@ -168,7 +168,7 @@ done()
 
 When we run this program, it draws the same square as before:
 
-[<img src="screenshot_square_smaller.png" class="screenshot" />](screenshot_square_smaller.png)
+[<img src="screenshot_square_smaller.png" style="width: 400px"  />](screenshot_square_smaller.png)
 
 However, now we only have one thing to change if we want to change the size of the square. Try changing the `line_length` variable to a few other sizes, like `line_length = 300` or `line_length = 5`.
 
@@ -193,7 +193,7 @@ Be sure to have exactly four spaces of indentation before the `forward(line_leng
 
 This program makes the same square drawing as before:
 
-[<img src="screenshot_first_square.png" class="screenshot" />](screenshot_first_square.png)
+[<img src="screenshot_first_square.png" style="width: 400px"  />](screenshot_first_square.png)
 
 Let's change the code so that the turtle turns left by 86 degrees instead of 90 degrees. Save this program as *square_for_loop_86.py*:
 
@@ -209,7 +209,7 @@ done()
 
 This draws a slightly different image that is not quite a square:
 
-[<img src="screenshot_square_for_loop_86.png" class="screenshot" />](screenshot_square_for_loop_86.png)
+[<img src="screenshot_square_for_loop_86.png" style="width: 400px"  />](screenshot_square_for_loop_86.png)
 
 Instead of turning left 86 degrees in the loop 4 times, let's do the loop 50 times. Make the following program and save it as *square_circle_86.py*:
 
@@ -231,7 +231,7 @@ This program also calls the `hideturtle()` function to make the turtle arrow dis
 
 This produces something that looks quite different from a simple square:
 
-[<img src="screenshot_square_circle_86.png" class="screenshot" />](screenshot_square_circle_86.png)
+[<img src="screenshot_square_circle_86.png" style="width: 400px"  />](screenshot_square_circle_86.png)
 
 By experimenting with different code and numbers, we can make all sorts of images. We can also have Python make random numbers for the left turns. Write the following code and save it as *square_random.py*. This program makes turns between 80 and 100 degrees:
 
@@ -251,9 +251,9 @@ done()
 
 Because this program uses random numbers, the picture will look different each time you run the program:
 
-[<img src="screenshot_square_random1.png" class="screenshot" />](screenshot_square_random1.png)
-[<img src="screenshot_square_random2.png" class="screenshot" />](screenshot_square_random2.png)
-[<img src="screenshot_square_random3.png" class="screenshot" />](screenshot_square_random3.png)
+[<img src="screenshot_square_random1.png" style="width: 400px"  />](screenshot_square_random1.png)
+[<img src="screenshot_square_random2.png" style="width: 400px"  />](screenshot_square_random2.png)
+[<img src="screenshot_square_random3.png" style="width: 400px"  />](screenshot_square_random3.png)
 
 There are a lot of different images we can learn to make with Turtle!
 
@@ -273,7 +273,7 @@ hideturtle()
 done()
 ```
 
-[<img src="screenshot_spiral.png" class="screenshot" />](screenshot_spiral.png)
+[<img src="screenshot_spiral.png" style="width: 400px"  />](screenshot_spiral.png)
 
 
 *spiral_red.py*
@@ -291,7 +291,7 @@ hideturtle()
 done()
 ```
 
-[<img src="screenshot_spiral_red.png" class="screenshot" />](screenshot_spiral_red.png)
+[<img src="screenshot_spiral_red.png" style="width: 400px"  />](screenshot_spiral_red.png)
 
 Try changing 91 to 30, 45, 60, 90, 120, 150, and 46, 61, 91, 120, 151. Finally, try 179 and 180.
 
@@ -313,7 +313,7 @@ hideturtle()
 done()
 ```
 
-[<img src="screenshot_spiral_color.png" class="screenshot" />](screenshot_spiral_color.png)
+[<img src="screenshot_spiral_color.png" style="width: 400px"  />](screenshot_spiral_color.png)
 
 
 *spiral_black_bg.py*
@@ -336,7 +336,7 @@ hideturtle()
 done()
 ```
 
-[<img src="screenshot_spiral_black_bg.png" class="screenshot" />](screenshot_spiral_black_bg.png)
+[<img src="screenshot_spiral_black_bg.png" style="width: 400px"  />](screenshot_spiral_black_bg.png)
 
 
 
@@ -385,7 +385,7 @@ for i in range(60):
 done()
 ```
 
-[<img src="screenshot_spiral_pretty.png" class="screenshot" />](screenshot_spiral_pretty.png)
+[<img src="screenshot_spiral_pretty.png" style="width: 400px"  />](screenshot_spiral_pretty.png)
 
 
 
@@ -579,7 +579,7 @@ update()
 done()
 ```
 
-[<img src="blue_flowers.png" class="screenshot" />](blue_flowers.png)
+[<img src="blue_flowers.png" style="width: 400px"  />](blue_flowers.png)
 
 ## Moving
 
@@ -610,7 +610,7 @@ right(90)
 forward(100)
 ```
 
-[<img src="turn_right.png" class="screenshot" />](turn_right.png)
+[<img src="turn_right.png" style="width: 400px"  />](turn_right.png)
 
 ### left(*angle*)
 
@@ -625,7 +625,7 @@ left(90)
 forward(100)
 ```
 
-[<img src="turn_left.png" class="screenshot" />](turn_left.png)
+[<img src="turn_left.png" style="width: 400px"  />](turn_left.png)
 
 ### goto(*x*, *y*)
 
@@ -642,7 +642,7 @@ goto(100, -50)
 goto(-50, -50)
 ```
 
-[<img src="goto.png" class="screenshot" />](goto.png)
+[<img src="goto.png" style="width: 400px"  />](goto.png)
 
 ### setx(*x*)
 
@@ -666,7 +666,7 @@ for angle in range(0, 360, 15):
     backward(100)
 ```
 
-[<img src="setheading.png" class="screenshot" />](setheading.png)
+[<img src="setheading.png" style="width: 400px"  />](setheading.png)
 
 ### undo()
 
@@ -689,7 +689,7 @@ for i in range(30):
     undo()
 ```
 
-[<img src="undo_before.png" class="screenshot" />](undo_before.png) [<img src="undo_after.png" class="screenshot" />](undo_after.png)
+[<img src="undo_before.png" style="width: 400px"  />](undo_before.png) [<img src="undo_after.png" style="width: 400px"  />](undo_after.png)
 
 
 ### home()
@@ -705,7 +705,7 @@ forward(100)
 home()
 ```
 
-[<img src="home.png" class="screenshot" />](home.png)
+[<img src="home.png" style="width: 400px"  />](home.png)
 
 ## Drawing
 
@@ -721,7 +721,7 @@ The penup() function will cause the turtle to draw as it moves around. The line 
 
 The pensize() function sets the width of the line that the turtle draws as it moves.
 
-[<img src="pensize.png" class="screenshot" />](pensize.png)
+[<img src="pensize.png" style="width: 400px"  />](pensize.png)
 
 ### pencolor(), pencolor(*color*), pencolor((*red*, *green*, *blue*)), pencolor(*red*, *green*, *blue*)
 
@@ -748,7 +748,7 @@ for red in range(4):
             forward(10)
 ```
 
-[<img src="pencolor.png" class="screenshot" />](pencolor.png)
+[<img src="pencolor.png" style="width: 400px"  />](pencolor.png)
 
 ### clear()
 
@@ -932,7 +932,7 @@ left(90)
 end_fill()
 ```
 
-[<img src="fill.png" class="screenshot" />](fill.png)
+[<img src="fill.png" style="width: 400px"  />](fill.png)
 
 ### fillcolor(), fillcolor(*color*), fillcolor((*red*, *green*, *blue*)), fillcolor(*red*, *green*, *blue*)
 
@@ -962,7 +962,7 @@ for i in range(30, -1, -1):
     forward(20)
 ```
 
-[<img src="stamp.png" class="screenshot" />](stamp.png)
+[<img src="stamp.png" style="width: 400px"  />](stamp.png)
 
 ### clearstamp()
 
@@ -1036,7 +1036,7 @@ onkey(left, 'a')
 onkey(right, 'd')
 ```
 
-[<img src="onkey.png" class="screenshot" />](onkey.png)
+[<img src="onkey.png" style="width: 400px"  />](onkey.png)
 
 up, right, down, down, left, left, up
 
