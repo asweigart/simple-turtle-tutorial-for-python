@@ -168,7 +168,7 @@ done()
 
 When we run this program, it draws the same square as before:
 
-[<img src="smaller_square.png" class="screenshot" />](smaller_square.png)
+[<img src="screenshot_square_smaller.png" class="screenshot" />](screenshot_square_smaller.png)
 
 However, now we only have one thing to change if we want to change the size of the square. Try changing the `line_length` variable to a few other sizes, like `line_length = 300` or `line_length = 5`.
 
