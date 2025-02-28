@@ -1,6 +1,6 @@
 # simple-turtle-tutorial-for-python
 
-**[Link to the tutorial](simple_turtle_turtoial.md)**
+**[Link to the tutorial](simple_turtle_tutorial.md)**
 
 A simple tutorial for Python's turtle.py written by Al Sweigart. This tutorial is written using common English words (like the Simple English Wikipedia is written) so it can easily translate into other languages.
 
