@@ -3,6 +3,8 @@
 
 # A Simple Tutorial for Python's turtle.py Module
 
+**This document is still being written and not yet complete.**
+
 This is a Turtle programming tutorial written by Al Sweigart, author of *Automate the Boring Stuff with Python* and other books. You can read all of his books for free online at [https://inventwithpython.com](https://inventwithpython.com)
 
 ## Table of Contents
@@ -74,27 +76,60 @@ The steps given to the program are:
 
 With these nine steps, the turtle draws a square. Here is what you need to understand about each instruction in the program:
 
-* The `# first_square.py` is a *comment* (see below) that is ignored by Python. You don't need to copy this part. It is here only to help identify the program names in this tutorial.
+```python
+# first_square.py
+```
 
-* The `from turtle import *` is an instruction needed at the beginning of all of your turtle programs. It imports the `turtle` module so you can do the turtle instructions.
+The `# first_square.py` is a *comment* (see below) that is ignored by Python. You don't need to copy this part. It is here only to help identify the program names in this tutorial.
 
-* Blank lines are skipped by the Python interpreter.
+```python
+from turtle import *
 
-* The instructions that begin with a `#` hashtag are *comments*. Everything on the line after the `#` hashtag is ignored by Python. Comments let you write notes to yourself about what the program does.
+```
 
-* You can skip typing the comments when copying the code in this tutorial. But including the comments may help you remember what the code does when you look at the program later.
+The `from turtle import *` is an instruction needed at the beginning of all of your turtle programs. It imports the `turtle` module so you can do the turtle instructions.
 
-* `forward()` is a function and `forward(100)` is a function call. A *function* is like a mini-program that contains code. Your program can run the code in functions by making a *function call*. Function calls can have values passed to them, like the `100` in `forward(100)`. These are called *function arguments* or just *arguments*.
+Blank lines are skipped by the Python interpreter.
 
-* The `forward(100)` makes the turtle move forward in its current direction by 100 steps.
+```python
+# This is a comment.
+# Everything after # is a "comment" and is not run as code.
+# Use comments to make notes to yourself about your code.
+```
 
-* The `left()` function makes the turtle turn its direction its left. "Left" means counterclockwise because imagine we are looking down at the turtle. The `left(90)` function call in our program makes the turtle turn left 90 degrees.
+The instructions that begin with a `#` hashtag are *comments*. Everything on the line after the `#` hashtag is ignored by Python. Comments let you write notes to yourself about what the program does.
 
-* (If you want the turtle to turn right, there is also a `right()` function your programs can call.)
+You can skip typing the comments when copying the code in this tutorial. But including the comments may help you remember what the code does when you look at the program later.
 
-* The `done()` function pauses the program until you close the Turtle window. In some code editors like IDLE, you don't need this in your program. In other code editors like Visual Studio Code, the window will immediately close at the end of the program without it. You should always add `done()` at the end of your Turtle programs so the user can see the drawing.
 
-* The `done()` function call has no arguments, but you still need to type the `()` parentheses after `done`.
+```python
+forward(100)  # Move the turtle forward 100 steps.
+left(90)  # Turn the turtle left by 90 degrees.
+
+# Move forward and turn three more times:
+forward(100)
+left(90)
+forward(100)
+left(90)
+forward(100)
+left(90)
+```
+
+`forward()` is a function and `forward(100)` is a function call. A *function* is like a mini-program that contains code. Your program can run the code in functions by making a *function call*. Function calls can have values passed to them, like the `100` in `forward(100)`. These are called *function arguments* or just *arguments*.
+
+The `forward(100)` makes the turtle move forward in its current direction by 100 steps.
+
+The `left()` function makes the turtle turn its direction its left. "Left" means counterclockwise because imagine we are looking down at the turtle. The `left(90)` function call in our program makes the turtle turn left 90 degrees.
+
+(If you want the turtle to turn right, there is also a `right()` function your programs can call.)
+
+```python
+done()  # Without this, the Turtle window may immediately close before you can see the picture.
+```
+
+The `done()` function pauses the program until you close the Turtle window. In some code editors like IDLE, you don't need this in your program. In other code editors like Visual Studio Code, the window will immediately close at the end of the program without it. You should always add `done()` at the end of your Turtle programs so the user can see the drawing.
+
+The `done()` function call has no arguments, but you still need to type the `()` parentheses after `done`.
 
 There are many functions like `left()`, `forward()`, and `done()`. This tutorial explains many of the functions in the `turtle` module. When you learn more of these functions, you will be able to draw many different shapes and beautiful pictures!
 
