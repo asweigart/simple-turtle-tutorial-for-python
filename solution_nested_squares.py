@@ -2,6 +2,8 @@
 
 from turtle import *
 
+pensize(4)
+
 line_length = 100
 for i in range(4):
     forward(line_length)

@@ -2,10 +2,12 @@
 from turtle import *
 import random
 
+pensize(4)
 speed('fastest')
+
 for i in range(50):
-    forward(100)
+    forward(200)
     # Turn left a random number of degrees between 80 and 100:
-    left(random.randint(80, 100))
+    left(random.randint(85, 95))
 hideturtle()
 done()

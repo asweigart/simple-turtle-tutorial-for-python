@@ -2,10 +2,12 @@
 
 from turtle import *
 
-forward(100)
+pensize(4)
+
+forward(200)
 right(90)
-forward(100)
+forward(200)
 right(135)
-forward(141.4)
+forward(282.8)
 
 done()

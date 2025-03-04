@@ -24,6 +24,8 @@ This is a Turtle programming tutorial written by Al Sweigart, author of *Automat
 
 
 
+
+
 ## Introduction
 
 Turtle graphics is a simple way to learn programming by making drawings with code. A small moving object, called the "turtle," moves around the screen and draws lines as it goes. This helps people create computer drawings and learn programming at the same time.
@@ -34,6 +36,10 @@ This tutorial only explains how to use Python's *turtle.py* module. It does not 
 
 Programs written in the Python language can be called Python programs. Not all Python programs use the `turtle` module to make drawings. But we will call our Python programs that use the `turtle` module, "Turtle programs".
 
+
+
+
+
 ## Drawing a Square
 
 
@@ -41,21 +47,24 @@ Let's write a program that draws a simple square. Create a new file and save it 
 
 ```python
 # first_square.py
-from turtle import *
 
 # This is a comment.
 # Everything after # is a "comment" and is not run as code.
 # Use comments to make notes to yourself about your code.
 
-forward(100)  # Move the turtle forward 100 steps.
+from turtle import *
+
+pensize(4)  # Make the lines thicker than normal.
+
+forward(200)  # Move the turtle forward 200 steps.
 left(90)  # Turn the turtle left by 90 degrees.
 
 # Move forward and turn three more times:
-forward(100)
+forward(200)
 left(90)
-forward(100)
+forward(200)
 left(90)
-forward(100)
+forward(200)
 left(90)
 
 done()  # Without this, the Turtle window may immediately close before you can see the picture.
@@ -65,17 +74,17 @@ Save the file after entering the code. Then run the program. (In IDLE, you can p
 
 When you run this program, a new window (which we will call the *Turtle window*) will appear with the following drawing:
 
-[<img src="screenshot_first_square.png" style="width: 400px"/>](screenshot_first_square.png)
+[<img src="screenshot_first_square.jpg" style="width: 400px"/>](screenshot_first_square.jpg)
 
 In the Turtle window, the turtle appears as a triangle. Imagine the turtle is holding a pen on the ground and drawing as it moves. The Python code tells it how to move:
 
-1. Move forward 100 steps. (The turtle starts facing to the right.)
+1. Move forward 200 steps. (The turtle starts facing to the right.)
 1. Turn 90 degrees to the left.
-1. Move forward 100 steps.
+1. Move forward 200 steps.
 1. Turn 90 degrees to the left.
-1. Move forward 100 steps.
+1. Move forward 200 steps.
 1. Turn 90 degrees to the left.
-1. Move forward 100 steps. (The turtle is where it started.)
+1. Move forward 200 steps. (The turtle is where it started.)
 1. Turn 90 degrees to the left. (The turtle is facing the original direction.)
 1. The program is done but the Turtle window should remain open so the user can look at the drawing.
 
@@ -83,38 +92,50 @@ With these nine steps, the turtle draws a square. Here is what you need to under
 
 ```python
 # first_square.py
+
+# This is a comment.
+# Everything after # is a "comment" and is not run as code.
+# Use comments to make notes to yourself about your code.
 ```
 
 The `# first_square.py` line is a *comment* (see below) that is ignored by the Python interpreter. You don't need to copy the comments into your program. This is here only to help identify the program names in this tutorial.
+
+Blank lines are skipped by the Python interpreter.
+
+The next three lines are also comments. These comments explain what comments are.
 
 ```python
 from turtle import *
 ```
 
-The `from turtle import *` is an instruction needed at the beginning of all of your turtle programs. It imports the `turtle` module so you can do the turtle instructions.
-
-Blank lines are skipped by the Python interpreter.
+You MUST have `from turtle import *` at the top of all of your turtle programs. It imports the `turtle` module so you can call the turtle functions in the rest of the programs. If you forget this line, your program will stop with a `NameError: name is not defined` error.
 
 ```python
-forward(100)  # Move the turtle forward 100 steps.
+pensize(4)  # Make the lines thicker than normal.
+```
+
+`pensize` is a function and `pensize(4)` is a function call. A *function* is like a mini-program that contains code. Your program can run the code in functions by making a *function call*. Function calls can have values passed to them, like the `4` in `pensize(4)`. These are called *function arguments* or just *arguments*.
+
+In this tutorial, we always add parentheses to the name of a function so it is easy to see that it is a function: "the `pensize()` function"
+
+```python
+forward(200)  # Move the turtle forward 200 steps.
 left(90)  # Turn the turtle left by 90 degrees.
 
 # Move forward and turn three more times:
-forward(100)
+forward(200)
 left(90)
-forward(100)
+forward(200)
 left(90)
-forward(100)
+forward(200)
 left(90)
 ```
 
-`forward()` is a function and `forward(100)` is a function call. A *function* is like a mini-program that contains code. Your program can run the code in functions by making a *function call*. Function calls can have values passed to them, like the `100` in `forward(100)`. These are called *function arguments* or just *arguments*.
+The `forward(100)` makes the turtle move forward in its current direction by 100 steps. As the turtle moves, it draws a line behind it. Imagine a turtle animal with a black marker in its mouth, drawing lines on the ground as it moves.
 
-The `forward(100)` makes the turtle move forward in its current direction by 100 steps.
+The `left()` function makes the turtle turn its direction its left. Imagine we are in the sky looking down at the turtle in the program's window. The turtle's left is counterclockwise. The `left(90)` function call in our program makes the turtle turn left 90 degrees.
 
-The `left()` function makes the turtle turn its direction its left. "Left" means counterclockwise because imagine we are looking down at the turtle. The `left(90)` function call in our program makes the turtle turn left 90 degrees.
-
-(If you want the turtle to turn right, there is also a `right()` function your programs can call.)
+(If you want the turtle to turn right or clockwise, there is also a `right()` function.)
 
 ```python
 done()  # Without this, the Turtle window may immediately close before you can see the picture.
@@ -128,14 +149,19 @@ There are many functions like `left()`, `forward()`, and `done()`. This tutorial
 
 But let's make some more simple Turtle programs first.
 
+
+
+
+
 ### Drawing a Smaller Square
 
-We can change `forward(100)` to `forward(25)` to draw a smaller square. Create and save a new file with the name *square_smaller.py*. Change the four function calls to `forward(100)` to look like this:
+We can change `forward(200)` to `forward(25)` to draw a smaller square. Create and save a new file with the name *square_smaller.py*. Change the four function calls to `forward(100)` to look like this:
 
 ```python
 # square_smaller.py
 from turtle import *
 
+pensize(4)
 forward(25)  # Now the turtle moves forward only 25 steps.
 left(90)
 forward(25)
@@ -149,19 +175,20 @@ done()
 
 When you run the program, it draws a smaller square because the lines are only 25 steps long instead of 100 steps.
 
-[<img src="screenshot_square_smaller.png" style="width: 400px"/>](screenshot_square_smaller.png)
+[<img src="screenshot_square_smaller.jpg" style="width: 400px"/>](screenshot_square_smaller.jpg)
 
-Remember that you must change all four places with `forward(100)` to `forward(25)`, or else the square will come out wrong. For example, I made program named *square_smaller_bug.py* that only made the change in three places:
+Remember that you must change all four places with `forward(200)` to `forward(25)`, or else the square will come out wrong. For example, I made program named *square_smaller_bug.py* that only made the change in three places:
 
 ```python
-# square_smaller_bug.py
+# square_smaller_buy.py
 from turtle import *
 
+pensize(4)
 forward(25)
 left(90)
 forward(25)
 left(90)
-forward(100)  # Uh oh, we forgot to change this line!
+forward(200)  # Uh oh, we forgot to change this line!
 left(90)
 forward(25)
 left(90)
@@ -170,9 +197,13 @@ done()
 
 This program has a *bug* in it, and draws the square wrong:
 
-[<img src="screenshot_square_smaller_bug.png" style="width: 400px"/>](screenshot_square_smaller_bug.png)
+[<img src="screenshot_square_smaller_bug.jpg" style="width: 400px"/>](screenshot_square_smaller_bug.jpg)
 
 Your computer does exactly what you tell it to do. But it is up to you to make sure what you *want* the computer to do is what you *told* the computer to do. If your program has a bug, carefully read your code and try to figure out what it is doing.
+
+
+
+
 
 ### Drawing a Square with a Variable Size
 
@@ -182,6 +213,7 @@ Instead of typing `25` in `forward(25)`, let's create a *variable* instead. Writ
 # square_variable.py
 from turtle import *
 
+pensize(4)
 line_length = 25  # This variable stores the number 25.
 forward(line_length)  # The turtle moves 25 steps because line_length is 25.
 left(90)
@@ -196,7 +228,7 @@ done()
 
 When we run this program, it draws the same square as before:
 
-[<img src="screenshot_square_smaller.png" style="width: 400px"/>](screenshot_square_smaller.png)
+[<img src="screenshot_square_smaller.jpg" style="width: 400px"/>](screenshot_square_smaller.jpg)
 
 However, now we only have one thing to change if we want to change the size of the square. Try changing the `line_length` variable to a few other sizes, like `line_length = 300` or `line_length = 5`.
 
@@ -208,9 +240,11 @@ Let's rewrite this program using a `for` loop instead. Save the file with the ne
 # square_for_loop.py
 from turtle import *
 
+pensize(4)
+
 # The indented lines of code run 4 times:
 for i in range(4):  
-    forward(100)
+    forward(200)
     left(90)
 done()
 ```
@@ -221,7 +255,9 @@ Be sure to have exactly four spaces of indentation before the `forward(line_leng
 
 This program makes the same square drawing as before:
 
-[<img src="screenshot_first_square.png" style="width: 400px"/>](screenshot_first_square.png)
+[<img src="screenshot_first_square.jpg" style="width: 400px"/>](screenshot_first_square.jpg)
+
+Our program only needs to call `pensize(4)` once, so we put it before the loop.
 
 Let's change the code so that the turtle turns left by 86 degrees instead of 90 degrees. Save this program as *square_for_loop_86.py*:
 
@@ -229,15 +265,17 @@ Let's change the code so that the turtle turns left by 86 degrees instead of 90 
 # square_for_loop_86.py
 from turtle import *
 
+pensize(4)
+
 for i in range(4):  
-    forward(100)
+    forward(200)
     left(86)  # Turn left 86 degrees instead of 90.
 done()
 ```
 
 This draws a slightly different image that is not quite a square:
 
-[<img src="screenshot_square_for_loop_86.png" style="width: 400px"/>](screenshot_square_for_loop_86.png)
+[<img src="screenshot_square_for_loop_86.jpg" style="width: 400px"/>](screenshot_square_for_loop_86.jpg)
 
 Instead of turning left 86 degrees in the loop 4 times, let's do the loop 50 times. Make the following program and save it as *square_circle_86.py*:
 
@@ -245,9 +283,11 @@ Instead of turning left 86 degrees in the loop 4 times, let's do the loop 50 tim
 # square_circle_86.py
 from turtle import *
 
+pensize(4)
 speed('fastest')
+
 for i in range(50):  # Loop 50 times instead of 4.
-    forward(100)
+    forward(200)
     left(86)
 hideturtle()
 done()
@@ -261,7 +301,7 @@ This program also calls the `hideturtle()` function to make the turtle arrow dis
 
 This produces something that looks quite different from a simple square:
 
-[<img src="screenshot_square_circle_86.png" style="width: 400px"/>](screenshot_square_circle_86.png)
+[<img src="screenshot_square_circle_86.jpg" style="width: 400px"/>](screenshot_square_circle_86.jpg)
 
 By experimenting with different code and numbers, we can make all sorts of images. We can also have Python make random numbers for the left turns. Write the following code and save it as *square_random.py*. This program makes turns between 80 and 100 degrees:
 
@@ -270,9 +310,11 @@ By experimenting with different code and numbers, we can make all sorts of image
 from turtle import *
 import random
 
+pensize(4)
 speed('fastest')
+
 for i in range(50):
-    forward(100)
+    forward(200)
     # Turn left a random number of degrees between 80 and 100:
     left(random.randint(80, 100))
 hideturtle()
@@ -281,11 +323,16 @@ done()
 
 Because this program uses random numbers, the picture will look different each time you run the program:
 
-[<img src="screenshot_square_random1.png" style="width: 400px"/>](screenshot_square_random1.png)
-[<img src="screenshot_square_random2.png" style="width: 400px"/>](screenshot_square_random2.png)
-[<img src="screenshot_square_random3.png" style="width: 400px"/>](screenshot_square_random3.png)
+[<img src="screenshot_square_random1.jpg" style="width: 400px"/>](screenshot_square_random1.jpg)
+[<img src="screenshot_square_random2.jpg" style="width: 400px"/>](screenshot_square_random2.jpg)
+[<img src="screenshot_square_random3.jpg" style="width: 400px"/>](screenshot_square_random3.jpg)
+[<img src="screenshot_square_random4.jpg" style="width: 400px"/>](screenshot_square_random4.jpg)
 
 There are a lot of different images we can learn to make with Turtle!
+
+
+
+
 
 ## Quick Review 1
 
@@ -318,6 +365,12 @@ right(45)  # Turn right 45 degrees.
 
 You can turn the turtle left (counterclockwise) or right (clockwise) by passing the number of degrees to turn to the `left()` and `right()` functions. The turtle only turns and does not change position.
 
+```python
+pensize(4)
+```
+
+Changes the thickness of the lines that the turtle draws. The default is `1`, but you can pass a larger number as the argument to make thicker lines.
+
 
 ```python
 done()
@@ -336,11 +389,11 @@ You can store values (such as `25`) in variables (such as `line_length`) and use
 
 ```python
 for i in range(4):  
-    forward(100)
+    forward(200)
     left(90)
 ```
 
-A `for` loop will repeat the indented instructions after it. In this example, the `forward(100)` and `left(90)` code is run four times because of the `range(4)`. This draws the four sides of a square.
+A `for` loop will repeat the indented instructions after it. In this example, the `forward(200)` and `left(90)` code is run four times because of the `range(4)`. This draws the four sides of a square.
 
 
 ```python
@@ -364,72 +417,77 @@ forward(random.randint(1, 100))
 Instead of a number, you can call the `random.randint()` function to get a random number. The function call `random.randint(1, 100)` returns a random number between 1 and 100. You must run `import random` before using this function.
 
 
+
+
+
 ## Practice Exercises 1
 
 The solutions are the end of this tutorial.
 
 Create a program named *solution_equilateral_triangle.py* that draws the following picture:
 
-[<img src="screenshot_equilateral_triangle.png" style="width: 400px"/>](screenshot_equilateral_triangle.png)
+[<img src="screenshot_equilateral_triangle.jpg" style="width: 400px"/>](screenshot_equilateral_triangle.jpg)
 
-*Hint: All lines in the equilateral triangle are 100 steps long. The first turn is 60 degrees. The later turns are 120 degrees.*
+*Hint: All lines in the equilateral triangle are 200 steps long. The first turn is 60 degrees. The later turns are 120 degrees.*
 
 Create a program named *solution_pentagon.py* that draws the following picture:
 
-[<img src="screenshot_pentagon.png" style="width: 400px"/>](screenshot_pentagon.png)
+[<img src="screenshot_pentagon.jpg" style="width: 400px"/>](screenshot_pentagon.jpg)
 
-*Hint: All lines in the pentagon are 100 steps long. All turns are 72 degrees.*
+*Hint: All lines in the pentagon are 200 steps long. All turns are 72 degrees.*
 
 Create a program named *solution_hexagon.py* that draws the following picture:
 
-[<img src="screenshot_hexagon.png" style="width: 400px"/>](screenshot_hexagon.png)
+[<img src="screenshot_hexagon.jpg" style="width: 400px"/>](screenshot_hexagon.jpg)
 
-*Hint: All lines in the hexagon are 100 steps long. All turns are 60 degrees.*
+*Hint: All lines in the hexagon are 200 steps long. All turns are 60 degrees.*
 
 Create a program named *solution_octogon.py* that draws the following picture:
 
-[<img src="screenshot_octogon.png" style="width: 400px"/>](screenshot_octogon.png)
+[<img src="screenshot_octogon.jpg" style="width: 400px"/>](screenshot_octogon.jpg)
 
 *Hint: All lines in the octogon are 100 steps long. All turns are 45 degrees.*
 
 Create a program named *solution_right_triangle.py* that draws the following picture:
 
-[<img src="screenshot_right_triangle.png" style="width: 400px"/>](screenshot_right_triangle.png)
+[<img src="screenshot_right_triangle.jpg" style="width: 400px"/>](screenshot_right_triangle.jpg)
 
-*Hint: For the right triangle, one turn is 90 degrees and the other turn is 135 degrees. Two sides are 100 steps long. According to the Pythagorean Theorem, the third side is 141.4 steps long.*
+*Hint: For the right triangle, one turn is 90 degrees and the other turn is 135 degrees. Two sides are 200 steps long. According to the Pythagorean Theorem, the third side is 282.8 steps long.*
 
 Create a program named *solution_star.py* that draws the following picture:
 
-[<img src="screenshot_star.png" style="width: 400px"/>](screenshot_star.png)
+[<img src="screenshot_star.jpg" style="width: 400px"/>](screenshot_star.jpg)
 
-*Hint: All lines in the star are 100 steps long. All turns are 144 degree turns.*
+*Hint: All lines in the star are 200 steps long. All turns are 144 degree turns.*
 
 Create a program named *solution_nested_squares.py* that draws the following picture:
 
-[<img src="screenshot_nested_squares.png" style="width: 400px"/>](screenshot_nested_squares.png)
+[<img src="screenshot_nested_squares.jpg" style="width: 400px"/>](screenshot_nested_squares.jpg)
 
 *Hint: Draw a square with sides of length `100`. Then draw another square with sides of length `150`, then `200`, then `250`, then `300`.*
 
 
 Create a program named *solution_cross.py* that draws the following picture:
 
-[<img src="screenshot_cross.png" style="width: 400px"/>](screenshot_cross.png)
+[<img src="screenshot_cross.jpg" style="width: 400px"/>](screenshot_cross.jpg)
 
 *Hint: All lines in the cross are 100 steps long. All turns are 90 degrees, but you must make both left and right turns.*
 
 
 Create a program named *solution_cube.py* that draws the following picture:
 
-[<img src="screenshot_cube.png" style="width: 400px"/>](screenshot_cube.png)
+[<img src="screenshot_cube.jpg" style="width: 400px"/>](screenshot_cube.jpg)
 
 *Hint: All lines are 100 steps long.All turns are either 45, 90, or 135 degrees. You might need to overlap some lines to draw the entire cube. You can always run `forward(100)` followed by `backward(100)` if you want to draw a line but return to the original position.*
 
 
 Create a program named *solution_triforce.py* that draws the following picture:
 
-[<img src="screenshot_triforce.png" style="width: 400px"/>](screenshot_triforce.png)
+[<img src="screenshot_triforce.jpg" style="width: 400px"/>](screenshot_triforce.jpg)
 
 *Hint: There are many ways to draw this. You can overlap lines. All turns are either 60 degrees or 120 degrees. If the outside triangle's line lengths are 100 steps, you may want to sometimes only move the turtle by 50 steps.*
+
+
 
 
 
@@ -446,7 +504,7 @@ write('Hello, world!')
 forward(80)
 right(45)
 forward(50)
-write('123456789', font=('Arial', 24, 'normal'))
+write('123456789', font=('Arial', 48, 'normal'))
 right(45)
 forward(30)
 write('oOoOoOoOoOo')
@@ -455,13 +513,17 @@ done()
 
 When you run this program, it looks like this:
 
-[<img src="screenshot_write_hello.png" style="width: 400px"/>](screenshot_write_hello.png)
+[<img src="screenshot_write_hello.jpg" style="width: 400px"/>](screenshot_write_hello.jpg)
 
 The bottom left corner of the text is at the turtle's location. For example, the code `write('Hello, world!')` appears at the center of the Turtle window where the turtle starts. Then the turtle moves with `forward(80)`, `right(45)`, and `forward(50)`. When `write('123456789', font=('Arial', 24, 'normal'))` runs, the text "123456789" appears at the turtle's new position.
 
 The function call `write('123456789', font=('Arial', 24, 'normal'))` also has a *keyword parameter* named  `font=`. We can pass an argument like `('Arial', 24, 'normal')` to change the font used to write the text in the Turtle window.
 
 There are three parts to the `font=` parameter's argument: the name of the font, the size of the font, and the style of the font. If you don't pass an argument, the default font is `('Arial', 8, 'normal')`. You can change the name of the font but it must be installed on your computer. The font size argument must be a number and not a text string: you must pass `8` but not `'8'`. The style argument can either be `'normal'`, `'bold'`, `'italic'`, `'underline'`, or any combination of those words like `'bold italic'`.
+
+
+
+
 
 ## Angles and Position
 
@@ -483,7 +545,7 @@ from turtle import *
 
 for i in range(24):
     forward(100)  # Move forward in the current direction.
-    write(str(heading()))  # Write the degrees of the direction.
+    write(str(heading()), font=('Arial', 20, 'normal'))  # Write the degrees of the direction.
     backward(100)  # Move back to the center.
     left(15)  # Turn left by 15 degrees and repeat.
 done()
@@ -491,7 +553,14 @@ done()
 
 When you run this program, the Turtle window looks like this:
 
-[<img src="screenshot_turtle_directions.png" style="width: 400px"/>](screenshot_turtle_directions.png)
+[<img src="screenshot_turtle_directions.jpg" style="width: 400px"/>](screenshot_turtle_directions.jpg)
+
+The `left()` and `right()` functions make the turtle turn based on its current direction. If the turtle is facing 45 degrees and your program calls `left(90)`, then the turtle's new direction will be 135 because 45 + 90 = 135. However, the `setheading()` function can make the turtle face a new direction no matter what it's current direction is.
+
+[<img src="screenshot_setheading_turtle1.jpg" style="width: 400px"/>](screenshot_setheading_turtle1.jpg)
+[<img src="screenshot_setheading_turtle2.jpg" style="width: 400px"/>](screenshot_setheading_turtle2.jpg)
+[<img src="screenshot_setheading_turtle3.jpg" style="width: 400px"/>](screenshot_setheading_turtle3.jpg)
+[<img src="screenshot_setheading_turtle4.jpg" style="width: 400px"/>](screenshot_setheading_turtle4.jpg)
 
 TODO explain 45, 90, 180 degrees with examples. Two 45 degree turns is one 90 degree turn.
 TODO explain x and y coordinates
@@ -521,7 +590,7 @@ done()
 
 When you run this program, it looks like this:
 
-[<img src="screenshot_spiral.png" style="width: 400px"/>](screenshot_spiral.png)
+[<img src="screenshot_spiral.jpg" style="width: 400px"/>](screenshot_spiral.jpg)
 
 In our previous programs with `for` loops, we have ignored the `i` variable. But in this program, we use `i` variable in the line `forward(i)`.
 
@@ -578,7 +647,7 @@ hideturtle()
 done()
 ```
 
-[<img src="screenshot_spiral_red.png" style="width: 400px"/>](screenshot_spiral_red.png)
+[<img src="screenshot_spiral_red.jpg" style="width: 400px"/>](screenshot_spiral_red.jpg)
 
 Try changing 91 to 30, 45, 60, 90, 120, 150, and 46, 61, 91, 120, 151. Finally, try 179 and 180.
 
@@ -600,7 +669,7 @@ hideturtle()
 done()
 ```
 
-[<img src="screenshot_spiral_color.png" style="width: 400px"/>](screenshot_spiral_color.png)
+[<img src="screenshot_spiral_color.jpg" style="width: 400px"/>](screenshot_spiral_color.jpg)
 
 
 *spiral_black_bg.py*
@@ -623,7 +692,7 @@ hideturtle()
 done()
 ```
 
-[<img src="screenshot_spiral_black_bg.png" style="width: 400px"/>](screenshot_spiral_black_bg.png)
+[<img src="screenshot_spiral_black_bg.jpg" style="width: 400px"/>](screenshot_spiral_black_bg.jpg)
 
 
 
@@ -672,7 +741,7 @@ for i in range(60):
 done()
 ```
 
-[<img src="screenshot_spiral_pretty.png" style="width: 400px"/>](screenshot_spiral_pretty.png)
+[<img src="screenshot_spiral_pretty.jpg" style="width: 400px"/>](screenshot_spiral_pretty.jpg)
 
 
 
@@ -900,7 +969,7 @@ update()
 done()
 ```
 
-[<img src="blue_flowers.png" style="width: 400px"/>](blue_flowers.png)
+[<img src="blue_flowers.jpg" style="width: 400px"/>](blue_flowers.jpg)
 
 
 
@@ -942,7 +1011,7 @@ right(90)
 forward(100)
 ```
 
-[<img src="turn_right.png" style="width: 400px"/>](turn_right.png)
+[<img src="turn_right.jpg" style="width: 400px"/>](turn_right.jpg)
 
 ### left(*angle*)
 
@@ -957,7 +1026,7 @@ left(90)
 forward(100)
 ```
 
-[<img src="turn_left.png" style="width: 400px"/>](turn_left.png)
+[<img src="turn_left.jpg" style="width: 400px"/>](turn_left.jpg)
 
 ### goto(*x*, *y*)
 
@@ -974,7 +1043,7 @@ goto(100, -50)
 goto(-50, -50)
 ```
 
-[<img src="goto.png" style="width: 400px"/>](goto.png)
+[<img src="goto.jpg" style="width: 400px"/>](goto.jpg)
 
 ### setx(*x*)
 
@@ -998,7 +1067,7 @@ for angle in range(0, 360, 15):
     backward(100)
 ```
 
-[<img src="setheading.png" style="width: 400px"/>](setheading.png)
+[<img src="setheading.jpg" style="width: 400px"/>](setheading.jpg)
 
 ### undo()
 
@@ -1021,7 +1090,7 @@ for i in range(30):
     undo()
 ```
 
-[<img src="undo_before.png" style="width: 400px"/>](undo_before.png) [<img src="undo_after.png" style="width: 400px"/>](undo_after.png)
+[<img src="undo_before.jpg" style="width: 400px"/>](undo_before.jpg) [<img src="undo_after.jpg" style="width: 400px"/>](undo_after.jpg)
 
 
 ### home()
@@ -1037,7 +1106,7 @@ forward(100)
 home()
 ```
 
-[<img src="home.png" style="width: 400px"/>](home.png)
+[<img src="home.jpg" style="width: 400px"/>](home.jpg)
 
 ## Drawing
 
@@ -1053,7 +1122,7 @@ The penup() function will cause the turtle to draw as it moves around. The line 
 
 The pensize() function sets the width of the line that the turtle draws as it moves.
 
-[<img src="pensize.png" style="width: 400px"/>](pensize.png)
+[<img src="pensize.jpg" style="width: 400px"/>](pensize.jpg)
 
 ### pencolor(), pencolor(*color*), pencolor((*red*, *green*, *blue*)), pencolor(*red*, *green*, *blue*)
 
@@ -1080,7 +1149,7 @@ for red in range(4):
             forward(10)
 ```
 
-[<img src="pencolor.png" style="width: 400px"/>](pencolor.png)
+[<img src="pencolor.jpg" style="width: 400px"/>](pencolor.jpg)
 
 ### clear()
 
@@ -1264,7 +1333,7 @@ left(90)
 end_fill()
 ```
 
-[<img src="fill.png" style="width: 400px"/>](fill.png)
+[<img src="fill.jpg" style="width: 400px"/>](fill.jpg)
 
 ### fillcolor(), fillcolor(*color*), fillcolor((*red*, *green*, *blue*)), fillcolor(*red*, *green*, *blue*)
 
@@ -1294,7 +1363,7 @@ for i in range(30, -1, -1):
     forward(20)
 ```
 
-[<img src="stamp.png" style="width: 400px"/>](stamp.png)
+[<img src="stamp.jpg" style="width: 400px"/>](stamp.jpg)
 
 ### clearstamp()
 
@@ -1368,7 +1437,7 @@ onkey(left, 'a')
 onkey(right, 'd')
 ```
 
-[<img src="onkey.png" style="width: 400px"/>](onkey.png)
+[<img src="onkey.jpg" style="width: 400px"/>](onkey.jpg)
 
 up, right, down, down, left, left, up
 

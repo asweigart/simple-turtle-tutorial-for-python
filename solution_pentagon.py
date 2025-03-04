@@ -2,24 +2,26 @@
 
 from turtle import *
 
-right(72)
-forward(100)
+pensize(4)
 
-right(72)
-forward(100)
+left(72)
+forward(200)
 
-right(72)
-forward(100)
+left(72)
+forward(200)
 
-right(72)
-forward(100)
+left(72)
+forward(200)
 
-right(72)
-forward(100)
+left(72)
+forward(200)
+
+left(72)
+forward(200)
 
 # Or you can run:
 # for i in range(5):
-#     right(72)
-#     forward(100)
+#     left(72)
+#     forward(200)
 
 done()
