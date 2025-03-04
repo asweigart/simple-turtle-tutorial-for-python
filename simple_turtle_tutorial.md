@@ -525,7 +525,7 @@ There are three parts to the `font=` parameter's argument: the name of the font,
 
 
 
-## Angles and Position
+## Angles
 
 In Turtle programs, we can measure distance in steps. For example, `forward(100)` moves the turtle a distance of 100 steps. There are also ways that we can measure turns and position using numbers as well.
 
@@ -557,18 +557,78 @@ When you run this program, the Turtle window looks like this:
 
 The `left()` and `right()` functions make the turtle turn based on its current direction. If the turtle is facing 45 degrees and your program calls `left(90)`, then the turtle's new direction will be 135 because 45 + 90 = 135. However, the `setheading()` function can make the turtle face a new direction no matter what it's current direction is.
 
+The `heading()` function returns a number value of the turtle's current heading.
+
+For example, create a new program named `setheading_turtle.py` with the following code:
+
+```python
+# setheading_turtle.py
+
+from turtle import *
+import random
+
+pensize(4)
+left(random.randint(0, 360))
+write(str(heading()))
+forward(200)
+
+setheading(45)
+write(str(heading()))
+forward(200)
+
+done()
+```
+
+When you run this program, it turns the turtle to face a random direction, writes the heading (as returned by `heading()`) to the window, and then moves forward in that direction by 200 steps. Then, the `setheading(45)` function call sets the direction of the turtle to 45 degrees. Because of this, the second `write(str(heading()))` line always writes "45.0" to the window. The turtle now points to the top right of the window. Then the turtle moves 200 steps in this new direction.
+
+This means that no matter what heading the turtle had before, `setheading(45)` makes the turtle always face to the top-right. If you run this program several times, it would look something like this:
+
 [<img src="screenshot_setheading_turtle1.jpg" style="width: 400px"/>](screenshot_setheading_turtle1.jpg)
 [<img src="screenshot_setheading_turtle2.jpg" style="width: 400px"/>](screenshot_setheading_turtle2.jpg)
 [<img src="screenshot_setheading_turtle3.jpg" style="width: 400px"/>](screenshot_setheading_turtle3.jpg)
 [<img src="screenshot_setheading_turtle4.jpg" style="width: 400px"/>](screenshot_setheading_turtle4.jpg)
 
-TODO explain 45, 90, 180 degrees with examples. Two 45 degree turns is one 90 degree turn.
-TODO explain x and y coordinates
 
-TODO - random walk algorithm 90 degrees
+## Position, and Moving the Pen Up and Down
 
-## Moving the Pen Up and Down to Draw Dashes
+Just as degrees are numbers that can describe where the turtle is facing and how much of a turn it should make, the *position* of the turtle can be represented by two numbers. In the *Cartesian coordinate system*, the *X coordinate* represents how far left or right the turtle is. The *Y coordinate* represents how far up or down the turtle is. Together, the XY coordinates tell you exactly where the turtle is.
 
+* The center of the window is called the *origin* and has XY coordinates of `0` and `0`.
+* When written together, the X coordinate is always written first and the Y coordinate second. The coordinates (4, -7) mean the X coordinate is 4 and the Y coordinate is -7.
+* The X coordinates increase going right and decrease going left.
+* The Y coordinates increase going up and decrease going down.
+* A turtle in the left half of the window always has a negative X coordinate.
+* A turtle in the right half always has a positive X coordinate.
+* A turtle in the bottom half of the window always has a negative Y coordinate.
+* A turtle in the top half of the window always has a positive Y coordinate.
+
+This image from Wikipedia shows a Cartesian coordiante system with some example points:
+
+[<img src="cartesian.png" style="width: 400px"/>](cartesian.png)
+
+Let's write a program called *random_position.py* that writes the XY coordinates in the window as the turtle moves around:
+
+```python
+# random_position.py
+from turtle import *
+from random import *
+
+for i in range(8):
+    write(str(position()))
+    left(randint(0, 90))
+    forward(100)
+
+done()
+```
+
+When you run this program, the output will look something like this:
+
+[<img src="screenshot_random_position.jpg" style="width: 400px"/>](screenshot_random_position.jpg)
+
+TODO
+
+
+The `forward()` and `backward()` functions always move from the turtle's current position. However, you can 
 
 TODO 
 
