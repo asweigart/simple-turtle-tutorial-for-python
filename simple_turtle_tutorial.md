@@ -14,6 +14,11 @@ This is a Turtle programming tutorial written by Al Sweigart, author of *Automat
 1. [Drawing a Smaller Square](#Drawing-a-Smaller-Square)
 1. [Drawing a Square with a Variable Size](#Drawing-a-Square-with-a-Variable-Size)
 1. [Draw a Square with a Loop](#Draw-a-Square-with-a-Loop)
+1. [Quick Review 1](#Quick-Review-1)
+1. [Practice Exercises 1](#Practice-Exercises-1)
+1. [Writing Text in the Turtle Window](#Writing-Text-in-the-Turtle-Window)
+1. [Angles and Position](#Angles-and-Position)
+1. [Moving the Pen Up and Down to Draw Dashes](#Moving-the-Pen-Up-and-Down-to-Draw-Dashes)
 1. [Square Spirals Examples](#Square-Spirals-Examples)
 1. [Interactive Square Drawing](#Interactive-Square-Drawing)
 
@@ -23,9 +28,9 @@ This is a Turtle programming tutorial written by Al Sweigart, author of *Automat
 
 Turtle graphics is a simple way to learn programming by making drawings with code. A small moving object, called the "turtle," moves around the screen and draws lines as it goes. This helps people create computer drawings and learn programming at the same time.
 
-This tutorial only explains how to use Python's turtle.py module. It does not teach the Python language itself. You should already know some basic Python ideas, like variables, operators, loops, function calls, importing modules, and random numbers. You also need Python installed and a code editor like IDLE, Mu, or Visual Studio Code.
+This tutorial only explains how to use Python's *turtle.py* module. It does not teach the Python language itself. It helps to already know some basic Python ideas, like variables, operators, loops, function calls, importing modules, and random numbers. You also need to first install the *Python interpreter*, the software that runs Python code, from [https://python.org](https://python.org) and a code editor like IDLE, Mu, or Visual Studio Code.
 
-If you do not know how to program or how to program in the Python language, you can still copy and run the example programs on your computer. You can install the *Python interpreter* software from [https://python.org](https://python.org). *Code editors* are the apps that you type Python code in. IDLE and Visual Studio Code are examples of code editors. These code editors also make it easy to have the Python interpreter run your Python programs. You can write your Python code in files that end with the *.py* file extension so you know the file is intended to be run by the Python interpeter.
+<!--If you do not know how to program or how to program in the Python language, you can still copy and run the example programs on your computer. You can install the *Python interpreter* software from [https://python.org](https://python.org). *Code editors* are the apps that you type Python code in. IDLE and Visual Studio Code are examples of code editors. These code editors also make it easy to have the Python interpreter run your Python programs. You can write your Python code in files that end with the *.py* file extension so you know the file is intended to be run by the Python interpeter.-->
 
 Programs written in the Python language can be called Python programs. Not all Python programs use the `turtle` module to make drawings. But we will call our Python programs that use the `turtle` module, "Turtle programs".
 
@@ -58,11 +63,11 @@ done()  # Without this, the Turtle window may immediately close before you can s
 
 Save the file after entering the code. Then run the program. (In IDLE, you can press F5 or click the Run > Run Module menu item. In Visual Studio Code, click the Run > Run Without Debugging menu item. In other editors, the steps to run a program may be different.)
 
-When you run this program, a new window will appear with the following drawing:
+When you run this program, a new window (which we will call the *Turtle window*) will appear with the following drawing:
 
 [<img src="screenshot_first_square.png" style="width: 400px"/>](screenshot_first_square.png)
 
-The steps given to the program are:
+In the Turtle window, the turtle appears as a triangle. Imagine the turtle is holding a pen on the ground and drawing as it moves. The Python code tells it how to move:
 
 1. Move forward 100 steps. (The turtle starts facing to the right.)
 1. Turn 90 degrees to the left.
@@ -80,27 +85,15 @@ With these nine steps, the turtle draws a square. Here is what you need to under
 # first_square.py
 ```
 
-The `# first_square.py` is a *comment* (see below) that is ignored by Python. You don't need to copy this part. It is here only to help identify the program names in this tutorial.
+The `# first_square.py` line is a *comment* (see below) that is ignored by the Python interpreter. You don't need to copy the comments into your program. This is here only to help identify the program names in this tutorial.
 
 ```python
 from turtle import *
-
 ```
 
 The `from turtle import *` is an instruction needed at the beginning of all of your turtle programs. It imports the `turtle` module so you can do the turtle instructions.
 
 Blank lines are skipped by the Python interpreter.
-
-```python
-# This is a comment.
-# Everything after # is a "comment" and is not run as code.
-# Use comments to make notes to yourself about your code.
-```
-
-The instructions that begin with a `#` hashtag are *comments*. Everything on the line after the `#` hashtag is ignored by Python. Comments let you write notes to yourself about what the program does.
-
-You can skip typing the comments when copying the code in this tutorial. But including the comments may help you remember what the code does when you look at the program later.
-
 
 ```python
 forward(100)  # Move the turtle forward 100 steps.
@@ -127,7 +120,7 @@ The `left()` function makes the turtle turn its direction its left. "Left" means
 done()  # Without this, the Turtle window may immediately close before you can see the picture.
 ```
 
-The `done()` function pauses the program until you close the Turtle window. In some code editors like IDLE, you don't need this in your program. In other code editors like Visual Studio Code, the window will immediately close at the end of the program without it. You should always add `done()` at the end of your Turtle programs so the user can see the drawing.
+The `done()` function pauses the program until you close the Turtle window. Python programs end immediately after the last instruction runs. This can cause the Turtle window to close as soon as your drawing has finished. You should always add `done()` at the end of your Turtle programs so the window stays open and the user can see the drawing.
 
 The `done()` function call has no arguments, but you still need to type the `()` parentheses after `done`.
 
@@ -262,6 +255,8 @@ done()
 
 This program does a lot more drawing than our previous programs, so we call the new `speed()` function and pass it the argument `'fastest'` to make the turtle move faster. Unlike `100` or `86`, this value is a *text string* and it must start and end with a quote character: `'fastest'` or `"fastest"`.
 
+The arguments you can pass to `speed()` are `'fastest'`, `'fast'`, `'normal'`, `'slow'`, and `'slowest'`.
+
 This program also calls the `hideturtle()` function to make the turtle arrow disappear at the end of the program.
 
 This produces something that looks quite different from a simple square:
@@ -292,6 +287,222 @@ Because this program uses random numbers, the picture will look different each t
 
 There are a lot of different images we can learn to make with Turtle!
 
+## Quick Review 1
+
+Let's review the Python instructions we've seen so far:
+
+```python
+# This is a comment.
+```
+
+Everything after the `#` hashtag until the end of a the line is a comment. Comments are notes you can write to remind yourself what the program does. You can write anything in a commnet. They do not change how your program works.
+
+```python
+from turtle import *
+```
+
+The turtle module must imported before you can call the turtle function. Put `from turtle import *` at the top of your program.
+
+```python
+forward(100)  # Move the turtle forward 100 steps.
+backward(100)  # Move the turtle backward 100 steps.
+forward(-100)  # Move the turtle backward 100 steps.
+```
+
+You can move the turtle forward and backward by calling the `forward()` and `backward()` functions. 
+
+```python
+left(90)  # Turn left 90 degrees.
+right(45)  # Turn right 45 degrees.
+```
+
+You can turn the turtle left (counterclockwise) or right (clockwise) by passing the number of degrees to turn to the `left()` and `right()` functions. The turtle only turns and does not change position.
+
+
+```python
+done()
+```
+
+Call the `done()` function at the very end of your program so that the Turtle window doesn't automatically close before you can see the finished drawing.
+
+
+```python
+line_length = 25  # This variable stores the number 25.
+forward(line_length)
+```
+
+You can store values (such as `25`) in variables (such as `line_length`) and use them in other places in your program.
+
+
+```python
+for i in range(4):  
+    forward(100)
+    left(90)
+```
+
+A `for` loop will repeat the indented instructions after it. In this example, the `forward(100)` and `left(90)` code is run four times because of the `range(4)`. This draws the four sides of a square.
+
+
+```python
+speed('fastest')
+```
+
+If your program draws a lot of lines, you can speed up the turtle by calling `speed('fastest')`.
+
+
+```python
+hideturtle()
+```
+
+If you don't want the triangle arrow of the turtle cursor to appear in the window, call the `hideturtle()` function.
+
+```python
+import random
+forward(random.randint(1, 100))
+```
+
+Instead of a number, you can call the `random.randint()` function to get a random number. The function call `random.randint(1, 100)` returns a random number between 1 and 100. You must run `import random` before using this function.
+
+
+## Practice Exercises 1
+
+The solutions are the end of this tutorial.
+
+Create a program named *solution_equilateral_triangle.py* that draws the following picture:
+
+[<img src="screenshot_equilateral_triangle.png" style="width: 400px"/>](screenshot_equilateral_triangle.png)
+
+*Hint: All lines in the equilateral triangle are 100 steps long. The first turn is 60 degrees. The later turns are 120 degrees.*
+
+Create a program named *solution_pentagon.py* that draws the following picture:
+
+[<img src="screenshot_pentagon.png" style="width: 400px"/>](screenshot_pentagon.png)
+
+*Hint: All lines in the pentagon are 100 steps long. All turns are 72 degrees.*
+
+Create a program named *solution_hexagon.py* that draws the following picture:
+
+[<img src="screenshot_hexagon.png" style="width: 400px"/>](screenshot_hexagon.png)
+
+*Hint: All lines in the hexagon are 100 steps long. All turns are 60 degrees.*
+
+Create a program named *solution_octogon.py* that draws the following picture:
+
+[<img src="screenshot_octogon.png" style="width: 400px"/>](screenshot_octogon.png)
+
+*Hint: All lines in the octogon are 100 steps long. All turns are 45 degrees.*
+
+Create a program named *solution_right_triangle.py* that draws the following picture:
+
+[<img src="screenshot_right_triangle.png" style="width: 400px"/>](screenshot_right_triangle.png)
+
+*Hint: For the right triangle, one turn is 90 degrees and the other turn is 135 degrees. Two sides are 100 steps long. According to the Pythagorean Theorem, the third side is 141.4 steps long.*
+
+Create a program named *solution_star.py* that draws the following picture:
+
+[<img src="screenshot_star.png" style="width: 400px"/>](screenshot_star.png)
+
+*Hint: All lines in the star are 100 steps long. All turns are 144 degree turns.*
+
+Create a program named *solution_nested_squares.py* that draws the following picture:
+
+[<img src="screenshot_nested_squares.png" style="width: 400px"/>](screenshot_nested_squares.png)
+
+*Hint: Draw a square with sides of length `100`. Then draw another square with sides of length `150`, then `200`, then `250`, then `300`.*
+
+
+Create a program named *solution_cross.py* that draws the following picture:
+
+[<img src="screenshot_cross.png" style="width: 400px"/>](screenshot_cross.png)
+
+*Hint: All lines in the cross are 100 steps long. All turns are 90 degrees, but you must make both left and right turns.*
+
+
+Create a program named *solution_cube.py* that draws the following picture:
+
+[<img src="screenshot_cube.png" style="width: 400px"/>](screenshot_cube.png)
+
+*Hint: All lines are 100 steps long.All turns are either 45, 90, or 135 degrees. You might need to overlap some lines to draw the entire cube. You can always run `forward(100)` followed by `backward(100)` if you want to draw a line but return to the original position.*
+
+
+Create a program named *solution_triforce.py* that draws the following picture:
+
+[<img src="screenshot_triforce.png" style="width: 400px"/>](screenshot_triforce.png)
+
+*Hint: There are many ways to draw this. You can overlap lines. All turns are either 60 degrees or 120 degrees. If the outside triangle's line lengths are 100 steps, you may want to sometimes only move the turtle by 50 steps.*
+
+
+
+## Writing Text in the Turtle Window
+
+The turtle can write text in the Turtle window just like it can draw lines. The `write()` function takes a text string argument and will write it where the turtle is. Create a new program with the name *write_hello.py* with the following code:
+
+```python
+# write_hello.py
+
+from turtle import *
+
+write('Hello, world!')
+forward(80)
+right(45)
+forward(50)
+write('123456789', font=('Arial', 24, 'normal'))
+right(45)
+forward(30)
+write('oOoOoOoOoOo')
+done()
+```
+
+When you run this program, it looks like this:
+
+[<img src="screenshot_write_hello.png" style="width: 400px"/>](screenshot_write_hello.png)
+
+The bottom left corner of the text is at the turtle's location. For example, the code `write('Hello, world!')` appears at the center of the Turtle window where the turtle starts. Then the turtle moves with `forward(80)`, `right(45)`, and `forward(50)`. When `write('123456789', font=('Arial', 24, 'normal'))` runs, the text "123456789" appears at the turtle's new position.
+
+The function call `write('123456789', font=('Arial', 24, 'normal'))` also has a *keyword parameter* named  `font=`. We can pass an argument like `('Arial', 24, 'normal')` to change the font used to write the text in the Turtle window.
+
+There are three parts to the `font=` parameter's argument: the name of the font, the size of the font, and the style of the font. If you don't pass an argument, the default font is `('Arial', 8, 'normal')`. You can change the name of the font but it must be installed on your computer. The font size argument must be a number and not a text string: you must pass `8` but not `'8'`. The style argument can either be `'normal'`, `'bold'`, `'italic'`, `'underline'`, or any combination of those words like `'bold italic'`.
+
+## Angles and Position
+
+In Turtle programs, we can measure distance in steps. For example, `forward(100)` moves the turtle a distance of 100 steps. There are also ways that we can measure turns and position using numbers as well.
+
+Imagine yourself in the sky and looking down at the turtle on the ground. If the turtle turns "right" then the turtle is turning clockwise. If the turtle turns to its left, then to us it looks like the turtle is turning counterclockwise.
+
+We measure turning in "degrees." A full turn around is 360 degrees. If the turtle turns 180 degrees, then it ends up facing the opposite direction. A "regular" right or left turn is 90 degrees. If you make four 90 degree turns to the right, you end up facing the original direction. This is because 90 + 90 + 90 + 90 = 360.
+
+We can also use degrees to describe what *heading* or *direction* the turtle is currently facing. When your program first starts, the turtle always begins by facing to the right. This direction is `0` degrees. As the turtle turns **left** (or **counterclockwise**), the direction increases. Facing up is `90` degrees, facing left is `180` degrees, and facing down is `270` degrees. Both `360` and `0` degrees are the same direction: facing right.
+
+The `heading()` function returns the number of what direction the turtle is currently facing. If we pass this function call to the `str()` function, we can convert this number to a text string. We can pass this text string to `write()` to make the turtle's current heading appear on the turtle window.
+
+Create a new program called `turtle_directions.py` with the following code:
+
+```python
+# turtle_directions.py
+from turtle import *
+
+for i in range(24):
+    forward(100)  # Move forward in the current direction.
+    write(str(heading()))  # Write the degrees of the direction.
+    backward(100)  # Move back to the center.
+    left(15)  # Turn left by 15 degrees and repeat.
+done()
+```
+
+When you run this program, the Turtle window looks like this:
+
+[<img src="screenshot_turtle_directions.png" style="width: 400px"/>](screenshot_turtle_directions.png)
+
+TODO explain 45, 90, 180 degrees with examples. Two 45 degree turns is one 90 degree turn.
+TODO explain x and y coordinates
+
+TODO - random walk algorithm 90 degrees
+
+## Moving the Pen Up and Down to Draw Dashes
+
+
+TODO 
+
 ## Square Spirals Examples
 
 Let's create a square spiral program. Open a new file and save it as *spiral.py*. Enter the following code.
@@ -308,7 +519,48 @@ hideturtle()
 done()
 ```
 
+When you run this program, it looks like this:
+
 [<img src="screenshot_spiral.png" style="width: 400px"/>](screenshot_spiral.png)
+
+In our previous programs with `for` loops, we have ignored the `i` variable. But in this program, we use `i` variable in the line `forward(i)`.
+
+In this `for` loop, the variable `i` is set to `0` when it runs the code inside the loop. The instruction `forward(i)` is really running `forward(0)`. On the next time through the loop, `i` is set to `1` and `forward(i)` now means `forward(1)`. The `for` loop keeps increasing the `i` variable and running the code in the loop. 
+
+The `i` variable goes up to, but not including, `300` because we wrote the code `for i in range(300):`. This means that on the last time through the loop, the `i` variable is set to `299`.
+
+This means our program does this:
+
+```python
+from turtle import *
+
+speed('fastest')
+
+forward(0)
+left(91)
+forward(1)
+left(91)
+forward(2)
+left(91)
+forward(3)
+left(91)
+forward(4)
+left(91)
+
+# Several more lines of code go here...
+
+forward(297)
+left(91)
+forward(298)
+left(91)
+forward(299)
+left(91)
+
+hideturtle()
+done()
+```
+
+Using the `for` loop saves us from a lot of typing!
 
 
 *spiral_red.py*
@@ -575,15 +827,49 @@ done()  # Make turtle wait for clicks.
 
 
 
+## Filled-In Shapes
+
+
+
+TODO
+
+
+
+
+## Draw Circles
+
+
+TODO
+
+TODO - draw snowpal
 
 
 
 
 
+## Example Programs
 
+https://inventwithpython.com/recursion/chapter9.html
 
+TODO - simple polygons
 
+TODO - click to draw a splat (random color, num lines, lengths, and pen size)
 
+TODO - checkboard
+
+TODO - random grid of various sizes
+
+TODO - racing game? key press spamming
+
+TODO - rainbow
+
+TODO - randow walk (with 0, 90, 180, or 270 degree turns and random starting angle)
+
+TODO - fractal tree
+
+TODO - sierpinski triangle
+
+TODO - hilbert curve
 
 
 
@@ -615,6 +901,17 @@ done()
 ```
 
 [<img src="blue_flowers.png" style="width: 400px"/>](blue_flowers.png)
+
+
+
+
+
+
+
+
+## Reference
+
+
 
 ## Moving
 
