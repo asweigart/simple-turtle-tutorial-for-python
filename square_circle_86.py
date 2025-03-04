@@ -3,7 +3,7 @@ from turtle import *
 
 speed('fastest')
 for i in range(50):  # Loop 50 times instead of 4.
-    forward(100)
+    forward(300)
     left(86)
 hideturtle()
 done()
