@@ -422,70 +422,70 @@ Instead of a number, you can call the `random.randint()` function to get a rando
 
 ## Practice Exercises 1
 
-The solutions are the end of this tutorial.
+Create programs that draw the pictures in this section. The solutions are the end of this tutorial. Your code and your pictures don't have to match the pictures here exactly, but they should look about the same. There are many different ways to write the code for these programs.
 
-Create a program named *solution_equilateral_triangle.py* that draws the following picture:
+
+Create a program named *solution_equilateral_triangle.py* that draws the following picture. *Hint: All lines in the equilateral triangle are 200 steps long. The first turn is 60 degrees. The later turns are 120 degrees.*
 
 [<img src="screenshot_solution_equilateral_triangle.jpg" style="width: 400px"/>](screenshot_solution_equilateral_triangle.jpg)
 
-*Hint: All lines in the equilateral triangle are 200 steps long. The first turn is 60 degrees. The later turns are 120 degrees.*
 
-Create a program named *solution_pentagon.py* that draws the following picture:
+
+Create a program named *solution_pentagon.py* that draws the following picture. *Hint: All lines in the pentagon are 200 steps long. All turns are 72 degrees.*
 
 [<img src="screenshot_solution_pentagon.jpg" style="width: 400px"/>](screenshot_solution_pentagon.jpg)
 
-*Hint: All lines in the pentagon are 200 steps long. All turns are 72 degrees.*
 
-Create a program named *solution_hexagon.py* that draws the following picture:
+
+Create a program named *solution_hexagon.py* that draws the following picture. *Hint: All lines in the hexagon are 200 steps long. All turns are 60 degrees.*
 
 [<img src="screenshot_solution_hexagon.jpg" style="width: 400px"/>](screenshot_solution_hexagon.jpg)
 
-*Hint: All lines in the hexagon are 200 steps long. All turns are 60 degrees.*
 
-Create a program named *solution_octogon.py* that draws the following picture:
+
+Create a program named *solution_octogon.py* that draws the following picture. *Hint: All lines in the octogon are 100 steps long. All turns are 45 degrees.*
 
 [<img src="screenshot_solution_octogon.jpg" style="width: 400px"/>](screenshot_solution_octogon.jpg)
 
-*Hint: All lines in the octogon are 100 steps long. All turns are 45 degrees.*
 
-Create a program named *solution_right_triangle.py* that draws the following picture:
+
+Create a program named *solution_right_triangle.py* that draws the following picture. *Hint: For the right triangle, one turn is 90 degrees and the other turn is 135 degrees. Two sides are 200 steps long. According to the Pythagorean Theorem, the third side is 282.8 steps long.*
 
 [<img src="screenshot_solution_right_triangle.jpg" style="width: 400px"/>](screenshot_solution_right_triangle.jpg)
 
-*Hint: For the right triangle, one turn is 90 degrees and the other turn is 135 degrees. Two sides are 200 steps long. According to the Pythagorean Theorem, the third side is 282.8 steps long.*
 
-Create a program named *solution_star.py* that draws the following picture:
+
+Create a program named *solution_star.py* that draws the following picture. *Hint: All lines in the star are 200 steps long. All turns are 144 degree turns.*
 
 [<img src="screenshot_solution_star.jpg" style="width: 400px"/>](screenshot_solution_star.jpg)
 
-*Hint: All lines in the star are 200 steps long. All turns are 144 degree turns.*
 
-Create a program named *solution_nested_squares.py* that draws the following picture:
+Create a program named *solution_nested_squares.py* that draws the following picture. *Hint: Draw a square with sides of length `100`. Then draw another square with sides of length `150`, then `200`, then `250`, then `300`.*
 
 [<img src="screenshot_solution_nested_squares.jpg" style="width: 400px"/>](screenshot_solution_nested_squares.jpg)
 
-*Hint: Draw a square with sides of length `100`. Then draw another square with sides of length `150`, then `200`, then `250`, then `300`.*
 
 
-Create a program named *solution_cross.py* that draws the following picture:
+
+Create a program named *solution_cross.py* that draws the following picture. *Hint: All lines in the cross are 100 steps long. All turns are 90 degrees, but you must make both left and right turns.*
 
 [<img src="screenshot_solution_cross.jpg" style="width: 400px"/>](screenshot_solution_cross.jpg)
 
-*Hint: All lines in the cross are 100 steps long. All turns are 90 degrees, but you must make both left and right turns.*
 
 
-Create a program named *solution_cube.py* that draws the following picture:
+
+Create a program named *solution_cube.py* that draws the following picture. *Hint: All lines are 100 steps long.All turns are either 45, 90, or 135 degrees. You might need to overlap some lines to draw the entire cube. You can always run `forward(100)` followed by `backward(100)` if you want to draw a line but return to the original position.*
 
 [<img src="screenshot_solution_cube.jpg" style="width: 400px"/>](screenshot_solution_cube.jpg)
 
-*Hint: All lines are 100 steps long.All turns are either 45, 90, or 135 degrees. You might need to overlap some lines to draw the entire cube. You can always run `forward(100)` followed by `backward(100)` if you want to draw a line but return to the original position.*
 
 
-Create a program named *solution_triforce.py* that draws the following picture:
+
+Create a program named *solution_triforce.py* that draws the following picture. *Hint: There are many ways to draw this. You can overlap lines. All turns are either 60 degrees or 120 degrees. If the outside triangle's line lengths are 100 steps, you may want to sometimes only move the turtle by 50 steps.*
 
 [<img src="screenshot_solution_triforce.jpg" style="width: 400px"/>](screenshot_solution_triforce.jpg)
 
-*Hint: There are many ways to draw this. You can overlap lines. All turns are either 60 degrees or 120 degrees. If the outside triangle's line lengths are 100 steps, you may want to sometimes only move the turtle by 50 steps.*
+
 
 
 
