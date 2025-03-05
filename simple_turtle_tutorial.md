@@ -17,15 +17,18 @@ This is a Turtle programming tutorial written by Al Sweigart, author of *Automat
 1. [Introduction](#Introduction)
 1. [Drawing a Square](#Drawing-a-Square)
 1. [Drawing a Smaller Square](#Drawing-a-Smaller-Square)
+1. [Common Bugs and Error Messages](#Common-Bugs-and-Error-Messages)
 1. [Drawing a Square with a Variable Size](#Drawing-a-Square-with-a-Variable-Size)
 1. [Draw a Square with a Loop](#Draw-a-Square-with-a-Loop)
 1. [Quick Review 1](#Quick-Review-1)
 1. [Practice Exercises 1](#Practice-Exercises-1)
 1. [Writing Text in the Turtle Window](#Writing-Text-in-the-Turtle-Window)
-1. [Angles and Position](#Angles-and-Position)
-1. [Moving the Pen Up and Down to Draw Dashes](#Moving-the-Pen-Up-and-Down-to-Draw-Dashes)
+1. [Angles](#Angles)
+1. [XY Cartesian Coordinates](#XY-Cartesian-Coordinates)
+1. [Raising and Lowering the Pen](#Raising-And-Lowering-the-Pen)
+1. [Stamping](#Stamping)
 1. [Square Spirals Examples](#Square-Spirals-Examples)
-1. [Interactive Square Drawing](#Interactive-Square-Drawing)
+1. [Interactive Drawing](#Interactive-Drawing)
 
 
 
@@ -572,7 +575,7 @@ We measure turning in "degrees." A full turn around is 360 degrees. If the turtl
 
 We can also use degrees to describe what *heading* or *direction* the turtle is currently facing. When your program first starts, the turtle always begins by facing to the right. This direction is `0` degrees. As the turtle turns **left** (or **counterclockwise**), the direction increases. Facing up is `90` degrees, facing left is `180` degrees, and facing down is `270` degrees. Both `360` and `0` degrees are the same direction: facing right.
 
-The `heading()` function returns the number of what direction the turtle is currently facing. If we pass this function call to the `str()` function, we can convert this number to a text string. We can pass this text string to `write()` to make the turtle's current heading appear on the turtle window.
+The `heading()` function returns the number of what direction the turtle is currently facing. We can pass this to `write()` to make the turtle's current heading appear on the turtle window.
 
 Create a new program called `turtle_directions.py` with the following code:
 
@@ -582,7 +585,7 @@ from turtle import *
 
 for i in range(24):
     forward(100)  # Move forward in the current direction.
-    write(str(heading()), font=('Arial', 20, 'normal'))  # Write the degrees of the direction.
+    write(heading(), font=('Arial', 20, 'normal'))  # Write the degrees of the direction.
     backward(100)  # Move back to the center.
     left(15)  # Turn left by 15 degrees and repeat.
 done()
@@ -606,17 +609,17 @@ from random import *
 
 pensize(4)
 left(randint(0, 360))
-write(str(heading()))
+write(heading())
 forward(200)
 
 setheading(45)
-write(str(heading()))
+write(heading())
 forward(200)
 
 done()
 ```
 
-When you run this program, it turns the turtle to face a random direction, writes the heading (as returned by `heading()`) to the window, and then moves forward in that direction by 200 steps. Then, the `setheading(45)` function call sets the direction of the turtle to 45 degrees. Because of this, the second `write(str(heading()))` line always writes "45.0" to the window. The turtle now points to the top right of the window. Then the turtle moves 200 steps in this new direction.
+When you run this program, it turns the turtle to face a random direction, writes the heading (as returned by `heading()`) to the window, and then moves forward in that direction by 200 steps. Then, the `setheading(45)` function call sets the direction of the turtle to 45 degrees. Because of this, the second `write(heading())` line always writes "45.0" to the window. The turtle now points to the top right of the window. Then the turtle moves 200 steps in this new direction.
 
 This means that no matter what heading the turtle had before, `setheading(45)` makes the turtle always face to the top-right. If you run this program several times, it would look something like this:
 
@@ -626,7 +629,7 @@ This means that no matter what heading the turtle had before, `setheading(45)` m
 [<img src="screenshot_setheading_turtle4.jpg" style="width: 400px"/>](screenshot_setheading_turtle4.jpg)
 
 
-## Position
+## XY Cartesian Coordinates
 
 Just as degrees are numbers that can describe where the turtle is facing and how much of a turn it should make, the *position* of the turtle can be represented by two numbers. In the *Cartesian coordinate system*, the *X coordinate* represents how far left or right the turtle is. The *Y coordinate* represents how far up or down the turtle is. Together, the XY coordinates tell you exactly where the turtle is.
 
@@ -652,7 +655,7 @@ from turtle import *
 from random import *
 
 for i in range(8):
-    write(str(position()))
+    write(position())
     left(randint(0, 90))
     forward(100)
 
@@ -680,7 +683,7 @@ for i in range(6):
     x = randint(-400, 400)
     y = randint(-400, 400)
     goto(x, y)
-    write(str(position()), font=('Arial', 18, 'normal'))
+    write(position(), font=('Arial', 18, 'normal'))
 
 done()
 ```
@@ -809,20 +812,19 @@ for i in range(1200):
     r = randint(1, 3)
 
     if r == 1:
-        # Set coordinates to halfway to point A:
-        x += (AX - x) / 2
-        y += (AY - y) / 2
+        # Move to halfway to point A:
+        setheading(towards(AX, AY))
+        forward(distance(AX, AY) / 2)
     if r == 2:
-        # Set coordinates to halfway to point B:
-        x += (BX - x) / 2
-        y += (BY - y) / 2
+        # Move to halfway to point B:
+        setheading(towards(BX, BY))
+        forward(distance(BX, BY) / 2)
     if r == 3:
-        # Set coordinates to halfway to point C:
-        x += (CX - x) / 2
-        y += (CY - y) / 2
+        # Move to halfway to point C:
+        setheading(towards(CX, CY))
+        forward(distance(CX, CY) / 2)
 
-    # Move the turtle and stamp it:
-    goto(x, y)
+    # Stamp at the new location.
     stamp()
 
 done()
@@ -1015,7 +1017,7 @@ done()
 
 
 
-## Interactive Square Drawing
+## Interactive Drawing
 
 *click_square.py*
 
