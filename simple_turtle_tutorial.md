@@ -1,11 +1,16 @@
 <meta charset="UTF-8">
 
 
-# A Simple Tutorial for Python's turtle.py Module
+# A Simple Turtle Tutorial for Python's turtle.py Module
 
 **This document is still being written and not yet complete.**
 
 This is a Turtle programming tutorial written by Al Sweigart, author of *Automate the Boring Stuff with Python* and other books. You can read all of his books for free online at [https://inventwithpython.com](https://inventwithpython.com)
+
+
+
+
+
 
 ## Table of Contents
 
@@ -26,15 +31,21 @@ This is a Turtle programming tutorial written by Al Sweigart, author of *Automat
 
 
 
+
 ## Introduction
+
+Turtle graphics is an easy way to learn programming by drawing with code. You program a small virtual object, called the *turtle*, to move around the screen and draw lines as it goes. This lets people make pictures with a computer while learning how to program. You can think of the turtle as an [Etch A Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch) controlled by your program.
+
+This guide explains how to use Python's *turtle.py* module. It does not teach the Python language itself. It's good to already know some basic Python ideas, like variables, operators, loops, functions, importing modules, and random numbers.
+
+Before starting, you need to install the *Python interpreter* (the software that runs Python code) from [python.org](https://python.org). You also need a code editor, like IDLE, Mu, or Visual Studio Code. 
+
+Programs written in Python are called Python programs. Not all Python programs use turtle graphics. But in this guide, we will call programs that use the turtle module "Turtle programs."
 
 Turtle graphics is a simple way to learn programming by making drawings with code. A small moving object, called the "turtle," moves around the screen and draws lines as it goes. This helps people create computer drawings and learn programming at the same time.
 
-This tutorial only explains how to use Python's *turtle.py* module. It does not teach the Python language itself. It helps to already know some basic Python ideas, like variables, operators, loops, function calls, importing modules, and random numbers. You also need to first install the *Python interpreter*, the software that runs Python code, from [https://python.org](https://python.org) and a code editor like IDLE, Mu, or Visual Studio Code.
+This tutorial only explains how to use Python's *turtle.py* module. It does not teach the Python language itself. It helps to already know some basic Python ideas, like variables, operators, loops, function calls, importing modules, and random numbers. You also need to first install the *Python interpreter*, the software that runs Python code, from [https://python.org](https://python.org) and a code editor like IDLE, Mu, or Visual Studio Code. However, even if you don't know how to program, you can still copy and run the example programs on your computer.
 
-<!--If you do not know how to program or how to program in the Python language, you can still copy and run the example programs on your computer. You can install the *Python interpreter* software from [https://python.org](https://python.org). *Code editors* are the apps that you type Python code in. IDLE and Visual Studio Code are examples of code editors. These code editors also make it easy to have the Python interpreter run your Python programs. You can write your Python code in files that end with the *.py* file extension so you know the file is intended to be run by the Python interpeter.-->
-
-Programs written in the Python language can be called Python programs. Not all Python programs use the `turtle` module to make drawings. But we will call our Python programs that use the `turtle` module, "Turtle programs".
 
 
 
@@ -43,7 +54,7 @@ Programs written in the Python language can be called Python programs. Not all P
 ## Drawing a Square
 
 
-Let's write a program that draws a simple square. Create a new file and save it as `first_square.py`. Enter the following Python code:
+Let's make a program that draws a square. Create a new file in your code editor. Save it as *first_square.py*. Enter the following Python code:
 
 ```python
 # first_square.py
@@ -153,9 +164,11 @@ But let's make some more simple Turtle programs first.
 
 
 
-### Drawing a Smaller Square
 
-We can change `forward(200)` to `forward(25)` to draw a smaller square. Create and save a new file with the name *square_smaller.py*. Change the four function calls to `forward(100)` to look like this:
+
+## Drawing a Smaller Square
+
+Let's make a program that draws a smaller square. We can change `forward(200)` to `forward(25)` to draw a smaller square. Create a new file in your code editor. Save it as *square_smaller.py*. Enter the following Python code:
 
 ```python
 # square_smaller.py
@@ -199,15 +212,31 @@ This program has a *bug* in it, and draws the square wrong:
 
 [<img src="screenshot_square_smaller_bug.jpg" style="width: 400px"/>](screenshot_square_smaller_bug.jpg)
 
-Your computer does exactly what you tell it to do. But it is up to you to make sure what you *want* the computer to do is what you *told* the computer to do. If your program has a bug, carefully read your code and try to figure out what it is doing.
+It's okay to make mistakes! You can fix them. Your computer does exactly what you tell it to do. But it is up to you to make sure what you *want* the computer to do is what you *told* the computer to do. If your program has a bug, carefully read your code and figure out where it is going wrong.
 
 
 
 
+## Common Bugs and Error Messages
 
-### Drawing a Square with a Variable Size
+As you write Python code, you may get error messages when you try to run the program. Pay attention to the error message, especially where it tells you what line number the error happens. Here are some common error messages you might see and what causes them:
 
-Instead of typing `25` in `forward(25)`, let's create a *variable* instead. Write the following code and save it as *square_variable.py*. The name of the variable is `line_length`, and the value in the variable is `25`:
+* **`ModuleNotFoundError: No module named 'trutle'`** - You made a typo in your `from turtle import *`. This specific error message was caused by the typo was `from trutle import *`.
+* **`NameError: name 'froward' is not defined`** - You made a typo with a function or variable name. This specific error message was caused by the typo was `froward(100)`.
+* **`TypeError: forward() missing 1 required positional argument: 'distance'`** - You made a function call but forgot to include an argument. This specific error message was caused by `forward()` which doesn't have the distance argument like in `forward(200)`
+* **`TypeError: left() takes 1 positional argument but 2 were given`** - You made a function call but used too many arguments. This specific error message was caused by `left(90, 45)` but the `left()` function expects only one argument like `left(90)`.
+* **`IndentationError: unexpected indent`** - There are too many spaces in front of the line of code.
+* **`IndentationError: expected an indented block after 'for' statement on line 5`** - You did not increase the amount of indentation after the beginning of a `for i in range(4):` loop.
+* **`SyntaxError: invalid syntax`** - There is a general problem with your code. Python can't understand it, but also doesn't know what correction to suggest. It can tell you the line number where it detected the problem though! If you write code by randomly mashing the keyboard, you will probably get this error message.
+
+When the error message says the error happens on, say, line number 5 in your program, it is possible that the true source of the error happens on the previous line: line number 4. The Python interpreter was unable to notice the error until line 5.
+
+
+## Drawing a Square with a Variable Size
+
+Instead of typing `25` in `forward(25)`, let's create a *variable* instead. The name of the variable will be `line_length`. The value in the variable will be `25`.
+
+Create a new file in your code editor. Save it as *square_variable.py*. Enter the following Python code:
 
 ```python
 # square_variable.py
@@ -232,7 +261,9 @@ When we run this program, it draws the same square as before:
 
 However, now we only have one thing to change if we want to change the size of the square. Try changing the `line_length` variable to a few other sizes, like `line_length = 300` or `line_length = 5`.
 
-### Draw a Square with a Loop
+## Draw a Square with a Loop
+
+Let's write program to draw a square using a `for` loop. Create a new file in your code editor. Save it as *square_for_loop.py*. Enter the following Python code:
 
 Let's rewrite this program using a `for` loop instead. Save the file with the new name, *square_for_loop.py*. We can tell the program to call `forward(line_length)` and `left(90)` four times:
 
@@ -259,7 +290,7 @@ This program makes the same square drawing as before:
 
 Our program only needs to call `pensize(4)` once, so we put it before the loop.
 
-Let's change the code so that the turtle turns left by 86 degrees instead of 90 degrees. Save this program as *square_for_loop_86.py*:
+Let's change the code so that the turtle turns left by 86 degrees instead of 90 degrees. Create a new file in your code editor. Save it as *square_for_loop_86.py*. Enter the following Python code:
 
 ```python
 # square_for_loop_86.py
@@ -277,7 +308,7 @@ This draws a slightly different image that is not quite a square:
 
 [<img src="screenshot_square_for_loop_86.jpg" style="width: 400px"/>](screenshot_square_for_loop_86.jpg)
 
-Instead of turning left 86 degrees in the loop 4 times, let's do the loop 50 times. Make the following program and save it as *square_circle_86.py*:
+Instead of turning left 86 degrees in the loop 4 times, let's do the loop 50 times. Let's make a program that draws a square. Create a new file in your code editor. Save it as *square_circle_86.py*. Enter the following Python code:
 
 ```python
 # square_circle_86.py
@@ -297,18 +328,18 @@ This program does a lot more drawing than our previous programs, so we call the 
 
 The arguments you can pass to `speed()` are `'fastest'`, `'fast'`, `'normal'`, `'slow'`, and `'slowest'`.
 
-This program also calls the `hideturtle()` function to make the turtle arrow disappear at the end of the program.
+This program also calls the `hideturtle()` function to make the turtle triangle cursor disappear at the end of the program.
 
 This produces something that looks quite different from a simple square:
 
 [<img src="screenshot_square_circle_86.jpg" style="width: 400px"/>](screenshot_square_circle_86.jpg)
 
-By experimenting with different code and numbers, we can make all sorts of images. We can also have Python make random numbers for the left turns. Write the following code and save it as *square_random.py*. This program makes turns between 80 and 100 degrees:
+By experimenting with different code and numbers, we can make all sorts of images. We can also have Python use random numbers for the left turns. Let's make a program that draws a square. Create a new file in your code editor. Save it as *square_random.py*. This program makes turns between 80 and 100 degrees:
 
 ```python
 # square_random.py
 from turtle import *
-import random
+from random import *
 
 pensize(4)
 speed('fastest')
@@ -316,7 +347,7 @@ speed('fastest')
 for i in range(50):
     forward(200)
     # Turn left a random number of degrees between 80 and 100:
-    left(random.randint(80, 100))
+    left(randint(80, 100))
 hideturtle()
 done()
 ```
@@ -407,14 +438,14 @@ If your program draws a lot of lines, you can speed up the turtle by calling `sp
 hideturtle()
 ```
 
-If you don't want the triangle arrow of the turtle cursor to appear in the window, call the `hideturtle()` function.
+If you don't want the triangle of the turtle cursor to appear in the window, call the `hideturtle()` function.
 
 ```python
-import random
-forward(random.randint(1, 100))
+from random import *
+forward(randint(1, 100))
 ```
 
-Instead of a number, you can call the `random.randint()` function to get a random number. The function call `random.randint(1, 100)` returns a random number between 1 and 100. You must run `import random` before using this function.
+Instead of a number, you can call the `randint()` function to get a random number. The function call `randint(1, 100)` returns a random number between 1 and 100. You must run `from random import *` before using this function.
 
 
 
@@ -493,7 +524,7 @@ Create a program named *solution_triforce.py* that draws the following picture. 
 
 ## Writing Text in the Turtle Window
 
-The turtle can write text in the Turtle window just like it can draw lines. The `write()` function takes a text string argument and will write it where the turtle is. Create a new program with the name *write_hello.py* with the following code:
+The turtle can write text in the Turtle window just like it can draw lines. The `write()` function takes a text string argument and will write it where the turtle is. Let's make a program that writes text in the window. Create a new file in your code editor. Save it as *write_hello.py*. Enter the following Python code:
 
 ```python
 # write_hello.py
@@ -519,7 +550,13 @@ The bottom left corner of the text is at the turtle's location. For example, the
 
 The function call `write('123456789', font=('Arial', 24, 'normal'))` also has a *keyword parameter* named  `font=`. We can pass an argument like `('Arial', 24, 'normal')` to change the font used to write the text in the Turtle window.
 
-There are three parts to the `font=` parameter's argument: the name of the font, the size of the font, and the style of the font. If you don't pass an argument, the default font is `('Arial', 8, 'normal')`. You can change the name of the font but it must be installed on your computer. The font size argument must be a number and not a text string: you must pass `8` but not `'8'`. The style argument can either be `'normal'`, `'bold'`, `'italic'`, `'underline'`, or any combination of those words like `'bold italic'`.
+There are three parts to the `font=` parameter's argument: 
+
+* The name of the font. (`'Arial'`)
+* The size of the font. (`24`)
+* The style of the font. (`'normal'`)
+
+If you don't pass an argument, the default font is `('Arial', 8, 'normal')`. You can change the name of the font but it must be installed on your computer. The font size argument must be a number and not a text string: you must pass `8` but not `'8'`. The style argument can either be `'normal'`, `'bold'`, `'italic'`, `'underline'`, or any combination of those words like `'bold italic'`.
 
 
 
@@ -565,10 +602,10 @@ For example, create a new program named `setheading_turtle.py` with the followin
 # setheading_turtle.py
 
 from turtle import *
-import random
+from random import *
 
 pensize(4)
-left(random.randint(0, 360))
+left(randint(0, 360))
 write(str(heading()))
 forward(200)
 
@@ -589,7 +626,7 @@ This means that no matter what heading the turtle had before, `setheading(45)` m
 [<img src="screenshot_setheading_turtle4.jpg" style="width: 400px"/>](screenshot_setheading_turtle4.jpg)
 
 
-## Position, and Moving the Pen Up and Down
+## Position
 
 Just as degrees are numbers that can describe where the turtle is facing and how much of a turn it should make, the *position* of the turtle can be represented by two numbers. In the *Cartesian coordinate system*, the *X coordinate* represents how far left or right the turtle is. The *Y coordinate* represents how far up or down the turtle is. Together, the XY coordinates tell you exactly where the turtle is.
 
@@ -606,7 +643,8 @@ This image from Wikipedia shows a Cartesian coordiante system with some example 
 
 [<img src="cartesian.png" style="width: 400px"/>](cartesian.png)
 
-Let's write a program called *random_position.py* that writes the XY coordinates in the window as the turtle moves around:
+Let's make a program that writes the XY coordinates in the window as the turtle moves around. Create a new file in your code editor. Save it as *random_position.py*. Enter the following Python code:
+
 
 ```python
 # random_position.py
@@ -625,16 +663,175 @@ When you run this program, the output will look something like this:
 
 [<img src="screenshot_random_position.jpg" style="width: 400px"/>](screenshot_random_position.jpg)
 
+The turtle begins at the origin, that is, the XY coordinates 0, 0. Notice that as the turtle moves right or up, the X and Y coordinates increase. As the turtle moves left or down, the X and Y coordinates decrease.
+
+The `forward()` and `backward()` functions always move from the turtle's current position. However, you can move the turtle to specific XY coordinates by calling the `goto()` function and passing the X and Y coordinate.
+
+Let's make a program that moves the turtle to random coordinates. Create a new file in your code editor. Save it as *random_position.py*. Enter the following Python code:
+
+```python
+# random_goto.py
+from turtle import *
+from random import *
+
+pensize(4)
+
+for i in range(6):    
+    x = randint(-400, 400)
+    y = randint(-400, 400)
+    goto(x, y)
+    write(str(position()), font=('Arial', 18, 'normal'))
+
+done()
+```
+
+When you run this program, the output will look something like this:
+
+[<img src="screenshot_random_goto1.jpg" style="width: 400px"/>](screenshot_random_goto1.jpg)
+[<img src="screenshot_random_goto2.jpg" style="width: 400px"/>](screenshot_random_goto2.jpg)
+[<img src="screenshot_random_goto3.jpg" style="width: 400px"/>](screenshot_random_goto3.jpg)
+[<img src="screenshot_random_goto4.jpg" style="width: 400px"/>](screenshot_random_goto4.jpg)
+
+The `x = randint(-400, 400)` instruction saves a random integer (that is, a random whole number) to the variable `x`. The `y = randint(-400, 400)` instruction does this again for the `y` variable. Then `goto(x, y)` moves the turtle to the coordinates of these random numbers.
+
+These could be 
+
 TODO
 
 
-The `forward()` and `backward()` functions always move from the turtle's current position. However, you can 
 
-TODO 
+
+## Raising and Lowering the Pen
+
+Imagine the turtle as holding a pen in its mouth. When the pen is touching the ground, the turtle draws a line as it moves. If the pen is raised up off the ground, the turtle does not draw a line as it moves. The `pendown()` and `penup()` functions can control if the turtle draws a line as it moves.
+
+Turtle programs always begin with the pen lowered down on the ground.
+
+Let's create a program that draws a dashed line. Create a new file in your code editor. Save it as *dashed_lines.py*. Enter the following Python code:
+
+```python
+# dashed_lines.py
+from turtle import *
+from random import *
+
+pensize(4)
+speed('fastest')
+
+for i in range(12):
+    # Face a random direction:
+    setheading(randint(0, 360))
+
+    # Make a dashed line in that direction:
+    for j in range(6):
+        pendown()
+        forward(10)  # Draw a line segment.
+        penup()
+        forward(10)  # Move without drawing a line segment.
+    
+    # Make one last line segment:
+    pendown()
+    forward(10)
+
+done()
+```
+
+
+
+
+## Stamping
+
+Python's turtle cursor looks like a triangle, not a cursor. However, you can change this by calling the `shape()` function. The `shape()` function takes one of the following arguments: `'arrow'`, `'turtle'`, `'circle'`, `'square'`, `'triangle'`, or `'classic'`.
+
+You can make a copy of this image appear at 
+
+Let's create a program that draws a square spiral. Create a new file in your code editor. Save it as *stamp_lines.py*. Enter the following Python code:
+
+
+```python
+# stamp_lines.py
+from turtle import *
+from random import *
+
+shape('turtle')
+speed('fastest')
+penup()
+
+for i in range(12):
+    # Face a random direction:
+    setheading(randint(0, 360))
+
+    for j in range(6):
+        forward(30)  # 30 step gap in between stamps.
+        stamp()
+
+done()
+```
+
+
+
+
+```python
+# sierpinski_game.py
+from turtle import *
+from random import *
+
+shape('circle')  # Make the turtle cursor a circle.
+speed('fast')
+penup()
+
+# Set up the coordinates of the three points of the triangle: A, B, and C
+# (You can change these coordinates to anything you like!)
+
+# Point A is at the top-middle:
+AX = 0
+AY = 400
+goto(AX, AY)
+stamp()
+
+# Point B is at the lower left:
+BX = -400
+BY = -400
+goto(BX, BY)
+stamp()
+
+# Point C is at the lower right:
+CX = 400
+CY = -400
+goto(CX, CY)
+stamp()
+
+# Start the turtle at point A:
+x, y = AX, AY
+
+# Make 1,200 circle stamps:
+for i in range(1200):
+    # Randomly pick one of the three points to move towards:
+    r = randint(1, 3)
+
+    if r == 1:
+        # Set coordinates to halfway to point A:
+        x += (AX - x) / 2
+        y += (AY - y) / 2
+    if r == 2:
+        # Set coordinates to halfway to point B:
+        x += (BX - x) / 2
+        y += (BY - y) / 2
+    if r == 3:
+        # Set coordinates to halfway to point C:
+        x += (CX - x) / 2
+        y += (CY - y) / 2
+
+    # Move the turtle and stamp it:
+    goto(x, y)
+    stamp()
+
+done()
+```
+
 
 ## Square Spirals Examples
 
-Let's create a square spiral program. Open a new file and save it as *spiral.py*. Enter the following code.
+Let's create a program that draws a square spiral. Create a new file in your code editor. Save it as *spiral.py*. Enter the following Python code:
 
 ```python
 # spiral.py
@@ -716,13 +913,13 @@ Try changing 91 to 30, 45, 60, 90, 120, 150, and 46, 61, 91, 120, 151. Finally, 
 ```python
 # spiral_color.py
 from turtle import *
-import random
+from random import *
 
 colors = ['red', 'orange', 'yellow', 'blue', 'green', 'purple']
 
 speed('fastest')
 for i in range(300):
-    pencolor(random.choice(colors))
+    pencolor(choice(colors))
     forward(i)
     left(91)
 hideturtle()
@@ -737,7 +934,7 @@ done()
 ```python
 # spiral_black_bg.py
 from turtle import *
-import random
+from random import *
 
 colors = ['red', 'orange', 'yellow', 'blue', 'green', 'purple']
 
@@ -745,7 +942,7 @@ speed('fastest')
 pensize(3)
 bgcolor('black')
 for i in range(300):
-    pencolor(random.choice(colors))
+    pencolor(choice(colors))
     forward(i)
     left(91)
 hideturtle()
@@ -871,7 +1068,7 @@ done()
 
 ```python
 from turtle import *
-import random
+from random import *
 
 tracer(1000, 0)  # TODO
 
@@ -880,8 +1077,8 @@ def draw_spiral(x, y):
     goto(x, y)
     pendown()
     setheading(0)
-    line_length = random.randint(50, 200)
-    turn_radius = random.randint(50, 70)
+    line_length = randint(50, 200)
+    turn_radius = randint(50, 70)
     for i in range(100):
         forward(i)
         left(turn_radius)
@@ -893,7 +1090,7 @@ done()  # Make turtle wait for clicks.
 
 ```python
 from turtle import *
-import random
+from random import *
 
 tracer(1000, 0)
 
@@ -902,8 +1099,8 @@ def draw_spiral(x, y):
     goto(x, y)
     pendown()
     setheading(0)
-    line_length = random.randint(50, 200)
-    turn_radius = random.randint(50, 70)
+    line_length = randint(50, 200)
+    turn_radius = randint(50, 70)
     for i in range(100):
         forward()
         left(turn_radius)
@@ -923,7 +1120,7 @@ done()  # Make turtle wait for clicks.
 ```python
 # Draw a rose.
 from turtle import *
-import random
+from random import *
 
 tracer(1000, 0)
 
@@ -933,10 +1130,10 @@ def draw_square(x, y):
     pendown()
     setheading(0)
     for i in range(100):
-        pencolor((random.random(), 0, 0))
-        pensize(random.randint(2, 5))
+        pencolor((random(), 0, 0))
+        pensize(randint(2, 5))
         forward(i)
-        left(random.randint(50, 70))
+        left(randint(50, 70))
     update()
 
 
@@ -1006,21 +1203,21 @@ This is a program that draws blue flowers:
 
 ```python
 from turtle import *
-import random
+from random import *
 
 tracer(1000, 0)
 
 for n in range(50):
     penup()
-    x = random.randint(-300, 300)
-    y = random.randint(-300, 300)
+    x = randint(-300, 300)
+    y = randint(-300, 300)
     goto(x, y)
     pendown()
 
-    pencolor((0, 0, random.random()))
+    pencolor((0, 0, random()))
 
-    circle_size = random.randint(10, 40)
-    pensize(random.randint(1, 5))
+    circle_size = randint(10, 40)
+    pensize(randint(1, 5))
 
     for i in range(6):
         circle(circle_size)
@@ -1040,25 +1237,29 @@ done()
 
 ## Reference
 
+https://docs.python.org/3/library/turtle.html
+
+https://docs.python.org/3/library/turtle.html#turtle-methods
 
 
-## Moving
 
-By calling these functions, the turtle can be made to move around the screen. Imagine the turtle holding a pen down on the ground and drawing a line as it moves around.
+### Moving
+
+By calling these functions, the turtle can be made to move around the screen. Imagine the turtle holding a pen down on the ground and drawing a line as it moves around. By programming the turtle's movements, you can program a picture!
 
 The turtle's position is two numbers: the X coordinate and Y coordinate. The turtle also
 
 ### forward(*distance*)
 
-The forward() function moves the turtle *distance* number of steps in the current direction. If the pen is down (see pendown() and penup()) a line will be drawn as the turtle moves forward. If *distance* is a negative number, the turtle will move backwards.
+The `forward()` function moves the turtle *distance* number of steps in the current direction. If the pen is down (see `pendown()` and `penup()`) a line will be drawn as the turtle moves forward. If *distance* is a negative number, the turtle will move backwards.
 
 ### backward(*distance*)
 
-The backward() function moves the turtle *distance* number of steps in **opposite direction** the current direction. If the pen is down (see pendown() and penup()) a line will be drawn as the turtle moves backward. If *distance* is a negative number, the turtle will move forward.
+The `backward()` function moves the turtle *distance* number of steps in **opposite direction** the current direction. If the pen is down (see `pendown()` and `penup()`) a line will be drawn as the turtle moves backward. If *distance* is a negative number, the turtle will move forward.
 
 ### right(*angle*)
 
-The right() function will change the current direction clockwise by *angle* degrees. If you imagine being above the turtle looking down, the turtle turning right looks like it is turning clockwise. The turtle will not move; it will only change the direction it is facing.
+The `right()`` function will change the current direction clockwise by *angle* degrees. If you imagine being above the turtle looking down, the turtle turning right looks like it is turning clockwise. The turtle will not move; it will only change the direction it is facing.
 
 This example moves the turtle forward, then turns right by 90 degrees, then moves forward again:
 
@@ -1075,7 +1276,7 @@ forward(100)
 
 ### left(*angle*)
 
-The left() function will change the current direction counter-clockwise or anti-clockwise by *angle* degrees. If you imagine being above the turtle looking down, the turtle turning left looks like it is turning counter-clockwise or anti-clockwise. The turtle will not move; it will only change the direction it is facing.
+The `left()`` function will change the current direction counter-clockwise or anti-clockwise by *angle* degrees. If you imagine being above the turtle looking down, the turtle turning left looks like it is turning counter-clockwise or anti-clockwise. The turtle will not move; it will only change the direction it is facing.
 
 This example moves the turtle forward, then turns left by 90 degrees, then moves forward again:
 
@@ -1107,15 +1308,15 @@ goto(-50, -50)
 
 ### setx(*x*)
 
-The goto() function will immediately move the turtle to the given *x* coordinate. The turtle's y coordinate will stay the same. If the pen is down (see pendown() and penup()) a line will be drawn from the previous coordinates to the new coordinates.
+The `setx()` function will immediately move the turtle to the given *x* coordinate. The turtle's y coordinate will stay the same. This moves the turtle strictly left or right. If the pen is down (see `pendown()` and `penup()`) a line will be drawn from the previous coordinates to the new coordinates.
 
 ### sety(*y*)
 
-The goto() function will immediately move the turtle to the given *y* coordinate. The turtle's x coordinate will stay the same. If the pen is down (see pendown() and penup()) a line will be drawn from the previous coordinates to the new coordinates.
+The `sety()` function will immediately move the turtle to the given *y* coordinate. The turtle's x coordinate will stay the same. This moves the turtle strictly up or down. If the pen is down (see `pendown()` and `penup()`) a line will be drawn from the previous coordinates to the new coordinates.
 
 ### setheading(*heading*)
 
-The setheading() function will change the current direction to the *heading* angle. If you imagine being above the turtle looking down, the turtle turning left looks like it is turning counter-clockwise or anti-clockwise. The turtle will not move; it will only change the heading it is facing.
+The `setheading()` function will change the current direction to the *heading* angle. If you imagine being above the turtle looking down, the turtle turning left looks like it is turning counter-clockwise or anti-clockwise. The turtle will not move; it will only change the heading it is facing.
 
 ```python
 from turtle import *
@@ -1129,33 +1330,9 @@ for angle in range(0, 360, 15):
 
 [<img src="setheading.jpg" style="width: 400px"/>](setheading.jpg)
 
-### undo()
-
-The undo() function will undo the turtle's last action. It will be as though the last action was never made. For example, if the last action was a call to the forward(100) function, calling undo will move the turtle backwards 100 steps and erase any line that was drawn. The undo() function can be called many times to erase more and more of the turtle
-
-```python
-from turtle import *
-
-for i in range(10):
-    forward(100)
-    left(90)
-    forward(10)
-    left(90)
-    forward(100)
-    right(90)
-    forward(10)
-    right(90)
-
-for i in range(30):
-    undo()
-```
-
-[<img src="undo_before.jpg" style="width: 400px"/>](undo_before.jpg) [<img src="undo_after.jpg" style="width: 400px"/>](undo_after.jpg)
-
-
 ### home()
 
-The home() function will move the turtle to it's original position at the coordinates (0, 0) and set it's direction to 0 degrees. Calling home() is the same as calling goto(0, 0) and setheading(0). If the pen is down (see pendown() and penup()) a line will be drawn as the turtle moves back home.
+The `home()` function will move the turtle to it's original position at the coordinates (0, 0) and set it's direction to 0 degrees. Calling home() is the same as calling `goto(0, 0)` and `setheading(0)`. If the pen is down (see `pendown()` and `penup()`) a line will be drawn as the turtle moves back home.
 
 ```python
 from turtle import *
@@ -1172,15 +1349,15 @@ home()
 
 ### pendown()
 
-The pendown() function will cause the turtle to draw as it moves around. The line it draws can be set with the pencolor() and pensize() functions.
+The `pendown()` function will cause the turtle to draw as it moves around. The line it draws can be set with the `pencolor()` and `pensize()` functions.
 
 ### penup()
 
-The penup() function will cause the turtle to draw as it moves around. The line it draws can be set with the pencolor() and pensize() functions.
+The `penup()` function will cause the turtle to draw as it moves around. The line it draws can be set with the `pencolor()` and `pensize()` functions.
 
 ### pensize(*size*)
 
-The pensize() function sets the width of the line that the turtle draws as it moves.
+The `pensize()` function sets the thickness of the line that the turtle draws as it moves. The default size is `1`. Larger numbers make thicker lines.
 
 [<img src="pensize.jpg" style="width: 400px"/>](pensize.jpg)
 
@@ -1224,149 +1401,6 @@ The reset()) function will erase all the line drawings on the screen and return 
 Red, green, and blue are the three primary colors of light.
 
 The float value 0.0 represents none of that color. The float value 1.0 represents a full color. So the color red is represented by the RGB color tuple (1.0, 0, 0). The color purple is half-red and half-blue, so it is represented by the RGB color tuple (0.5, 0.0, 0.5). Full red and blue makes pink: (1.0, 0.0, 1.0)
-
-Here are some RGB color tuples:
-
-
-<table>
-<tbody><tr>
-<td class="color_td" style="background:#330000; color: #FFFFFF">(0.2, 0.0, 0.0)</td>
-<td class="color_td" style="background:#331900; color: #FFFFFF">(0.2, 0.1, 0.0)</td>
-<td class="color_td" style="background:#333300; color: #FFFFFF">(0.2, 0.2, 0.0)</td>
-<td class="color_td" style="background:#193300; color: #FFFFFF">(0.1, 0.2, 0.0)</td>
-<td class="color_td" style="background:#003300; color: #FFFFFF">(0.0, 0.2, 0.0)</td>
-<td class="color_td" style="background:#003319; color: #FFFFFF">(0.0, 0.2, 0.1)</td>
-<td class="color_td" style="background:#003333; color: #FFFFFF">(0.0, 0.2, 0.2)</td>
-<td class="color_td" style="background:#001933; color: #FFFFFF">(0.0, 0.1, 0.2)</td>
-<td class="color_td" style="background:#000033; color: #FFFFFF">(0.0, 0.0, 0.2)</td>
-<td class="color_td" style="background:#190033; color: #FFFFFF">(0.1, 0.0, 0.2)</td>
-<td class="color_td" style="background:#330033; color: #FFFFFF">(0.2, 0.0, 0.2)</td>
-<td class="color_td" style="background:#330019; color: #FFFFFF">(0.2, 0.0, 0.1)</td>
-<td class="color_td" style="background:#000000; color: #FFFFFF">(0.0, 0.0, 0.0)</td>
-</tr>
-<tr>
-<td class="color_td" style="background:#660000; color: #FFFFFF">(0.4, 0.0, 0.0)</td>
-<td class="color_td" style="background:#663300; color: #FFFFFF">(0.4, 0.2, 0.0)</td>
-<td class="color_td" style="background:#666600; color: #FFFFFF">(0.4, 0.4, 0.0)</td>
-<td class="color_td" style="background:#336600; color: #FFFFFF">(0.2, 0.4, 0.0)</td>
-<td class="color_td" style="background:#006600; color: #FFFFFF">(0.0, 0.4, 0.0)</td>
-<td class="color_td" style="background:#006633; color: #FFFFFF">(0.0, 0.4, 0.2)</td>
-<td class="color_td" style="background:#006666; color: #FFFFFF">(0.0, 0.4, 0.4)</td>
-<td class="color_td" style="background:#003366; color: #FFFFFF">(0.0, 0.2, 0.4)</td>
-<td class="color_td" style="background:#000066; color: #FFFFFF">(0.0, 0.0, 0.4)</td>
-<td class="color_td" style="background:#330066; color: #FFFFFF">(0.2, 0.0, 0.4)</td>
-<td class="color_td" style="background:#660066; color: #FFFFFF">(0.4, 0.0, 0.4)</td>
-<td class="color_td" style="background:#660033; color: #FFFFFF">(0.4, 0.0, 0.2)</td>
-<td class="color_td" style="background:#202020; color: #FFFFFF">(0.13, 0.13, 0.13)</td>
-</tr>
-<tr>
-<td class="color_td" style="background:#990000; color: #FFFFFF">(0.6, 0.0, 0.0)</td>
-<td class="color_td" style="background:#994C00; color: #FFFFFF">(0.6, 0.3, 0.0)</td>
-<td class="color_td" style="background:#999900; color: #FFFFFF">(0.6, 0.6, 0.0)</td>
-<td class="color_td" style="background:#4C9900; color: #FFFFFF">(0.3, 0.6, 0.0)</td>
-<td class="color_td" style="background:#009900; color: #FFFFFF">(0.0, 0.6, 0.0)</td>
-<td class="color_td" style="background:#00994C; color: #FFFFFF">(0.0, 0.6, 0.3)</td>
-<td class="color_td" style="background:#009999; color: #FFFFFF">(0.0, 0.6, 0.6)</td>
-<td class="color_td" style="background:#004C99; color: #FFFFFF">(0.0, 0.3, 0.6)</td>
-<td class="color_td" style="background:#000099; color: #FFFFFF">(0.0, 0.0, 0.6)</td>
-<td class="color_td" style="background:#4C0099; color: #FFFFFF">(0.3, 0.0, 0.6)</td>
-<td class="color_td" style="background:#990099; color: #FFFFFF">(0.6, 0.0, 0.6)</td>
-<td class="color_td" style="background:#99004C; color: #FFFFFF">(0.6, 0.0, 0.3)</td>
-<td class="color_td" style="background:#404040; color: #FFFFFF">(0.25, 0.25, 0.25)</td>
-</tr>
-<tr>
-<td class="color_td" style="background:#CC0000; color: #FFFFFF">(0.8, 0.0, 0.0)</td>
-<td class="color_td" style="background:#CC6600; color: #FFFFFF">(0.8, 0.4, 0.0)</td>
-<td class="color_td" style="background:#CCCC00; color: #FFFFFF">(0.8, 0.8, 0.0)</td>
-<td class="color_td" style="background:#66CC00; color: #FFFFFF">(0.4, 0.8, 0.0)</td>
-<td class="color_td" style="background:#00CC00; color: #FFFFFF">(0.0, 0.8, 0.0)</td>
-<td class="color_td" style="background:#00CC66; color: #FFFFFF">(0.0, 0.8, 0.4)</td>
-<td class="color_td" style="background:#00CCCC; color: #FFFFFF">(0.0, 0.8, 0.8)</td>
-<td class="color_td" style="background:#0066CC; color: #FFFFFF">(0.0, 0.4, 0.8)</td>
-<td class="color_td" style="background:#0000CC; color: #FFFFFF">(0.0, 0.0, 0.8)</td>
-<td class="color_td" style="background:#6600CC; color: #FFFFFF">(0.4, 0.0, 0.8)</td>
-<td class="color_td" style="background:#CC00CC; color: #FFFFFF">(0.8, 0.0, 0.8)</td>
-<td class="color_td" style="background:#CC0066; color: #FFFFFF">(0.8, 0.0, 0.4)</td>
-<td class="color_td" style="background:#606060; color: #FFFFFF">(0.38, 0.38, 0.38)</td>
-</tr>
-<tr>
-<td class="color_td" style="background:#FF0000">(1.0, 0.0, 0.0)</td>
-<td class="color_td" style="background:#FF8000">(1.0, 0.5, 0.0)</td>
-<td class="color_td" style="background:#FFFF00">(1.0, 1.0, 0.0)</td>
-<td class="color_td" style="background:#80FF00">(0.5, 1.0, 0.0)</td>
-<td class="color_td" style="background:#00FF00">(0.0, 1.0, 0.0)</td>
-<td class="color_td" style="background:#00FF80">(0.0, 1.0, 0.5)</td>
-<td class="color_td" style="background:#00FFFF">(0.0, 1.0, 1.0)</td>
-<td class="color_td" style="background:#0080FF">(0.0, 0.5, 1.0)</td>
-<td class="color_td" style="background:#0000FF">(0.0, 0.0, 1.0)</td>
-<td class="color_td" style="background:#7F00FF">(0.5, 0.0, 1.0)</td>
-<td class="color_td" style="background:#FF00FF">(1.0, 0.0, 1.0)</td>
-<td class="color_td" style="background:#FF007F">(1.0, 0.0, 0.5)</td>
-<td class="color_td" style="background:#808080">(0.5, 0.5, 0.5)</td>
-</tr>
-<tr>
-<td class="color_td" style="background:#FF3333">(1.0, 0.2, 0.2)</td>
-<td class="color_td" style="background:#FF9933">(1.0, 0.6, 0.2)</td>
-<td class="color_td" style="background:#FFFF33">(1.0, 1.0, 0.2)</td>
-<td class="color_td" style="background:#99FF33">(0.6, 1.0, 0.2)</td>
-<td class="color_td" style="background:#33FF33">(0.2, 1.0, 0.2)</td>
-<td class="color_td" style="background:#33FF99">(0.2, 1.0, 0.6)</td>
-<td class="color_td" style="background:#33FFFF">(0.2, 1.0, 1.0)</td>
-<td class="color_td" style="background:#3399FF">(0.2, 0.6, 1.0)</td>
-<td class="color_td" style="background:#3333FF">(0.2, 0.2, 1.0)</td>
-<td class="color_td" style="background:#9933FF">(0.6, 0.2, 1.0)</td>
-<td class="color_td" style="background:#FF33FF">(1.0, 0.2, 1.0)</td>
-<td class="color_td" style="background:#FF3399">(1.0, 0.2, 0.6)</td>
-<td class="color_td" style="background:#A0A0A0">(0.63, 0.63, 0.63)</td>
-</tr>
-<tr>
-<td class="color_td" style="background:#FF6666">(1.0, 0.4, 0.4)</td>
-<td class="color_td" style="background:#FFB266">(1.0, 0.7, 0.4)</td>
-<td class="color_td" style="background:#FFFF66">(1.0, 1.0, 0.4)</td>
-<td class="color_td" style="background:#B2FF66">(0.7, 1.0, 0.4)</td>
-<td class="color_td" style="background:#66FF66">(0.4, 1.0, 0.4)</td>
-<td class="color_td" style="background:#66FFB2">(0.4, 1.0, 0.7)</td>
-<td class="color_td" style="background:#66FFFF">(0.4, 1.0, 1.0)</td>
-<td class="color_td" style="background:#66B2FF">(0.4, 0.7, 1.0)</td>
-<td class="color_td" style="background:#6666FF">(0.4, 0.4, 1.0)</td>
-<td class="color_td" style="background:#B266FF">(0.7, 0.4, 1.0)</td>
-<td class="color_td" style="background:#FF66FF">(1.0, 0.4, 1.0)</td>
-<td class="color_td" style="background:#FF66B2">(1.0, 0.4, 0.7)</td>
-<td class="color_td" style="background:#C0C0C0">(0.75, 0.75, 0.75)</td>
-</tr>
-<tr>
-<td class="color_td" style="background:#FF9999">(1.0, 0.6, 0.6)</td>
-<td class="color_td" style="background:#FFCC99">(1.0, 0.8, 0.6)</td>
-<td class="color_td" style="background:#FFFF99">(1.0, 1.0, 0.6)</td>
-<td class="color_td" style="background:#CCFF99">(0.8, 1.0, 0.6)</td>
-<td class="color_td" style="background:#99FF99">(0.6, 1.0, 0.6)</td>
-<td class="color_td" style="background:#99FFCC">(0.6, 1.0, 0.8)</td>
-<td class="color_td" style="background:#99FFFF">(0.6, 1.0, 1.0)</td>
-<td class="color_td" style="background:#99CCFF">(0.6, 0.8, 1.0)</td>
-<td class="color_td" style="background:#9999FF">(0.6, 0.6, 1.0)</td>
-<td class="color_td" style="background:#CC99FF">(0.8, 0.6, 1.0)</td>
-<td class="color_td" style="background:#FF99FF">(1.0, 0.6, 1.0)</td>
-<td class="color_td" style="background:#FF99CC">(1.0, 0.6, 0.8)</td>
-<td class="color_td" style="background:#E0E0E0">(0.88, 0.88, 0.88)</td>
-</tr>
-<tr>
-<td class="color_td" style="background:#FFCCCC">(1.0, 0.8, 0.8)</td>
-<td class="color_td" style="background:#FFE5CC">(1.0, 0.9, 0.8)</td>
-<td class="color_td" style="background:#FFFFCC">(1.0, 1.0, 0.8)</td>
-<td class="color_td" style="background:#E5FFCC">(0.9, 1.0, 0.8)</td>
-<td class="color_td" style="background:#CCFFCC">(0.8, 1.0, 0.8)</td>
-<td class="color_td" style="background:#CCFFE5">(0.8, 1.0, 0.9)</td>
-<td class="color_td" style="background:#CCFFFF">(0.8, 1.0, 1.0)</td>
-<td class="color_td" style="background:#CCE5FF">(0.8, 0.9, 1.0)</td>
-<td class="color_td" style="background:#CCCCFF">(0.8, 0.8, 1.0)</td>
-<td class="color_td" style="background:#E5CCFF">(0.9, 0.8, 1.0)</td>
-<td class="color_td" style="background:#FFCCFF">(1.0, 0.8, 1.0)</td>
-<td class="color_td" style="background:#FFCCE5">(1.0, 0.8, 0.9)</td>
-<td class="color_td" style="background:#FFFFFF">(1.0, 1.0, 1.0)</td>
-</tr>
-</tbody></table>
-
-RGB Color Tuple: <input type="text" id="RGBTupleField"/>
 
 
 ## Filling in Shapes
