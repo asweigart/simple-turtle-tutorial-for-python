@@ -1,6 +1,6 @@
 # square_random.py
 from turtle import *
-import random
+from random import *
 
 pensize(4)
 speed('fastest')

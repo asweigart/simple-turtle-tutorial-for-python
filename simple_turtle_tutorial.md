@@ -25,11 +25,18 @@ This is a Turtle programming tutorial written by Al Sweigart, author of *Automat
 1. [Writing Text in the Turtle Window](#Writing-Text-in-the-Turtle-Window)
 1. [Angles](#Angles)
 1. [XY Cartesian Coordinates](#XY-Cartesian-Coordinates)
+
+1. [Quick Review 2]()
+1. [Practice Exercises 2]()
+
 1. [Raising and Lowering the Pen](#Raising-And-Lowering-the-Pen)
 1. [Stamping](#Stamping)
 1. [Square Spirals Examples](#Square-Spirals-Examples)
 1. [Interactive Drawing](#Interactive-Drawing)
 
+
+1. [Quick Review 3]()
+1. [Practice Exercises 3]()
 
 
 
@@ -362,8 +369,9 @@ Because this program uses random numbers, the picture will look different each t
 [<img src="screenshot_square_random3.jpg" style="width: 400px"/>](screenshot_square_random3.jpg)
 [<img src="screenshot_square_random4.jpg" style="width: 400px"/>](screenshot_square_random4.jpg)
 
-There are a lot of different images we can learn to make with Turtle!
+The `from random import *` instruction lets your program call the `randint()` function. This function returns a random *integer* (that is, a whole number) that you can pass to in other function calls. The instruction `left(randint(80, 100))` turns the turtle left by a random amount of degrees between 80 and 100.
 
+When our program has loops and random numbers, [we can create generative art](https://duckduckgo.com/?t=ffab&q=generative+art&iax=images&ia=images). We don't make the art ourselves, but we make the programs that create the art. There are a lot of different images we can learn to make with Turtle!
 
 
 
@@ -459,7 +467,7 @@ Instead of a number, you can call the `randint()` function to get a random numbe
 Create programs that draw the pictures in this section. The solutions are the end of this tutorial. Your code and your pictures don't have to match the pictures here exactly, but they should look about the same. There are many different ways to write the code for these programs.
 
 
-Create a program named *solution_equilateral_triangle.py* that draws the following picture. *Hint: All lines in the equilateral triangle are 200 steps long. The first turn is 60 degrees. The later turns are 120 degrees.*
+Create a program named *solution_equilateral_triangle.py* that draws the following picture. *Hint: All lines in the equilateral triangle are 200 steps long. The first turn is a 60 degree right turn. The later turns are 120 degrees.*
 
 [<img src="screenshot_solution_equilateral_triangle.jpg" style="width: 400px"/>](screenshot_solution_equilateral_triangle.jpg)
 
@@ -494,7 +502,7 @@ Create a program named *solution_star.py* that draws the following picture. *Hin
 [<img src="screenshot_solution_star.jpg" style="width: 400px"/>](screenshot_solution_star.jpg)
 
 
-Create a program named *solution_nested_squares.py* that draws the following picture. *Hint: Draw a square with sides of length `100`. Then draw another square with sides of length `150`, then `200`, then `250`, then `300`.*
+Create a program named *solution_nested_squares.py* that draws the following picture. *Hint: Draw a square with sides of length `100`. Then draw another square with sides of length `150`, then `200`, then `250`, then `300`. You may put a `for` loop inside another `for` loop to do this.* 
 
 [<img src="screenshot_solution_nested_squares.jpg" style="width: 400px"/>](screenshot_solution_nested_squares.jpg)
 
@@ -697,75 +705,149 @@ When you run this program, the output will look something like this:
 
 The `x = randint(-400, 400)` instruction saves a random integer (that is, a random whole number) to the variable `x`. The `y = randint(-400, 400)` instruction does this again for the `y` variable. Then `goto(x, y)` moves the turtle to the coordinates of these random numbers.
 
-These could be 
-
-TODO
 
 
 
 
-## Raising and Lowering the Pen
 
-Imagine the turtle as holding a pen in its mouth. When the pen is touching the ground, the turtle draws a line as it moves. If the pen is raised up off the ground, the turtle does not draw a line as it moves. The `pendown()` and `penup()` functions can control if the turtle draws a line as it moves.
+## Quick Review 2
 
-Turtle programs always begin with the pen lowered down on the ground.
 
-Let's create a program that draws a dashed line. Create a new file in your code editor. Save it as *dashed_lines.py*. Enter the following Python code:
 
-```python
-# dashed_lines.py
-from turtle import *
-from random import *
+## Practice Exercises 2
 
-pensize(4)
-speed('fastest')
 
-for i in range(12):
-    # Face a random direction:
-    setheading(randint(0, 360))
+Star outline:
+[(0, 300), (70, 95), (285, 95), (110, -35), (175, -260),
+ (0, -100), (-175, -260), (-110, -35), (-285, 95), (-70, 95), (0, 300)]
 
-    # Make a dashed line in that direction:
-    for j in range(6):
-        pendown()
-        forward(10)  # Draw a line segment.
-        penup()
-        forward(10)  # Move without drawing a line segment.
-    
-    # Make one last line segment:
-    pendown()
-    forward(10)
 
-done()
-```
+
+
+
+
+## Home, Clear, Reset, Undo
+
+The turtle draws lines as it moves, but there are several functions for erasing lines:
+
+* `home()` moves the turtle back to XY coordiantes 0, 0 and sets the heading to 0 degrees. This is the same as calling both `goto(0, 0)` and `setheading(0)`.
+* `clear()` erases all the lines the turtle has drawn.
+* `reset()` moves the turtle home and erases all lines. This is the same as calling both `home()` and `reset()`.
+* `undo()` erases the last line the turtle made. You can call this repeatedly to keep undoing lines.
+
+
+
+
+## Colors
+
+You can change the background color of the window by calling the `bgcolor()` function and passing it one of the following color text strings:
+
+* `'black'`
+* `'blue'`
+* `'brown'`
+* `'orange'`
+* `'gray'`
+* `'green'`
+* `'purple'`
+* `'violet'`
+* `'pink'`
+* `'yellow'`
+* `'white'`
+* `'red'`
+* `'magenta'`
+* `'cyan'`
+
+You can change the color of the turtle's lines by passing a color to the `pencolor()` function.
+
+For example, adding `bgcolor('yellow')` and `pencolor('blue')` makes the background a yellow color and the turtle line blue in the *square_circle_86.py*:
+
+[<img src="screenshot_bgcolor_yellow.jpg" style="width: 400px"/>](screenshot_bgcolor_yellow.jpg)
+
+Custom colors use an *RGB value* that uses the primary colors of light: red, green, and blue. (This is different from the primary colors of dyes and pigments: red, yellow, and blue.) Each of the red, green, and blue settings are between `0.0` (for none) and `1.0` (for maximum). For example, `(1.0, 0.0, 0.0)` is the same as `'red'` because it has full red and zero green and blue.
+
+When all three values are at the maximum, they produce white: `(1.0, 1.0, 1.0)` is the same as `'white'`. When all three values are at zero, they produce black: `(0.0, 0.0, 0.0)` is the same as `'black'`. You can increase the numbers to make lighter colors or decrease them to make darker colors.
+
+For another example, `(1.0, 1.0, 0.0)` is the same as `'yellow'` because mixing full red and green with no blue produces yellow. However, `(1.0, 1.0, 0.5)` produces a lighter yellow, while `(0.5, 0.5, 0)` produces a darker yellow.
+
+
+Here are the RGB values of some different colors:
+
+* `'black'` is `(0.0, 0.0, 0.0)`
+* `'blue'` is `(0.0, 0.0, 1.0)`
+* `'brown'` is `(0.6, 0.4, 0.2)`
+* `'orange'` is `(1.0, 0.5, 0.0)`
+* `'gray'` is `(0.5, 0.5, 0.5)`
+* `'green'` is `(0.0, 1.0, 0.0)`
+* `'purple'` is `(0.5, 0.0, 0.5)`
+* `'violet'` is `(0.56, 0.0, 1.0)`
+* `'pink'` is `(1.0, 0.75, 0.8)`
+* `'yellow'` is `(1.0, 1.0, 0.0)`
+* `'white'` is `(1.0, 1.0, 1.0)`
+* `'red'` is `(1.0, 0.0, 0.0)`
+* `'magenta'` is `(1.0, 0.0, 1.0)`
+* `'cyan'` is `(0.0, 1.0, 1.0)`
+
+You can use the `turtlecolors` app to see the RGB values of different colors. Copy the code from https://raw.githubusercontent.com/asweigart/turtlecolors/refs/heads/main/src/turtlecolors/__init__.py and paste it into a file named *turtlecolors.py* and run the program. You can adjust the three sliders for red, green, and blue to see what color they make.
+
+The app looks like this when you run it:
+
+
+[<img src="screenshot_turtlecolors1.jpg" style="width: 400px"/>](screenshot_turtlecolors1.jpg)
+[<img src="screenshot_turtlecolors2.jpg" style="width: 400px"/>](screenshot_turtlecolors2.jpg)
+[<img src="screenshot_turtlecolors3.jpg" style="width: 400px"/>](screenshot_turtlecolors3.jpg)
+[<img src="screenshot_turtlecolors4.jpg" style="width: 400px"/>](screenshot_turtlecolors4.jpg)
+
+
+
+
+<!--
+## Cursors
+
+Python's turtle cursor looks like a triangle, not a cursor. However, you can change this by calling the `shape()` function. The `shape()` function takes one of the following arguments:
+
+* `shape('classic')` - The default shape of the cursor. It looks like a sharp arrowhead.
+* `shape('triangle')` - A long triangle shape.
+* `shape('arrow')`  - A shorter triangle shape.
+* `shape('turtle')` - A turtle animal.
+* `shape('circle')` - A large dot.
+* `shape('square')` - A large square.
+* `shape('blank')` - An invisible cursor, like calling `hideturtle()`.
+
+For example, calling `shape('turtle')` makes the cursor look like a turtle animal that moves around the window.
+
 
 
 
 
 ## Stamping
 
-Python's turtle cursor looks like a triangle, not a cursor. However, you can change this by calling the `shape()` function. The `shape()` function takes one of the following arguments: `'arrow'`, `'turtle'`, `'circle'`, `'square'`, `'triangle'`, or `'classic'`.
 
-You can make a copy of this image appear at 
+While the `shape()` function changes the shape of turtle cursor, you can make a copy of this image on the window by calling the 
 
 Let's create a program that draws a square spiral. Create a new file in your code editor. Save it as *stamp_lines.py*. Enter the following Python code:
 
 
 ```python
-# stamp_lines.py
+# stamp_path.py
 from turtle import *
 from random import *
 
 shape('turtle')
 speed('fastest')
 penup()
+bgcolor((0.1, 0.6, 0.8))  # Set the background color to a light blue.
 
-for i in range(12):
-    # Face a random direction:
-    setheading(randint(0, 360))
-
-    for j in range(6):
+start_heading = 0
+while start_heading < 360:
+    home()
+    setheading(start_heading)
+    pencolor()
+    fillcolor(choice(['green', 'yellow']))
+    for j in range(12):
+        left(randint(-20, 20))  # Randomly turn up to 20 degrees left or right.
         forward(30)  # 30 step gap in between stamps.
         stamp()
+    start_heading = start_heading + 20
 
 done()
 ```
@@ -831,6 +913,53 @@ done()
 ```
 
 
+
+-->
+
+
+
+## Raising and Lowering the Pen
+
+Imagine the turtle as holding a pen in its mouth. When the pen is touching the ground, the turtle draws a line as it moves. If the pen is raised up off the ground, the turtle does not draw a line as it moves. The `pendown()` and `penup()` functions can control if the turtle draws a line as it moves.
+
+Turtle programs always begin with the pen lowered down on the ground.
+
+Let's create a program that draws a dashed line. Create a new file in your code editor. Save it as *dashed_lines.py*. Enter the following Python code:
+
+```python
+# dashed_lines.py
+from turtle import *
+from random import *
+
+pensize(4)
+speed('fastest')
+
+for i in range(12):
+    # Face a random direction:
+    setheading(randint(0, 360))
+
+    # Make a dashed line in that direction:
+    for j in range(6):
+        pendown()
+        forward(10)  # Draw a line segment.
+        penup()
+        forward(10)  # Move without drawing a line segment.
+    
+    # Make one last line segment:
+    pendown()
+    forward(10)
+
+done()
+```
+
+Because this program uses random numbers, the picture will look different each time you run the program:
+
+[<img src="screenshot_dashed1.jpg" style="width: 400px"/>](screenshot_dashed1.jpg)
+[<img src="screenshot_dashed2.jpg" style="width: 400px"/>](screenshot_dashed2.jpg)
+
+
+
+
 ## Square Spirals Examples
 
 Let's create a program that draws a square spiral. Create a new file in your code editor. Save it as *spiral.py*. Enter the following Python code:
@@ -853,7 +982,7 @@ When you run this program, it looks like this:
 
 In our previous programs with `for` loops, we have ignored the `i` variable. But in this program, we use `i` variable in the line `forward(i)`.
 
-In this `for` loop, the variable `i` is set to `0` when it runs the code inside the loop. The instruction `forward(i)` is really running `forward(0)`. On the next time through the loop, `i` is set to `1` and `forward(i)` now means `forward(1)`. The `for` loop keeps increasing the `i` variable and running the code in the loop. 
+In this `for` loop, the variable `i` is set to `0` when it runs the code inside the loop. The instruction `forward(i)` is really running `forward(0)`. On the next time through the loop, `i` is set to `1` and `forward(i)` now means `forward(1)`. The `for` loop keeps increasing the `i` variable, making the turtle draw longer and longer lines. 
 
 The `i` variable goes up to, but not including, `300` because we wrote the code `for i in range(300):`. This means that on the last time through the loop, the `i` variable is set to `299`.
 
@@ -891,50 +1020,16 @@ done()
 Using the `for` loop saves us from a lot of typing!
 
 
-*spiral_red.py*
+Try changing `91` in `left(91)` to other numbers between `30` and `180`. Then run the program again to see how the drawing changes.
+
+
+
+Next, let's create a random colorful spiral. Create a new file in your code editor. Save it as *spiral_black_bg.py*. Enter the following Python code:
+
+*spiral_random.py*
 
 ```python
-# spiral_red.py
-from turtle import *
-
-speed('fastest')
-pencolor('red')  # Make the lines red.
-for i in range(300):
-    forward(i)
-    left(91)
-hideturtle()
-done()
-```
-
-[<img src="screenshot_spiral_red.jpg" style="width: 400px"/>](screenshot_spiral_red.jpg)
-
-Try changing 91 to 30, 45, 60, 90, 120, 150, and 46, 61, 91, 120, 151. Finally, try 179 and 180.
-
-*spiral_color.py*
-
-```python
-# spiral_color.py
-from turtle import *
-from random import *
-
-colors = ['red', 'orange', 'yellow', 'blue', 'green', 'purple']
-
-speed('fastest')
-for i in range(300):
-    pencolor(choice(colors))
-    forward(i)
-    left(91)
-hideturtle()
-done()
-```
-
-[<img src="screenshot_spiral_color.jpg" style="width: 400px"/>](screenshot_spiral_color.jpg)
-
-
-*spiral_black_bg.py*
-
-```python
-# spiral_black_bg.py
+# spiral_random.py
 from turtle import *
 from random import *
 
@@ -951,16 +1046,19 @@ hideturtle()
 done()
 ```
 
-[<img src="screenshot_spiral_black_bg.jpg" style="width: 400px"/>](screenshot_spiral_black_bg.jpg)
+When you run this program, it looks like this:
+
+[<img src="spiral_random.jpg" style="width: 400px"/>](spiral_random.jpg)
+
+The `choice()` function (from the `random` module) randomly chooses one of the string values in the `` list. This makes every line a random color.
+
+We can create a spiral that makes a rainbow with the following code. Create a new file in your code editor. Save it as *spiral_rainbow.py*. Enter the following Python code:
 
 
-
-
-
-*spiral_pretty.py*
+*spiral_rainbow.py*
 
 ```python
-# spiral_pretty.py
+# spiral_rainbow.py
 from turtle import *
 
 speed('fastest')
@@ -1000,12 +1098,9 @@ for i in range(60):
 done()
 ```
 
-[<img src="screenshot_spiral_pretty.jpg" style="width: 400px"/>](screenshot_spiral_pretty.jpg)
+When you run this program, it looks like this:
 
-
-
-
-
+[<img src="screenshot_spiral_rainbow.jpg" style="width: 400px"/>](screenshot_spiral_rainbow.jpg)
 
 
 
@@ -1019,7 +1114,13 @@ done()
 
 ## Interactive Drawing
 
+
+
+
+
+
 *click_square.py*
+
 
 ```python
 # click_square.py
@@ -1028,39 +1129,18 @@ from turtle import *
 speed('fastest')
 
 def draw_square(x, y):
-    goto(x, y)  # TODO
-    for i in range(4):
-        forward(100)
-        left(90)
-
-# When the turtle window is clicked, call draw_square():
-getscreen().onclick(draw_square)
-done()
-```
-
-
-
-
-
-
-*click_square_no_line.py*
-
-
-```python
-from turtle import *
-
-speed('fastest')
-
-def draw_square(x, y):
-    penup()  # TODO 
+    # Move to the XY coordinates of the mouse click:
+    penup()
     goto(x, y)
-    pendown()  # TODO
+    pendown()
+
+    # Draw a square:
     for i in range(4):
         forward(100)
         left(90)
-    update()
 
-getscreen().onclick(draw_square)
+# Set the draw_square() function to be called when a click happens:
+getscreen().onclick(draw_square)  # NOTE: There is no () after draw_square
 done()
 ```
 
@@ -1069,15 +1149,19 @@ done()
 
 
 ```python
+# click_spiral.py
 from turtle import *
 from random import *
 
 tracer(1000, 0)  # TODO
 
 def draw_spiral(x, y):
+    # Move to the XY coordinates of the mouse click:
     penup()
     goto(x, y)
     pendown()
+
+    # Draw a spiral:
     setheading(0)
     line_length = randint(50, 200)
     turn_radius = randint(50, 70)
@@ -1086,50 +1170,36 @@ def draw_spiral(x, y):
         left(turn_radius)
     update()
 
+# Set the draw_spiral() function to be called when a click happens:
 getscreen().onclick(draw_spiral)
-done()  # Make turtle wait for clicks.
-```
-
-```python
-from turtle import *
-from random import *
-
-tracer(1000, 0)
-
-def draw_spiral(x, y):
-    penup()
-    goto(x, y)
-    pendown()
-    setheading(0)
-    line_length = randint(50, 200)
-    turn_radius = randint(50, 70)
-    for i in range(100):
-        forward()
-        left(turn_radius)
-    update()
-
-# When the turtle window is clicked, call draw_spiral():
-getscreen().onclick(draw_spiral)
-
-listen()  # Put the turtle window in focus.
-done()  # Make turtle wait for clicks.
+done()
 ```
 
 
 
 
 
+
+
+
 ```python
-# Draw a rose.
+# click_rose.py
 from turtle import *
 from random import *
 
 tracer(1000, 0)
 
-def draw_square(x, y):
+def draw_rose(x, y):
+    # Set pen color and size for roses:
+    pencolor('red')
+    pensize(randint(2, 5))
+
+    # Move to the XY coordinates of the mouse click:
     penup()
     goto(x, y)
     pendown()
+
+    # Draw a rose:
     setheading(0)
     for i in range(100):
         pencolor((random(), 0, 0))
@@ -1140,14 +1210,11 @@ def draw_square(x, y):
 
 
 bgcolor('black')
-pencolor('red')
-pensize(4)
 
-# When the turtle window is clicked, call draw_sqaure():
-getscreen().onclick(draw_square)
+# Set the draw_rose() function to be called when a click happens:
+getscreen().onclick(draw_rose)
 
-listen()  # Put the turtle window in focus.
-done()  # Make turtle wait for clicks.
+done()
 ```
 
 
@@ -1167,39 +1234,38 @@ TODO
 ## Draw Circles
 
 
+
 TODO
 
 TODO - draw snowpal
 
 
+## Drawing Very Fast
+
+tracer(100, 0)
+
+Always pass 
 
 
 
-## Example Programs
 
-https://inventwithpython.com/recursion/chapter9.html
-
-TODO - simple polygons
-
-TODO - click to draw a splat (random color, num lines, lengths, and pen size)
-
-TODO - checkboard
-
-TODO - random grid of various sizes
-
-TODO - racing game? key press spamming
-
-TODO - rainbow
-
-TODO - randow walk (with 0, 90, 180, or 270 degree turns and random starting angle)
-
-TODO - fractal tree
-
-TODO - sierpinski triangle
-
-TODO - hilbert curve
+## Quick Review 3
 
 
+
+
+
+## Practice Exercises 3
+
+
+
+
+
+
+## Blue Flowers Program
+
+
+Let's use everything we've learned to make a generative art program. This program draws blue flowers by making six circles in a random location, size, pen thickness, and color. The random color will be a shade of blue.
 
 This is a program that draws blue flowers:
 
@@ -1207,20 +1273,26 @@ This is a program that draws blue flowers:
 from turtle import *
 from random import *
 
-tracer(1000, 0)
+tracer(100, 0)
 
 for n in range(50):
+    # Move to a random location:
     penup()
     x = randint(-300, 300)
     y = randint(-300, 300)
     goto(x, y)
     pendown()
 
+    # Make a random blue color:
     pencolor((0, 0, random()))
 
-    circle_size = randint(10, 40)
+    # Make a random pen thickness:
     pensize(randint(1, 5))
 
+    # Make a random size for the circles:
+    circle_size = randint(10, 40)
+
+    # Draw six circles.
     for i in range(6):
         circle(circle_size)
         left(60)
@@ -1228,7 +1300,7 @@ update()
 done()
 ```
 
-[<img src="blue_flowers.jpg" style="width: 400px"/>](blue_flowers.jpg)
+[<img src="screenshot_blue_flowers.jpg" style="width: 400px"/>](screenshot_blue_flowers.jpg)
 
 
 
@@ -1239,8 +1311,28 @@ done()
 
 ## For More Information
 
-https://docs.python.org/3/library/turtle.html
+There are many other things you can learn about turtle programming. 
 
-https://docs.python.org/3/library/turtle.html#turtle-methods
+* [The official documentation of the Turtle module.](https://docs.python.org/3/library/turtle.html)
+
+* [The list of Turtle functions in the official documentation.](https://docs.python.org/3/library/turtle.html#turtle-methods)
+
+* [Chapter 9 of The Recursive Book of Recursion, with recursive turtle drawings.](https://inventwithpython.com/recursion/chapter9.html)
+
+* [Chapter 13 of The Recursive Book of Recursion, with a recursive fractal drawing program.](https://inventwithpython.com/recursion/chapter13.html)
+
+Python also comes with the `turtledemo` program that has many more examples. Create a program with the following code:
+
+```python
+import turtledemo.__main__
+turtledemo.__main__.main()
+```
+
+When you run this program, you can select one of the example programs from the menu. Then click the **Start** button to run the example program. The source code for the example program is shown in the left side of the window. This is the Peace example program:
+
+[<img src="screenshot_peace.jpg" style="width: 400px"/>](screenshot_peace.jpg)
 
 
+## Contact
+
+If you have questions about this tutorial or can help translate it into non-English languages, please contact [al@inventwithpython.com](mailto:al@inventwithpython.com).

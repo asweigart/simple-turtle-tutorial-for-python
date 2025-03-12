@@ -1,4 +1,4 @@
-# spiral_prett.py
+# spiral_rainbow.py
 from turtle import *
 
 speed('fastest')
