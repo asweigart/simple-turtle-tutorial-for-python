@@ -1,7 +1,13 @@
 <meta charset="UTF-8">
 
+<!-- TODO: Create HTML and PDF versions in all languages.
+Add a part that explains how to take screenshots in all OSes?
+Keep high-resolution screenshots for print editions.
+-->
 
 # A Simple Turtle Tutorial for Python's turtle.py Module
+
+*A programming guide for students and their parents, teachers, and instructors.*
 
 **This document is still being written and not yet complete.**
 
@@ -378,7 +384,9 @@ When our program has loops and random numbers, [we can create generative art](ht
 
 ## Quick Review 1
 
-Let's review the Python instructions we've seen so far:
+Let's review the Python instructions we've seen so far.
+
+You can create comments with the `#` hashtag character:
 
 ```python
 # This is a comment.
@@ -386,11 +394,15 @@ Let's review the Python instructions we've seen so far:
 
 Everything after the `#` hashtag until the end of a the line is a comment. Comments are notes you can write to remind yourself what the program does. You can write anything in a commnet. They do not change how your program works.
 
+Your programs must always import the `turtle` module:
+
 ```python
 from turtle import *
 ```
 
-The turtle module must imported before you can call the turtle function. Put `from turtle import *` at the top of your program.
+The turtle module must imported before you can call turtle functions. Always put `from turtle import *` at the top of your program.
+
+There are functions that can move the turtle cursor:
 
 ```python
 forward(100)  # Move the turtle forward 100 steps.
@@ -398,36 +410,43 @@ backward(100)  # Move the turtle backward 100 steps.
 forward(-100)  # Move the turtle backward 100 steps.
 ```
 
-You can move the turtle forward and backward by calling the `forward()` and `backward()` functions. 
+You can move the turtle forward and backward by calling the `forward()` and `backward()` functions. Passing a negative number makes the turtle move in the opposite direction.
+
+There are also functions that can turn the direction the turtle cursor is facing:
 
 ```python
 left(90)  # Turn left 90 degrees.
 right(45)  # Turn right 45 degrees.
 ```
 
-You can turn the turtle left (counterclockwise) or right (clockwise) by passing the number of degrees to turn to the `left()` and `right()` functions. The turtle only turns and does not change position.
+You can turn the turtle left (counterclockwise) or right (clockwise) by passing the number of degrees to turn to the `left()` and `right()` functions. The turtle only turns and does not change position. Passing a negative number makes the turtle turn in the opposite direction.
+
+By default, the turtle draws a thin line when it moves. You can make this line thicker:
 
 ```python
 pensize(4)
 ```
 
-Changes the thickness of the lines that the turtle draws. The default is `1`, but you can pass a larger number as the argument to make thicker lines.
+The pen size is `1` by default, but you can pass a larger number as the argument to `pensize()` to make thicker lines.
 
+The last thing your turtle program should do is call the `done()` function:
 
 ```python
 done()
 ```
 
-Call the `done()` function at the very end of your program so that the Turtle window doesn't automatically close before you can see the finished drawing.
+Calling the `done()` function at the very end of your program keeps the window open after the drawing has finished. This makes sure the Turtle window doesn't automatically close before you can see the finished drawing.
 
+You can use numbers as function call arguments. But you can also store numbers in variables and pass variables as function call arguments:
 
 ```python
 line_length = 25  # This variable stores the number 25.
 forward(line_length)
 ```
 
-You can store values (such as `25`) in variables (such as `line_length`) and use them in other places in your program.
+This code stores `25`) in a variable named `line_length`. The code `forward(line_length)` is the same as `forward(25)`.
 
+A `for` loop allows you to repeat instructions:
 
 ```python
 for i in range(4):  
@@ -437,13 +456,15 @@ for i in range(4):
 
 A `for` loop will repeat the indented instructions after it. In this example, the `forward(200)` and `left(90)` code is run four times because of the `range(4)`. This draws the four sides of a square.
 
+By default, the turtle cursor moves slowly. You can make it faster by calling `speed('fastest')`:
 
 ```python
 speed('fastest')
 ```
 
-If your program draws a lot of lines, you can speed up the turtle by calling `speed('fastest')`.
+Remember to include the quotes. You want to call `speed('fastest')` and not `speed(fastest)`.
 
+Sometimes the turtle cursor gets in the way of your final drawing. You can make it go away by calling `hideturtle()`:
 
 ```python
 hideturtle()
@@ -451,12 +472,14 @@ hideturtle()
 
 If you don't want the triangle of the turtle cursor to appear in the window, call the `hideturtle()` function.
 
+Instead of having the numbers you type, you can have Python create random numbers:
+
 ```python
 from random import *
 forward(randint(1, 100))
 ```
 
-Instead of a number, you can call the `randint()` function to get a random number. The function call `randint(1, 100)` returns a random number between 1 and 100. You must run `from random import *` before using this function.
+The function call `randint(1, 100)` returns a random number between 1 and 100. You must run `from random import *` before using this function.
 
 
 
@@ -709,23 +732,6 @@ The `x = randint(-400, 400)` instruction saves a random integer (that is, a rand
 
 
 
-
-## Quick Review 2
-
-
-
-## Practice Exercises 2
-
-
-Star outline:
-[(0, 300), (70, 95), (285, 95), (110, -35), (175, -260),
- (0, -100), (-175, -260), (-110, -35), (-285, 95), (-70, 95), (0, 300)]
-
-
-
-
-
-
 ## Home, Clear, Reset, Undo
 
 The turtle draws lines as it moves, but there are several functions for erasing lines:
@@ -738,39 +744,73 @@ The turtle draws lines as it moves, but there are several functions for erasing 
 
 
 
+
+
+## Quick Review 2
+
+Let's review the Python instructions we've seen so far:
+
+```python
+write('Hello, world!')
+write('Hello, world!', font=('Arial', 48, 'normal'))
+```
+
+The `write()` function writes text in the Turtle window where the turtle cursor is. You can pass it a text string value of the text to appear. You can also pass a `font=` keyword argument to make the font appear in a different size or style.
+
+```python
+setheading(90)
+current_heading = heading()
+```
+
+The `setheading()` function sets the direction the turtle cursor is facing. `0` degrees faces right (east), `90` degrees faces up (north), `180` degrees faces left (west), and `270` degrees faces down (south).
+
+The `heading()` function returns the direction the turtle cursor is facing, and you can pass this to a function call or store it in a variable.
+
+```python
+goto(250, -100)  # Move the turtle cursor to the XY coordinates 250, -100.
+```
+
+* An XY coordinate is a pair of numbers that tells you where something is.
+* The center of the Turtle window is the *origin*, at XY coordinates 0, 0.
+* The X coordinates increase going right and decrease going left.
+* The Y coordinates increase going up and decrease going down.
+
+To start your drawing over, your program can call the following functions:
+
+* `home()` is the same as calling `goto(0, 0)` and `setheading(0)`.
+* `clear()` erases all the lines the turtle has drawn.
+* `reset()` is the same as calling `home()` and `clear()`.
+* `undo()` erases the most recent line the turtle drew.
+
+
+
+
+
+## Practice Exercises 2
+
+
+Create a program named *solution_star_outline.py* that draws the following picture. Only use `goto()` to move the turtle. *Hint: The coordinates you must pass to `goto()` are (0, 300), (70, 95), (285, 95), (110, -35), (175, -260),
+ (0, -100), (-175, -260), (-110, -35), (-285, 95), (-70, 95), and (0, 300)*
+
+[<img src="screenshot_solution_star_outline.jpg" style="width: 400px"/>](screenshot_solution_star_outline.jpg)
+
+
+Create a program named *solution_cross_setheading.py* that draws the following picture. Do not use `right()` or `left()` but instead only use `setheading()` *Hint: All lines in the cross are 100 steps long. All headings are either 0, 90, 180, or 270*
+
+[<img src="screenshot_solution_cross.jpg" style="width: 400px"/>](screenshot_solution_cross.jpg)
+
+
+Create a program named *solution_random_hello.py* that writes "Hello,world!" twenty times at random places in the Turtle window. The text should also have random sizes between 12 and 24. The program will look something like this:
+
+[<img src="screenshot_solution_random_hello.jpg" style="width: 400px"/>](screenshot_solution_random_hello.jpg)
+
+
+
+
+
 ## Colors
 
-You can change the background color of the window by calling the `bgcolor()` function and passing it one of the following color text strings:
-
-* `'black'`
-* `'blue'`
-* `'brown'`
-* `'orange'`
-* `'gray'`
-* `'green'`
-* `'purple'`
-* `'violet'`
-* `'pink'`
-* `'yellow'`
-* `'white'`
-* `'red'`
-* `'magenta'`
-* `'cyan'`
-
-You can change the color of the turtle's lines by passing a color to the `pencolor()` function.
-
-For example, adding `bgcolor('yellow')` and `pencolor('blue')` makes the background a yellow color and the turtle line blue in the *square_circle_86.py*:
-
-[<img src="screenshot_bgcolor_yellow.jpg" style="width: 400px"/>](screenshot_bgcolor_yellow.jpg)
-
-Custom colors use an *RGB value* that uses the primary colors of light: red, green, and blue. (This is different from the primary colors of dyes and pigments: red, yellow, and blue.) Each of the red, green, and blue settings are between `0.0` (for none) and `1.0` (for maximum). For example, `(1.0, 0.0, 0.0)` is the same as `'red'` because it has full red and zero green and blue.
-
-When all three values are at the maximum, they produce white: `(1.0, 1.0, 1.0)` is the same as `'white'`. When all three values are at zero, they produce black: `(0.0, 0.0, 0.0)` is the same as `'black'`. You can increase the numbers to make lighter colors or decrease them to make darker colors.
-
-For another example, `(1.0, 1.0, 0.0)` is the same as `'yellow'` because mixing full red and green with no blue produces yellow. However, `(1.0, 1.0, 0.5)` produces a lighter yellow, while `(0.5, 0.5, 0)` produces a darker yellow.
-
-
-Here are the RGB values of some different colors:
+You can change the background color of the window by calling the `bgcolor()` function and passing it one of the following color text strings and their three-number RGB values (explained later):
 
 * `'black'` is `(0.0, 0.0, 0.0)`
 * `'blue'` is `(0.0, 0.0, 1.0)`
@@ -786,6 +826,19 @@ Here are the RGB values of some different colors:
 * `'red'` is `(1.0, 0.0, 0.0)`
 * `'magenta'` is `(1.0, 0.0, 1.0)`
 * `'cyan'` is `(0.0, 1.0, 1.0)`
+
+You can change the color of the turtle's lines by passing a color to the `pencolor()` function.
+
+For example, adding `bgcolor('yellow')` and `pencolor('blue')` makes the background a yellow color and the turtle line blue in the *square_circle_86.py*:
+
+[<img src="screenshot_bgcolor_yellow.jpg" style="width: 400px"/>](screenshot_bgcolor_yellow.jpg)
+
+Custom colors use an *RGB value* that uses the primary colors of light: red, green, and blue. (This is different from the primary colors of dyes and pigments: red, yellow, and blue.) Each of the red, green, and blue settings are between `0.0` (for none) and `1.0` (for maximum). For example, `(1.0, 0.0, 0.0)` is the same as `'red'` because it has full red and zero green and blue.
+
+When all three values are at the maximum, they produce white: `(1.0, 1.0, 1.0)` is the same as `'white'`. When all three values are at zero, they produce black: `(0.0, 0.0, 0.0)` is the same as `'black'`. You can increase the numbers to make lighter colors or decrease them to make darker colors.
+
+For another example, `(1.0, 1.0, 0.0)` is the same as `'yellow'` because mixing full red and green with no blue produces yellow. However, `(1.0, 1.0, 0.5)` produces a lighter yellow, while `(0.5, 0.5, 0)` produces a darker yellow.
+
 
 You can use the `turtlecolors` app to see the RGB values of different colors. Copy the code from https://raw.githubusercontent.com/asweigart/turtlecolors/refs/heads/main/src/turtlecolors/__init__.py and paste it into a file named *turtlecolors.py* and run the program. You can adjust the three sliders for red, green, and blue to see what color they make.
 
@@ -952,6 +1005,8 @@ for i in range(12):
 done()
 ```
 
+The `for i in range(12):` loop draws twelve dashed lines. Each dashed line is drawn by the `for j in range(6):` loop. The turtle moves forward 10 steps while the pen is down and then moves forward 10 steps while the pen is up. This makes it look like a dashed line.
+
 Because this program uses random numbers, the picture will look different each time you run the program:
 
 [<img src="screenshot_dashed1.jpg" style="width: 400px"/>](screenshot_dashed1.jpg)
@@ -1023,10 +1078,7 @@ Using the `for` loop saves us from a lot of typing!
 Try changing `91` in `left(91)` to other numbers between `30` and `180`. Then run the program again to see how the drawing changes.
 
 
-
 Next, let's create a random colorful spiral. Create a new file in your code editor. Save it as *spiral_black_bg.py*. Enter the following Python code:
-
-*spiral_random.py*
 
 ```python
 # spiral_random.py
@@ -1048,14 +1100,12 @@ done()
 
 When you run this program, it looks like this:
 
-[<img src="spiral_random.jpg" style="width: 400px"/>](spiral_random.jpg)
+[<img src="screenshot_spiral_random.jpg" style="width: 400px"/>](screenshot_spiral_random.jpg)
 
-The `choice()` function (from the `random` module) randomly chooses one of the string values in the `` list. This makes every line a random color.
+The `choice()` function (from the `random` module) randomly chooses one of the string values in the `['red', 'orange', 'yellow', 'blue', 'green', 'purple']` list. This makes every line a random color.
 
 We can create a spiral that makes a rainbow with the following code. Create a new file in your code editor. Save it as *spiral_rainbow.py*. Enter the following Python code:
 
-
-*spiral_rainbow.py*
 
 ```python
 # spiral_rainbow.py
@@ -1098,6 +1148,8 @@ for i in range(60):
 done()
 ```
 
+Each of the `for` loops in this program draws lines with a different color. The later `for` loops also add a number to the `i` variable when calling `forward()`. So `for i in range(60):` will make `forward(i)` call `forward(0)` to `forward(59)`. However, `forward(60 + i)` will call `forward(60)` to `forward(119)`. This is how each `for` loop draws longer and longer lines.
+
 When you run this program, it looks like this:
 
 [<img src="screenshot_spiral_rainbow.jpg" style="width: 400px"/>](screenshot_spiral_rainbow.jpg)
@@ -1114,12 +1166,9 @@ When you run this program, it looks like this:
 
 ## Interactive Drawing
 
+The art we make with the computer can be interactive. The `def` keyword lets us define our own functions in Python. The `getscreen().onclick()` function makes the `turtle` module call our function when the user clicks on the Turtle window.
 
-
-
-
-
-*click_square.py*
+Create a new file in your code editor. Save it as *click_square.py*. Enter the following Python code:
 
 
 ```python
@@ -1130,9 +1179,9 @@ speed('fastest')
 
 def draw_square(x, y):
     # Move to the XY coordinates of the mouse click:
-    penup()
-    goto(x, y)
-    pendown()
+    penup()  # Raise the pen up.
+    goto(x, y)  # Move the turtle to the XY coordinates of the click.
+    pendown()  # Lower the pen down.
 
     # Draw a square:
     for i in range(4):
@@ -1144,16 +1193,23 @@ getscreen().onclick(draw_square)  # NOTE: There is no () after draw_square
 done()
 ```
 
+When we run this program, nothing happens at first. When we click on the window, the `draw_square()` function we defined is called, and the XY coordinates are passed for the `x` and `y` parameters. The code inside this function raises the pen up, moves the turtle to the XY coordinates of the click, then lowers the pen down.
+
+Now that the turtle is in place, the `for` loop draws a square.
+
+When you click on the window several times, the window may look like this: 
+
+[<img src="screenshot_click_square.jpg" style="width: 400px"/>](screenshot_click_square.jpg)
 
 
-
+Instead of just squares, we could make spirals appear wherever we click on the window. Create a new file in your code editor. Save it as *click_spiral.py*. Enter the following Python code:
 
 ```python
 # click_spiral.py
 from turtle import *
 from random import *
 
-tracer(1000, 0)  # TODO
+tracer(1000, 0)  # Draw 1,000 lines before updating 
 
 def draw_spiral(x, y):
     # Move to the XY coordinates of the mouse click:
@@ -1162,10 +1218,9 @@ def draw_spiral(x, y):
     pendown()
 
     # Draw a spiral:
-    setheading(0)
     line_length = randint(50, 200)
     turn_radius = randint(50, 70)
-    for i in range(100):
+    for i in range(randint(50, 200)):
         forward(i)
         left(turn_radius)
     update()
@@ -1175,12 +1230,13 @@ getscreen().onclick(draw_spiral)
 done()
 ```
 
+This program uses the new functions `tracer()` and `update()`. These functions let the turtle draw even faster than `speed('fastest')`. Normally, your program updates the screen after drawing one line. This can be too slow if your program does a lot of drawing. At the beginning of your program, call `tracer(1000, 0)` to make your program draw 1,000 lines before updating the screen (with a 0 millisecond pause in between lines). However, you must remember to call `update()` to update the screen when you are done drawing.
 
+After clicking the window several times, it may look something like this:
 
+[<img src="screenshot_click_spiral.jpg" style="width: 400px"/>](screenshot_click_spiral.jpg)
 
-
-
-
+Let's draw random red spirals on a black background. These will look like roses. Create a new file in your code editor. Save it as *click_rose.py*. Enter the following Python code:
 
 ```python
 # click_rose.py
@@ -1200,7 +1256,6 @@ def draw_rose(x, y):
     pendown()
 
     # Draw a rose:
-    setheading(0)
     for i in range(100):
         pencolor((random(), 0, 0))
         pensize(randint(2, 5))
@@ -1217,37 +1272,150 @@ getscreen().onclick(draw_rose)
 done()
 ```
 
+Now you can make your own drawing of a bouquet of roses in seconds!
+
+[<img src="screenshot_click_rose.jpg" style="width: 400px"/>](screenshot_click_rose.jpg)
 
 
 
 
 
-## Filled-In Shapes
-
-
-
-TODO
-
-
-
-
-## Draw Circles
-
-
-
-TODO
-
-TODO - draw snowpal
 
 
 ## Drawing Very Fast
 
-tracer(100, 0)
+If `speed('fastest')` is still to slow, make your program call `tracer(100, 0)` instead. However, to make sure all lines appear in the Turtle window, you must remember to call `update()` when you are done drawing. If you need the program to draw even faster, increase the `100` number to `1000` or even `10000`.
 
-Always pass 
+Let's demonstrate how fast your computer can draw 1,000 lines. Create a new file in your code editor. Save it as *random_tracer.py*. Enter the following Python code:
+
+```python
+# random_tracer.py
+
+from turtle import *
+from random import *
+
+tracer(10, 0)
+
+for i in range(1000):
+    goto(randint(-400, 400), randint(-400, 400))
+
+update()
+done()
+```
+
+When you run this program, the Turtle window will look something like this:
+
+
+[<img src="screenshot_random_tracer.jpg" style="width: 400px"/>](screenshot_random_tracer.jpg)
+
+With `tracer(10, 0)`, the program takes a few seconds to draw all 1,000 lines. But if you change it to `tracer(100, 0)`, the program can finish in about one second. If you change it to `tracer(1000, 0)`, the program can draw all 1,000 lines almost instantly.
+
+At a certain high number, your computer will be drawing as fast as it can and increasing the number doesn't make it draw any faster. (Usually this number is about `1000`.)
+
+If your program is missing lines, then you probably forgot to add the `update()` call after the drawing has finished.
 
 
 
+
+
+
+
+## Draw Curves and Circles
+
+The `turtle` module can only draw straight lines. It cannot draw curves and circles. However, you can draw very short lines and make it appear as a curve. Create a new file in your code editor. Save it as *curve_path.py*. Enter the following Python code:
+
+```python
+# curve_path.py
+
+from turtle import *
+from random import *
+
+tracer(4, 0)
+
+for i in range(100):  # Draw 100 curvy paths.
+    # Move the turtle back to 0, 0:
+    penup()
+    home()
+    pendown()
+
+    # Set a random heading and draw several short lines with changing direction:
+    setheading(randint(0, 360))
+    for j in range(randint(200, 600)):  # Each curve has 200 to 600 segments.
+        forward(1)  # Each segment is 1 step long.
+        left(randint(-4, 4))  # Change the direction slightly
+
+
+update()
+done()
+```
+
+When you run this program, the Turtle window will look something like this:
+
+[<img src="screenshot_curve_path.jpg" style="width: 400px"/>](screenshot_curve_path.jpg)
+
+These curves are actually made up of several very short lines. By having a small change in direction, the short lines together look like one long curve.
+
+You cannot draw a circle, but you can draw a 360-sided polygon that looks like a circle. This is how the `circle()` function draws circles. Pass the radius (that is, half the width of the circle) you want the function to draw. Create a new file in your code editor. Save it as *draw_circles.py*. Enter the following Python code:
+
+```python
+# draw_circles.py
+from turtle import *
+
+speed('fastest')
+
+# Draw circle in the top half of the window:
+setheading(0)  # Face right.
+for i in range(20):
+    circle(i * 10)
+
+# Draw circles in the bottom half of the window:
+setheading(180)  # Face left.
+for i in range(20):
+    circle(i * 10)
+
+done()
+```
+
+The `circle()` function always draws circles by turning the turtle left (or counterclockwise). When we call `setheading(0)` to make the turtle face right, the circle will be drawn above the turtle. When we call `setheading(180)` to make the turtle face to the left, it draws circles below the turtle.
+
+If our program called `circle(i)` inside the `for` loop, it would create circles with radius `0`, `1`, `2`, `3`, and so on up to `9`. But because our program calls `circle(i * 10)`, it creates circles with radius `0`, `10`, `20`, `30`, and so on up to `90`.
+
+When you run this program, the Turtle window will look like this:
+
+[<img src="screenshot_draw_circles.jpg" style="width: 400px"/>](screenshot_draw_circles.jpg)
+
+Let's create an interesting drawing with many overlapping circles. Create a new file in your code editor. Save it as *draw_many_circles.py*. Enter the following Python code:
+
+
+```python
+# draw_many_circles.py
+from turtle import *
+
+speed('fastest')
+
+for j in range(6):
+    setheading(j)
+    for i in range(20):
+        circle(i * 10)
+
+    setheading(j + 120)
+    for i in range(20):
+        circle(i * 10)
+
+    setheading(j + 240)
+    for i in range(20):
+        circle(i * 10)
+
+done()
+```
+
+When you run this program, the Turtle window will look like this:
+
+[<img src="screenshot_draw_many_circles.jpg" style="width: 400px"/>](screenshot_draw_many_circles.jpg)
+
+Try changing some of the numbers and re-running this program to see how they affect the drawing. If you need the program to draw faster, replace the `speed('fastest')` function call with `tracer(1000, 0)` and add `update()` to the line before `done()`.
+
+<!--
 
 ## Quick Review 3
 
@@ -1258,7 +1426,7 @@ Always pass
 ## Practice Exercises 3
 
 
-
+-->
 
 
 
@@ -1300,18 +1468,124 @@ update()
 done()
 ```
 
+When you run this program, the Turtle window looks something like this:
+
 [<img src="screenshot_blue_flowers.jpg" style="width: 400px"/>](screenshot_blue_flowers.jpg)
 
+You can re-run the program to produce different flowery images.
 
 
 
 
+
+## Filled-In Shapes
+
+So far we have only drawn lines. But we can also draw filled-in shapes too. First, call the `fillcolor()` function and pass it the color you want the inside of shapes to be. Then you can call the `begin_fill()` function, move the turtle, and then call the `end_fill()` function to finish the shape.
+
+
+
+Let's create a program that draws the same square as our first program, but filled in with color. Create a new file in your code editor. Save it as *filled_square.py*. Enter the following Python code:
+
+```python
+# filled_square.py
+
+from turtle import *
+
+pensize(4)
+
+fillcolor('blue')
+
+begin_fill()
+for i in range(4):
+    forward(200)
+    left(90)
+end_fill()
+
+done()
+```
+
+When you run this program, the Turtle window will look like this:
+
+[<img src="screenshot_filled_square.jpg" style="width: 400px"/>](screenshot_filled_square.jpg)
+
+The interior of the shape the turtle drew between the `begin_fill()` and `end_fill()` is now filled in with the "fill color" set by the `fillcolor()` function.
+
+Let's create a program that draws several random squares of random colors. Create a new file in your code editor. Save it as *colorful_squares.py*. Enter the following Python code:
+
+```python
+# colorful_squares.py
+
+from turtle import *
+from random import *
+
+pensize(4)
+tracer(10, 0)
+
+for i in range(100):  # Draw 100 squares.
+    # Move to a random place:
+    penup()
+    goto(randint(-400, 200), randint(-400, 200))
+    pendown()
+
+    # Set fill and pen colors to something random:
+    fillcolor((random(), random(), random()))
+    pencolor((random(), random(), random()))
+
+    # Make the square size random:
+    line_length = randint(20, 200)
+
+    # Draw the filled-in square:
+    begin_fill()
+    for j in range(4):
+        forward(line_length)
+        left(90)
+    end_fill()
+
+done()
+```
+
+When you run this program, the Turtle window will look something like this:
+
+[<img src="screenshot_colorful_squares.jpg" style="width: 400px"/>](screenshot_colorful_squares.jpg)
+
+
+
+
+You can create filled shapes of any shape! Let's modify our *curve_path.py* program to draw filled in curvy shapes. Create a new file in your code editor. Save it as *curve_path_filled.py*. Enter the following Python code:
+
+```python
+# curve_path_filled.py
+
+from turtle import *
+from random import *
+
+tracer(4, 0)
+
+for i in range(50):
+    fillcolor((random(), random(), random()))
+
+    # Set a random heading and draw several short lines with changing direction:
+    setheading(randint(0, 360))
+    begin_fill()
+    for j in range(randint(200, 600)):
+        forward(1)
+        left(randint(-4, 4))
+    home()
+    end_fill()
+
+update()
+done()
+```
+
+When you run this program, the Turtle window will look something like this:
+
+[<img src="screenshot_curve_path_filled.jpg" style="width: 400px"/>](screenshot_curve_path_filled.jpg)
 
 
 
 ## For More Information
 
-There are many other things you can learn about turtle programming. 
+This tutorial has just been the beginning of what you can do with Python's `turtle` module. There are many other things you can learn about turtle programming. Check out the following links for more information:
 
 * [The official documentation of the Turtle module.](https://docs.python.org/3/library/turtle.html)
 
@@ -1331,6 +1605,8 @@ turtledemo.__main__.main()
 When you run this program, you can select one of the example programs from the menu. Then click the **Start** button to run the example program. The source code for the example program is shown in the left side of the window. This is the Peace example program:
 
 [<img src="screenshot_peace.jpg" style="width: 400px"/>](screenshot_peace.jpg)
+
+Good luck on your programming journey!
 
 
 ## Contact
