@@ -8,6 +8,6 @@ speed('fastest')
 for i in range(50):
     forward(200)
     # Turn left a random number of degrees between 80 and 100:
-    left(random.randint(85, 95))
+    left(randint(85, 95))
 hideturtle()
 done()

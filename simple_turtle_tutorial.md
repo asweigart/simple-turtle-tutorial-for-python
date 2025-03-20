@@ -3,6 +3,9 @@
 <!-- TODO: Create HTML and PDF versions in all languages.
 Add a part that explains how to take screenshots in all OSes?
 Keep high-resolution screenshots for print editions.
+
+Possible titles:
+Turtorial: Learn to Program in Python with Turtle Graphics
 -->
 
 # A Simple Turtle Tutorial for Python's turtle.py Module
@@ -101,7 +104,7 @@ Save the file after entering the code. Then run the program. (In IDLE, you can p
 
 When you run this program, a new window (which we will call the *Turtle window*) will appear with the following drawing:
 
-[<img src="screenshot_first_square.jpg" style="width: 400px"/>](screenshot_first_square.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_first_square.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_first_square.jpg)
 
 In the Turtle window, the turtle appears as a triangle. Imagine the turtle is holding a pen on the ground and drawing as it moves. The Python code tells it how to move:
 
@@ -204,7 +207,7 @@ done()
 
 When you run the program, it draws a smaller square because the lines are only 25 steps long instead of 100 steps.
 
-[<img src="screenshot_square_smaller.jpg" style="width: 400px"/>](screenshot_square_smaller.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_smaller.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_smaller.jpg)
 
 Remember that you must change all four places with `forward(200)` to `forward(25)`, or else the square will come out wrong. For example, I made program named *square_smaller_bug.py* that only made the change in three places:
 
@@ -226,7 +229,7 @@ done()
 
 This program has a *bug* in it, and draws the square wrong:
 
-[<img src="screenshot_square_smaller_bug.jpg" style="width: 400px"/>](screenshot_square_smaller_bug.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_smaller_bug.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_smaller_bug.jpg)
 
 It's okay to make mistakes! You can fix them. Your computer does exactly what you tell it to do. But it is up to you to make sure what you *want* the computer to do is what you *told* the computer to do. If your program has a bug, carefully read your code and figure out where it is going wrong.
 
@@ -273,7 +276,7 @@ done()
 
 When we run this program, it draws the same square as before:
 
-[<img src="screenshot_square_smaller.jpg" style="width: 400px"/>](screenshot_square_smaller.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_smaller.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_smaller.jpg)
 
 However, now we only have one thing to change if we want to change the size of the square. Try changing the `line_length` variable to a few other sizes, like `line_length = 300` or `line_length = 5`.
 
@@ -302,7 +305,7 @@ Be sure to have exactly four spaces of indentation before the `forward(line_leng
 
 This program makes the same square drawing as before:
 
-[<img src="screenshot_first_square.jpg" style="width: 400px"/>](screenshot_first_square.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_first_square.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_first_square.jpg)
 
 Our program only needs to call `pensize(4)` once, so we put it before the loop.
 
@@ -322,7 +325,7 @@ done()
 
 This draws a slightly different image that is not quite a square:
 
-[<img src="screenshot_square_for_loop_86.jpg" style="width: 400px"/>](screenshot_square_for_loop_86.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_for_loop_86.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_for_loop_86.jpg)
 
 Instead of turning left 86 degrees in the loop 4 times, let's do the loop 50 times. Let's make a program that draws a square. Create a new file in your code editor. Save it as *square_circle_86.py*. Enter the following Python code:
 
@@ -348,7 +351,7 @@ This program also calls the `hideturtle()` function to make the turtle triangle 
 
 This produces something that looks quite different from a simple square:
 
-[<img src="screenshot_square_circle_86.jpg" style="width: 400px"/>](screenshot_square_circle_86.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_circle_86.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_circle_86.jpg)
 
 By experimenting with different code and numbers, we can make all sorts of images. We can also have Python use random numbers for the left turns. Let's make a program that draws a square. Create a new file in your code editor. Save it as *square_random.py*. This program makes turns between 80 and 100 degrees:
 
@@ -370,10 +373,10 @@ done()
 
 Because this program uses random numbers, the picture will look different each time you run the program:
 
-[<img src="screenshot_square_random1.jpg" style="width: 400px"/>](screenshot_square_random1.jpg)
-[<img src="screenshot_square_random2.jpg" style="width: 400px"/>](screenshot_square_random2.jpg)
-[<img src="screenshot_square_random3.jpg" style="width: 400px"/>](screenshot_square_random3.jpg)
-[<img src="screenshot_square_random4.jpg" style="width: 400px"/>](screenshot_square_random4.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_random1.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_random1.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_random2.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_random2.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_random3.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_random3.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_random4.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_random4.jpg)
 
 The `from random import *` instruction lets your program call the `randint()` function. This function returns a random *integer* (that is, a whole number) that you can pass to in other function calls. The instruction `left(randint(80, 100))` turns the turtle left by a random amount of degrees between 80 and 100.
 
@@ -492,63 +495,63 @@ Create programs that draw the pictures in this section. The solutions are the en
 
 Create a program named *solution_equilateral_triangle.py* that draws the following picture. *Hint: All lines in the equilateral triangle are 200 steps long. The first turn is a 60 degree right turn. The later turns are 120 degrees.*
 
-[<img src="screenshot_solution_equilateral_triangle.jpg" style="width: 400px"/>](screenshot_solution_equilateral_triangle.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_equilateral_triangle.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_equilateral_triangle.jpg)
 
 
 
 Create a program named *solution_pentagon.py* that draws the following picture. *Hint: All lines in the pentagon are 200 steps long. All turns are 72 degrees.*
 
-[<img src="screenshot_solution_pentagon.jpg" style="width: 400px"/>](screenshot_solution_pentagon.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_pentagon.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_pentagon.jpg)
 
 
 
 Create a program named *solution_hexagon.py* that draws the following picture. *Hint: All lines in the hexagon are 200 steps long. All turns are 60 degrees.*
 
-[<img src="screenshot_solution_hexagon.jpg" style="width: 400px"/>](screenshot_solution_hexagon.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_hexagon.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_hexagon.jpg)
 
 
 
 Create a program named *solution_octogon.py* that draws the following picture. *Hint: All lines in the octogon are 100 steps long. All turns are 45 degrees.*
 
-[<img src="screenshot_solution_octogon.jpg" style="width: 400px"/>](screenshot_solution_octogon.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_octogon.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_octogon.jpg)
 
 
 
 Create a program named *solution_right_triangle.py* that draws the following picture. *Hint: For the right triangle, one turn is 90 degrees and the other turn is 135 degrees. Two sides are 200 steps long. According to the Pythagorean Theorem, the third side is 282.8 steps long.*
 
-[<img src="screenshot_solution_right_triangle.jpg" style="width: 400px"/>](screenshot_solution_right_triangle.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_right_triangle.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_right_triangle.jpg)
 
 
 
 Create a program named *solution_star.py* that draws the following picture. *Hint: All lines in the star are 200 steps long. All turns are 144 degree turns.*
 
-[<img src="screenshot_solution_star.jpg" style="width: 400px"/>](screenshot_solution_star.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_star.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_star.jpg)
 
 
 Create a program named *solution_nested_squares.py* that draws the following picture. *Hint: Draw a square with sides of length `100`. Then draw another square with sides of length `150`, then `200`, then `250`, then `300`. You may put a `for` loop inside another `for` loop to do this.* 
 
-[<img src="screenshot_solution_nested_squares.jpg" style="width: 400px"/>](screenshot_solution_nested_squares.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_nested_squares.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_nested_squares.jpg)
 
 
 
 
 Create a program named *solution_cross.py* that draws the following picture. *Hint: All lines in the cross are 100 steps long. All turns are 90 degrees, but you must make both left and right turns.*
 
-[<img src="screenshot_solution_cross.jpg" style="width: 400px"/>](screenshot_solution_cross.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cross.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cross.jpg)
 
 
 
 
 Create a program named *solution_cube.py* that draws the following picture. *Hint: All lines are 100 steps long.All turns are either 45, 90, or 135 degrees. You might need to overlap some lines to draw the entire cube. You can always run `forward(100)` followed by `backward(100)` if you want to draw a line but return to the original position.*
 
-[<img src="screenshot_solution_cube.jpg" style="width: 400px"/>](screenshot_solution_cube.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cube.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cube.jpg)
 
 
 
 
 Create a program named *solution_triforce.py* that draws the following picture. *Hint: There are many ways to draw this. You can overlap lines. All turns are either 60 degrees or 120 degrees. If the outside triangle's line lengths are 100 steps, you may want to sometimes only move the turtle by 50 steps.*
 
-[<img src="screenshot_solution_triforce.jpg" style="width: 400px"/>](screenshot_solution_triforce.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_triforce.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_triforce.jpg)
 
 
 
@@ -578,7 +581,7 @@ done()
 
 When you run this program, it looks like this:
 
-[<img src="screenshot_write_hello.jpg" style="width: 400px"/>](screenshot_write_hello.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_write_hello.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_write_hello.jpg)
 
 The bottom left corner of the text is at the turtle's location. For example, the code `write('Hello, world!')` appears at the center of the Turtle window where the turtle starts. Then the turtle moves with `forward(80)`, `right(45)`, and `forward(50)`. When `write('123456789', font=('Arial', 24, 'normal'))` runs, the text "123456789" appears at the turtle's new position.
 
@@ -624,7 +627,7 @@ done()
 
 When you run this program, the Turtle window looks like this:
 
-[<img src="screenshot_turtle_directions.jpg" style="width: 400px"/>](screenshot_turtle_directions.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_turtle_directions.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_turtle_directions.jpg)
 
 The `left()` and `right()` functions make the turtle turn based on its current direction. If the turtle is facing 45 degrees and your program calls `left(90)`, then the turtle's new direction will be 135 because 45 + 90 = 135. However, the `setheading()` function can make the turtle face a new direction no matter what it's current direction is.
 
@@ -654,10 +657,10 @@ When you run this program, it turns the turtle to face a random direction, write
 
 This means that no matter what heading the turtle had before, `setheading(45)` makes the turtle always face to the top-right. If you run this program several times, it would look something like this:
 
-[<img src="screenshot_setheading_turtle1.jpg" style="width: 400px"/>](screenshot_setheading_turtle1.jpg)
-[<img src="screenshot_setheading_turtle2.jpg" style="width: 400px"/>](screenshot_setheading_turtle2.jpg)
-[<img src="screenshot_setheading_turtle3.jpg" style="width: 400px"/>](screenshot_setheading_turtle3.jpg)
-[<img src="screenshot_setheading_turtle4.jpg" style="width: 400px"/>](screenshot_setheading_turtle4.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_setheading_turtle1.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_setheading_turtle1.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_setheading_turtle2.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_setheading_turtle2.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_setheading_turtle3.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_setheading_turtle3.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_setheading_turtle4.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_setheading_turtle4.jpg)
 
 
 ## XY Cartesian Coordinates
@@ -695,13 +698,13 @@ done()
 
 When you run this program, the output will look something like this:
 
-[<img src="screenshot_random_position.jpg" style="width: 400px"/>](screenshot_random_position.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_position.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_position.jpg)
 
 The turtle begins at the origin, that is, the XY coordinates 0, 0. Notice that as the turtle moves right or up, the X and Y coordinates increase. As the turtle moves left or down, the X and Y coordinates decrease.
 
 The `forward()` and `backward()` functions always move from the turtle's current position. However, you can move the turtle to specific XY coordinates by calling the `goto()` function and passing the X and Y coordinate.
 
-Let's make a program that moves the turtle to random coordinates. Create a new file in your code editor. Save it as *random_position.py*. Enter the following Python code:
+Let's make a program that moves the turtle to random coordinates. Create a new file in your code editor. Save it as *random_goto.py*. Enter the following Python code:
 
 ```python
 # random_goto.py
@@ -721,10 +724,10 @@ done()
 
 When you run this program, the output will look something like this:
 
-[<img src="screenshot_random_goto1.jpg" style="width: 400px"/>](screenshot_random_goto1.jpg)
-[<img src="screenshot_random_goto2.jpg" style="width: 400px"/>](screenshot_random_goto2.jpg)
-[<img src="screenshot_random_goto3.jpg" style="width: 400px"/>](screenshot_random_goto3.jpg)
-[<img src="screenshot_random_goto4.jpg" style="width: 400px"/>](screenshot_random_goto4.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_goto1.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_goto1.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_goto2.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_goto2.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_goto3.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_goto3.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_goto4.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_goto4.jpg)
 
 The `x = randint(-400, 400)` instruction saves a random integer (that is, a random whole number) to the variable `x`. The `y = randint(-400, 400)` instruction does this again for the `y` variable. Then `goto(x, y)` moves the turtle to the coordinates of these random numbers.
 
@@ -792,17 +795,17 @@ To start your drawing over, your program can call the following functions:
 Create a program named *solution_star_outline.py* that draws the following picture. Only use `goto()` to move the turtle. *Hint: The coordinates you must pass to `goto()` are (0, 300), (70, 95), (285, 95), (110, -35), (175, -260),
  (0, -100), (-175, -260), (-110, -35), (-285, 95), (-70, 95), and (0, 300)*
 
-[<img src="screenshot_solution_star_outline.jpg" style="width: 400px"/>](screenshot_solution_star_outline.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_star_outline.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_star_outline.jpg)
 
 
 Create a program named *solution_cross_setheading.py* that draws the following picture. Do not use `right()` or `left()` but instead only use `setheading()` *Hint: All lines in the cross are 100 steps long. All headings are either 0, 90, 180, or 270*
 
-[<img src="screenshot_solution_cross.jpg" style="width: 400px"/>](screenshot_solution_cross.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cross.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cross.jpg)
 
 
-Create a program named *solution_random_hello.py* that writes "Hello,world!" twenty times at random places in the Turtle window. The text should also have random sizes between 12 and 24. The program will look something like this:
+Create a program named *solution_random_hello.py* that writes "Hello,world!" one hundred times at random places in the Turtle window. The text should also have random sizes between 12 and 48. Don't draw any lines and hide the turtle cursor. The program will look something like this:
 
-[<img src="screenshot_solution_random_hello.jpg" style="width: 400px"/>](screenshot_solution_random_hello.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_random_hello.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_random_hello.jpg)
 
 
 
@@ -831,7 +834,7 @@ You can change the color of the turtle's lines by passing a color to the `pencol
 
 For example, adding `bgcolor('yellow')` and `pencolor('blue')` makes the background a yellow color and the turtle line blue in the *square_circle_86.py*:
 
-[<img src="screenshot_bgcolor_yellow.jpg" style="width: 400px"/>](screenshot_bgcolor_yellow.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_bgcolor_yellow.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_bgcolor_yellow.jpg)
 
 Custom colors use an *RGB value* that uses the primary colors of light: red, green, and blue. (This is different from the primary colors of dyes and pigments: red, yellow, and blue.) Each of the red, green, and blue settings are between `0.0` (for none) and `1.0` (for maximum). For example, `(1.0, 0.0, 0.0)` is the same as `'red'` because it has full red and zero green and blue.
 
@@ -845,10 +848,10 @@ You can use the `turtlecolors` app to see the RGB values of different colors. Co
 The app looks like this when you run it:
 
 
-[<img src="screenshot_turtlecolors1.jpg" style="width: 400px"/>](screenshot_turtlecolors1.jpg)
-[<img src="screenshot_turtlecolors2.jpg" style="width: 400px"/>](screenshot_turtlecolors2.jpg)
-[<img src="screenshot_turtlecolors3.jpg" style="width: 400px"/>](screenshot_turtlecolors3.jpg)
-[<img src="screenshot_turtlecolors4.jpg" style="width: 400px"/>](screenshot_turtlecolors4.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_turtlecolors1.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_turtlecolors1.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_turtlecolors2.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_turtlecolors2.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_turtlecolors3.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_turtlecolors3.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_turtlecolors4.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_turtlecolors4.jpg)
 
 
 
@@ -1009,8 +1012,8 @@ The `for i in range(12):` loop draws twelve dashed lines. Each dashed line is dr
 
 Because this program uses random numbers, the picture will look different each time you run the program:
 
-[<img src="screenshot_dashed1.jpg" style="width: 400px"/>](screenshot_dashed1.jpg)
-[<img src="screenshot_dashed2.jpg" style="width: 400px"/>](screenshot_dashed2.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_dashed_lines1.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_dashed1.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_dashed_lines2.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_dashed2.jpg)
 
 
 
@@ -1033,7 +1036,7 @@ done()
 
 When you run this program, it looks like this:
 
-[<img src="screenshot_spiral.jpg" style="width: 400px"/>](screenshot_spiral.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_spiral.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_spiral.jpg)
 
 In our previous programs with `for` loops, we have ignored the `i` variable. But in this program, we use `i` variable in the line `forward(i)`.
 
@@ -1081,7 +1084,7 @@ Try changing `91` in `left(91)` to other numbers between `30` and `180`. Then ru
 Next, let's create a random colorful spiral. Create a new file in your code editor. Save it as *spiral_black_bg.py*. Enter the following Python code:
 
 ```python
-# spiral_random.py
+# spiral_black_bg.py
 from turtle import *
 from random import *
 
@@ -1100,7 +1103,7 @@ done()
 
 When you run this program, it looks like this:
 
-[<img src="screenshot_spiral_random.jpg" style="width: 400px"/>](screenshot_spiral_random.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_spiral_black_bg.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_spiral_black_bg.jpg)
 
 The `choice()` function (from the `random` module) randomly chooses one of the string values in the `['red', 'orange', 'yellow', 'blue', 'green', 'purple']` list. This makes every line a random color.
 
@@ -1152,7 +1155,47 @@ Each of the `for` loops in this program draws lines with a different color. The 
 
 When you run this program, it looks like this:
 
-[<img src="screenshot_spiral_rainbow.jpg" style="width: 400px"/>](screenshot_spiral_rainbow.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_spiral_rainbow.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_spiral_rainbow.jpg)
+
+
+
+
+
+
+
+
+
+## Drawing Very Fast
+
+If `speed('fastest')` is still to slow, make your program call `tracer(100, 0)` instead. However, to make sure all lines appear in the Turtle window, you must remember to call `update()` when you are done drawing. If you need the program to draw even faster, increase the `100` number to `1000` or even `10000`.
+
+Let's demonstrate how fast your computer can draw 1,000 lines. Create a new file in your code editor. Save it as *random_tracer.py*. Enter the following Python code:
+
+```python
+# random_tracer.py
+
+from turtle import *
+from random import *
+
+tracer(10, 0)
+
+for i in range(1000):
+    goto(randint(-400, 400), randint(-400, 400))
+
+update()
+done()
+```
+
+When you run this program, the Turtle window will look something like this:
+
+
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_tracer.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_random_tracer.jpg)
+
+With `tracer(10, 0)`, the program takes a few seconds to draw all 1,000 lines. But if you change it to `tracer(100, 0)`, the program can finish in about one second. If you change it to `tracer(1000, 0)`, the program can draw all 1,000 lines almost instantly.
+
+At a certain high number, your computer will be drawing as fast as it can and increasing the number doesn't make it draw any faster. (Usually this number is about `1000`.)
+
+If your program is missing lines, then you probably forgot to add the `update()` call after the drawing has finished.
 
 
 
@@ -1199,7 +1242,7 @@ Now that the turtle is in place, the `for` loop draws a square.
 
 When you click on the window several times, the window may look like this: 
 
-[<img src="screenshot_click_square.jpg" style="width: 400px"/>](screenshot_click_square.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_click_square.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_click_square.jpg)
 
 
 Instead of just squares, we could make spirals appear wherever we click on the window. Create a new file in your code editor. Save it as *click_spiral.py*. Enter the following Python code:
@@ -1234,7 +1277,7 @@ This program uses the new functions `tracer()` and `update()`. These functions l
 
 After clicking the window several times, it may look something like this:
 
-[<img src="screenshot_click_spiral.jpg" style="width: 400px"/>](screenshot_click_spiral.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_click_spiral.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_click_spiral.jpg)
 
 Let's draw random red spirals on a black background. These will look like roses. Create a new file in your code editor. Save it as *click_rose.py*. Enter the following Python code:
 
@@ -1274,45 +1317,10 @@ done()
 
 Now you can make your own drawing of a bouquet of roses in seconds!
 
-[<img src="screenshot_click_rose.jpg" style="width: 400px"/>](screenshot_click_rose.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_click_rose.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_click_rose.jpg)
 
 
 
-
-
-
-
-## Drawing Very Fast
-
-If `speed('fastest')` is still to slow, make your program call `tracer(100, 0)` instead. However, to make sure all lines appear in the Turtle window, you must remember to call `update()` when you are done drawing. If you need the program to draw even faster, increase the `100` number to `1000` or even `10000`.
-
-Let's demonstrate how fast your computer can draw 1,000 lines. Create a new file in your code editor. Save it as *random_tracer.py*. Enter the following Python code:
-
-```python
-# random_tracer.py
-
-from turtle import *
-from random import *
-
-tracer(10, 0)
-
-for i in range(1000):
-    goto(randint(-400, 400), randint(-400, 400))
-
-update()
-done()
-```
-
-When you run this program, the Turtle window will look something like this:
-
-
-[<img src="screenshot_random_tracer.jpg" style="width: 400px"/>](screenshot_random_tracer.jpg)
-
-With `tracer(10, 0)`, the program takes a few seconds to draw all 1,000 lines. But if you change it to `tracer(100, 0)`, the program can finish in about one second. If you change it to `tracer(1000, 0)`, the program can draw all 1,000 lines almost instantly.
-
-At a certain high number, your computer will be drawing as fast as it can and increasing the number doesn't make it draw any faster. (Usually this number is about `1000`.)
-
-If your program is missing lines, then you probably forgot to add the `update()` call after the drawing has finished.
 
 
 
@@ -1351,7 +1359,7 @@ done()
 
 When you run this program, the Turtle window will look something like this:
 
-[<img src="screenshot_curve_path.jpg" style="width: 400px"/>](screenshot_curve_path.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_curve_path.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_curve_path.jpg)
 
 These curves are actually made up of several very short lines. By having a small change in direction, the short lines together look like one long curve.
 
@@ -1382,7 +1390,7 @@ If our program called `circle(i)` inside the `for` loop, it would create circles
 
 When you run this program, the Turtle window will look like this:
 
-[<img src="screenshot_draw_circles.jpg" style="width: 400px"/>](screenshot_draw_circles.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_draw_circles.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_draw_circles.jpg)
 
 Let's create an interesting drawing with many overlapping circles. Create a new file in your code editor. Save it as *draw_many_circles.py*. Enter the following Python code:
 
@@ -1411,7 +1419,7 @@ done()
 
 When you run this program, the Turtle window will look like this:
 
-[<img src="screenshot_draw_many_circles.jpg" style="width: 400px"/>](screenshot_draw_many_circles.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_draw_many_circles.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_draw_many_circles.jpg)
 
 Try changing some of the numbers and re-running this program to see how they affect the drawing. If you need the program to draw faster, replace the `speed('fastest')` function call with `tracer(1000, 0)` and add `update()` to the line before `done()`.
 
@@ -1470,7 +1478,7 @@ done()
 
 When you run this program, the Turtle window looks something like this:
 
-[<img src="screenshot_blue_flowers.jpg" style="width: 400px"/>](screenshot_blue_flowers.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_blue_flowers.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_blue_flowers.jpg)
 
 You can re-run the program to produce different flowery images.
 
@@ -1506,7 +1514,7 @@ done()
 
 When you run this program, the Turtle window will look like this:
 
-[<img src="screenshot_filled_square.jpg" style="width: 400px"/>](screenshot_filled_square.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_filled_square.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_filled_square.jpg)
 
 The interior of the shape the turtle drew between the `begin_fill()` and `end_fill()` is now filled in with the "fill color" set by the `fillcolor()` function.
 
@@ -1546,7 +1554,7 @@ done()
 
 When you run this program, the Turtle window will look something like this:
 
-[<img src="screenshot_colorful_squares.jpg" style="width: 400px"/>](screenshot_colorful_squares.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_colorful_squares.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_colorful_squares.jpg)
 
 
 
@@ -1579,7 +1587,7 @@ done()
 
 When you run this program, the Turtle window will look something like this:
 
-[<img src="screenshot_curve_path_filled.jpg" style="width: 400px"/>](screenshot_curve_path_filled.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_curve_path_filled.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_curve_path_filled.jpg)
 
 
 
@@ -1604,7 +1612,7 @@ turtledemo.__main__.main()
 
 When you run this program, you can select one of the example programs from the menu. Then click the **Start** button to run the example program. The source code for the example program is shown in the left side of the window. This is the Peace example program:
 
-[<img src="screenshot_peace.jpg" style="width: 400px"/>](screenshot_peace.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_peace.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_peace.jpg)
 
 Good luck on your programming journey!
 
