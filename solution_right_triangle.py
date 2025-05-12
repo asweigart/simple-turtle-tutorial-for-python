@@ -1,7 +1,5 @@
 # solution_right_triangle.py
-
 from turtle import *
-
 pensize(4)
 
 forward(200)

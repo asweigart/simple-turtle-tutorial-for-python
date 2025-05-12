@@ -1,7 +1,5 @@
 # solution_cross_setheading.py
-
 from turtle import *
-
 pensize(4)
 
 # Right bump:

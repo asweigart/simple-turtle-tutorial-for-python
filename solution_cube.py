@@ -1,7 +1,5 @@
 # solution_cross.py
-
 from turtle import *
-
 pensize(4)
 
 # Front square:

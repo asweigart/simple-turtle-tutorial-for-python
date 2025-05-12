@@ -1,5 +1,4 @@
 # solution_star_outline.py
-
 from turtle import *
 
 # Move the turtle to the first point of the star:

@@ -1,7 +1,5 @@
 # solution_nested_squares.py
-
 from turtle import *
-
 pensize(4)
 
 line_length = 100
@@ -29,4 +27,9 @@ for i in range(4):
     forward(line_length)
     left(90)
 
+# Or you can run:
+#for line_length in range(100, 350, 50):
+#    for i in range(4):
+#        forward(line_length)
+#        left(90)
 done()

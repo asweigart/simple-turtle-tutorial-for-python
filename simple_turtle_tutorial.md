@@ -18,7 +18,7 @@ This is a Turtle programming tutorial written by Al Sweigart, author of *Automat
 
 
 
-
+TODO - discuss random seeds real quick? (actually, nah)
 
 
 ## Table of Contents
@@ -53,22 +53,15 @@ This is a Turtle programming tutorial written by Al Sweigart, author of *Automat
 
 ## Introduction
 
-Turtle graphics is an easy way to learn programming by drawing with code. You program a small virtual object, called the *turtle*, to move around the screen and draw lines as it goes. This lets people make pictures with a computer while learning how to program. You can think of the turtle as an [Etch A Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch) controlled by your program.
+Turtle graphics is an easy way to learn programming by drawing with code. You program a virtual pen, called the *turtle*, to move around the screen and draw lines. You make pictures with a computer while learning how to program. You can think of the turtle as an [Etch A Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch) controlled by your Python program.
 
-This guide explains how to use Python's *turtle.py* module. It does not teach the Python language itself. It's good to already know some basic Python ideas, like variables, operators, loops, functions, importing modules, and random numbers.
+This guide explains how to use Python's `turtle` module. It does not teach the Python language itself. It's good to already know some basic Python ideas, like variables, operators, loops, functions, importing modules, and random numbers. The free book [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) is an introduction for complete beginners new to programming.
 
-Before starting, you need to install the *Python interpreter* (the software that runs Python code) from [python.org](https://python.org). You also need a code editor, like IDLE, Mu, or Visual Studio Code. 
+Before starting, you need to download and install the *Python interpreter* (the software that runs Python code) from [python.org](https://python.org). You also need to install a code editor, like IDLE, [Mu](https://codewith.mu/), or [Visual Studio Code](https://code.visualstudio.com/download). 
 
-Programs written in Python are called Python programs. Not all Python programs use turtle graphics. But in this guide, we will call programs that use the turtle module "Turtle programs."
+Programs written in Python are called Python programs. Not all Python programs use turtle graphics. But in this guide, we will call programs that use the `turtle` module "Turtle programs."
 
-Turtle graphics is a simple way to learn programming by making drawings with code. A small moving object, called the "turtle," moves around the screen and draws lines as it goes. This helps people create computer drawings and learn programming at the same time.
-
-This tutorial only explains how to use Python's *turtle.py* module. It does not teach the Python language itself. It helps to already know some basic Python ideas, like variables, operators, loops, function calls, importing modules, and random numbers. You also need to first install the *Python interpreter*, the software that runs Python code, from [https://python.org](https://python.org) and a code editor like IDLE, Mu, or Visual Studio Code. However, even if you don't know how to program, you can still copy and run the example programs on your computer.
-
-
-
-
-
+Even if you don't know how to program in Python, you can still copy the code in this tutorial into your code editor and run them.
 
 ## Drawing a Square
 
@@ -100,7 +93,7 @@ left(90)
 done()  # Without this, the Turtle window may immediately close before you can see the picture.
 ```
 
-Save the file after entering the code. Then run the program. (In IDLE, you can press F5 or click the Run > Run Module menu item. In Visual Studio Code, click the Run > Run Without Debugging menu item. In other editors, the steps to run a program may be different.)
+Save the file after entering the code. Then run the program. (If you are using IDLE for your code editor, you can press F5 or click the **Run > Run Module**) menu item. In Visual Studio Code, click the **Run > Run Without Debugging** menu item. In other editors, the steps to run a program may be different.)
 
 When you run this program, a new window (which we will call the *Turtle window*) will appear with the following drawing:
 
@@ -132,13 +125,11 @@ The `# first_square.py` line is a *comment* (see below) that is ignored by the P
 
 Blank lines are skipped by the Python interpreter.
 
-The next three lines are also comments. These comments explain what comments are.
-
 ```python
 from turtle import *
 ```
 
-You MUST have `from turtle import *` at the top of all of your turtle programs. It imports the `turtle` module so you can call the turtle functions in the rest of the programs. If you forget this line, your program will stop with a `NameError: name is not defined` error.
+You MUST have `from turtle import *` at the top of all of your turtle programs. It imports the `turtle` module so you can call the turtle functions in the rest of the programs. (The turtle functions include `pensize()`, `forward()`, `left()`, and `done()`.) If you forget this line, your program will stop with a `NameError: name is not defined` error.
 
 ```python
 pensize(4)  # Make the lines thicker than normal.
@@ -302,6 +293,15 @@ done()
 The indented code after `for i in range(4):` will run four times because we pass `4` to the `range()` function.
 
 Be sure to have exactly four spaces of indentation before the `forward(line_length)` and `left(90)` lines of code! If they have different amounts of indentation, you will get an error that says `IndentationError: unindent does not match any outer indentation level`.
+
+Here is that same code, but with periods to mark where the spaces are:
+
+```
+for i in range(4):  
+....forward(200)
+....left(90)
+done()
+```
 
 This program makes the same square drawing as before:
 
@@ -1616,6 +1616,382 @@ When you run this program, you can select one of the example programs from the m
 
 Good luck on your programming journey!
 
+
+## Advanced Turtle Challenges
+
+If you are looking for challenging shapes to write turtle programs, look at the drawings of [Oscar Reutersvärd](https://en.wikipedia.org/wiki/Oscar_Reutersv%C3%A4rd) on the [Impossible World website](https://im-possible.info/english/library/index.html). You can also do [an image search for "Oscar Reutersvärd"](https://duckduckgo.com/?t=ffab&q=Oscar+Reutersv%C3%A4rd&iax=images&ia=images) to see examples of his art.
+
+Here are some examples:
+
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/oscar1.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/oscar1.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/oscar2.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/oscar2.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/oscar3.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/oscar3.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/oscar4.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/oscar4.jpg)
+
+
+## Solutions
+
+Here are the solutions to the practice exercises:
+
+```python
+# solution_equilateral_triangle.py
+from turtle import *
+pensize(4)
+
+right(60)
+forward(200)
+
+right(120)
+forward(200)
+
+right(120)
+forward(200)
+
+done()
+```
+
+```python
+# solution_pentagon.py
+from turtle import *
+pensize(4)
+
+left(72)
+forward(200)
+
+left(72)
+forward(200)
+
+left(72)
+forward(200)
+
+left(72)
+forward(200)
+
+left(72)
+forward(200)
+
+# Or you can run:
+# for i in range(5):
+#     left(72)
+#     forward(200)
+done()
+```
+
+```python
+# solution_hexagon.py
+from turtle import *
+pensize(4)
+
+left(60)
+forward(200)
+
+left(60)
+forward(200)
+
+left(60)
+forward(200)
+
+left(60)
+forward(200)
+
+left(60)
+forward(200)
+
+left(60)
+forward(200)
+
+# Or you can run:
+# for i in range(6):
+#     left(60)
+#     forward(200)
+done()
+```
+
+```python
+# solution_octogon.py
+from turtle import *
+pensize(4)
+
+left(45)
+forward(100)
+
+left(45)
+forward(100)
+
+left(45)
+forward(100)
+
+left(45)
+forward(100)
+
+left(45)
+forward(100)
+
+left(45)
+forward(100)
+
+left(45)
+forward(100)
+
+left(45)
+forward(100)
+
+# Or you can run:
+# for i in range(8):
+#     left(45)
+#     forward(100)
+done()
+```
+
+```python
+# solution_right_triangle.py
+from turtle import *
+pensize(4)
+
+forward(200)
+right(90)
+forward(200)
+right(135)
+forward(282.8)
+
+done()
+```
+
+```python
+# solution_star.py
+from turtle import *
+pensize(4)
+
+right(144)
+forward(300)
+
+right(144)
+forward(300)
+
+right(144)
+forward(300)
+
+right(144)
+forward(300)
+
+right(144)
+forward(300)
+
+# Or you can run:
+#for i in range(5):
+#    right(144)
+#    forward(300)
+done()
+```
+
+```python
+# solution_nested_squares.py
+from turtle import *
+pensize(4)
+
+line_length = 100
+for i in range(4):
+    forward(line_length)
+    left(90)
+
+line_length = 150
+for i in range(4):
+    forward(line_length)
+    left(90)
+
+line_length = 200
+for i in range(4):
+    forward(line_length)
+    left(90)
+
+line_length = 250
+for i in range(4):
+    forward(line_length)
+    left(90)
+
+line_length = 300
+for i in range(4):
+    forward(line_length)
+    left(90)
+
+# Or you can run:
+#for line_length in range(100, 350, 50):
+#    for i in range(4):
+#        forward(line_length)
+#        left(90)
+done()
+```
+
+```python
+# solution_cross.py
+from turtle import *
+pensize(4)
+
+for i in range(4):
+    forward(100)
+    right(90)
+
+    forward(100)
+    right(90)
+
+    forward(100)
+    left(90)
+
+done()
+```
+
+```python
+# solution_cross.py
+from turtle import *
+pensize(4)
+
+# Front square:
+for i in range(4):
+    forward(200)
+    right(90)
+
+# Top left diagonal:
+left(45)
+forward(200)
+right(45)
+
+# Top side of back square:
+forward(200)
+right(135)
+forward(200)
+backward(200)
+left(45)
+
+# Right side of back square:
+forward(200)
+right(45)
+forward(200)
+backward(200)
+right(45)
+
+# Bottom side of back square:
+forward(200)
+left(45)
+forward(200)
+backward(200)
+
+# Left side of back square:
+right(135)
+forward(200)
+
+done()
+```
+
+```python
+# solution_cross.py
+from turtle import *
+pensize(4)
+
+right(60)
+forward(400)
+
+right(120)
+forward(400)
+
+right(120)
+forward(400)
+
+right(120)
+forward(200)
+
+right(60)
+forward(200)
+
+right(120)
+forward(200)
+
+right(120)
+forward(200)
+
+done()
+```
+
+```python
+# solution_star_outline.py
+from turtle import *
+
+# Move the turtle to the first point of the star:
+pensize(4)
+penup()
+goto(0, 300)
+
+# Draw lines to the other points of the star:
+pendown()
+goto(70, 95)
+goto(285, 95)
+goto(110, -35)
+goto(175, -260)
+goto(0, -100)
+goto(-175, -260)
+goto(-110, -35)
+goto(-285, 95)
+goto(-70, 95)
+goto(0, 300)
+
+done()
+```
+
+```python
+# solution_cross_setheading.py
+from turtle import *
+pensize(4)
+
+# Right bump:
+setheading(0)  # Face right.
+forward(100)
+setheading(270)  # Face down.
+forward(100)
+setheading(180)  # Face left.
+forward(100)
+
+# Bottom bump:
+setheading(270)  # Face down.
+forward(100)
+setheading(180)  # Face left.
+forward(100)
+setheading(90)  # Face up.
+forward(100)
+
+# Left bump:
+setheading(180)  # Face left.
+forward(100)
+setheading(90)  # Face up.
+forward(100)
+setheading(0)  # Face right.
+forward(100)
+
+# Top bump:
+setheading(90)  # Face up.
+forward(100)
+setheading(0)  # Face right.
+forward(100)
+setheading(270)  # Face down.
+forward(100)
+
+done()
+```
+
+```python
+# solution_random_hello.py
+from turtle import *
+from random import *
+
+tracer(1000, 0)
+penup()
+hideturtle()
+
+for i in range(100):
+    goto(randint(-400, 400), randint(-400, 400))
+    write('Hello, world!', font=('Arial', randint(12, 48), 'normal'))
+
+update()
+done()
+```
 
 ## Contact
 

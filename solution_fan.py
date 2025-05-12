@@ -1,8 +1,6 @@
 # solution_fan.py
-
 from turtle import *
 from random import *
-
 pensize(4)
 speed('fastest')
 

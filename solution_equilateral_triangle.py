@@ -1,7 +1,5 @@
 # solution_equilateral_triangle.py
-
 from turtle import *
-
 pensize(4)
 
 right(60)

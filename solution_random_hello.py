@@ -1,5 +1,4 @@
 # solution_random_hello.py
-
 from turtle import *
 from random import *
 
