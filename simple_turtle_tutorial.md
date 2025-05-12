@@ -26,28 +26,30 @@ TODO - discuss random seeds real quick? (actually, nah)
 1. [Introduction](#Introduction)
 1. [Drawing a Square](#Drawing-a-Square)
 1. [Drawing a Smaller Square](#Drawing-a-Smaller-Square)
-1. [Common Bugs and Error Messages](#Common-Bugs-and-Error-Messages)
 1. [Drawing a Square with a Variable Size](#Drawing-a-Square-with-a-Variable-Size)
+1. [Draw a Square with a Loop](#Draw-a-Square-with-a-Loop)
+1. [Common Bugs and Error Messages](#Common-Bugs-and-Error-Messages)
 1. [Draw a Square with a Loop](#Draw-a-Square-with-a-Loop)
 1. [Quick Review 1](#Quick-Review-1)
 1. [Practice Exercises 1](#Practice-Exercises-1)
 1. [Writing Text in the Turtle Window](#Writing-Text-in-the-Turtle-Window)
 1. [Angles](#Angles)
 1. [XY Cartesian Coordinates](#XY-Cartesian-Coordinates)
-
-1. [Quick Review 2]()
-1. [Practice Exercises 2]()
-
+1. [Home, Clear, Reset, Undo](#Home-Clear-Reset-Undo)
+1. [Quick Review 2](#Quick-Review-2)
+1. [Practice Exercises 2](#Practice-Exercises-2)
+1. [Colors](#Colors)
 1. [Raising and Lowering the Pen](#Raising-And-Lowering-the-Pen)
-1. [Stamping](#Stamping)
 1. [Square Spirals Examples](#Square-Spirals-Examples)
+1. [Drawing Very Fast](#Drawing Very Fast)
 1. [Interactive Drawing](#Interactive-Drawing)
-
-
-1. [Quick Review 3]()
-1. [Practice Exercises 3]()
-
-
+1. [Draw Curves and Circles](#Draw-Curves-and-Circles)
+1. [Blue Flowers Program](#Blue-Flowers-Program)
+1. [Filled-In Shapes](#Filled-In-Shapes)
+1. [For More Information](#For-More-Information)
+1. [Advanced Turtle Challenges](#Advanced-Turtle-Challenges)
+1. [Solutions](#Solutions)
+1. [Contact the Author](#Contact-the-Author)
 
 
 
@@ -1993,6 +1995,6 @@ update()
 done()
 ```
 
-## Contact
+## Contact the Author
 
 If you have questions about this tutorial or can help translate it into non-English languages, please contact [al@inventwithpython.com](mailto:al@inventwithpython.com).
