@@ -1,4 +1,4 @@
-# solution_cross.py
+# solution_cube.py
 from turtle import *
 pensize(4)
 

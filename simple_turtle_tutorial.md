@@ -12,13 +12,7 @@ Turtorial: Learn to Program in Python with Turtle Graphics
 
 *A programming guide for students and their parents, teachers, and instructors.*
 
-**This document is still being written and not yet complete.**
-
 This is a Turtle programming tutorial written by Al Sweigart, author of *Automate the Boring Stuff with Python* and other books. You can read all of his books for free online at [https://inventwithpython.com](https://inventwithpython.com)
-
-
-
-TODO - discuss random seeds real quick? (actually, nah)
 
 
 ## Table of Contents
@@ -26,8 +20,6 @@ TODO - discuss random seeds real quick? (actually, nah)
 1. [Introduction](#Introduction)
 1. [Drawing a Square](#Drawing-a-Square)
 1. [Drawing a Smaller Square](#Drawing-a-Smaller-Square)
-1. [Drawing a Square with a Variable Size](#Drawing-a-Square-with-a-Variable-Size)
-1. [Draw a Square with a Loop](#Draw-a-Square-with-a-Loop)
 1. [Common Bugs and Error Messages](#Common-Bugs-and-Error-Messages)
 1. [Draw a Square with a Loop](#Draw-a-Square-with-a-Loop)
 1. [Quick Review 1](#Quick-Review-1)
@@ -39,7 +31,7 @@ TODO - discuss random seeds real quick? (actually, nah)
 1. [Quick Review 2](#Quick-Review-2)
 1. [Practice Exercises 2](#Practice-Exercises-2)
 1. [Colors](#Colors)
-1. [Raising and Lowering the Pen](#Raising-And-Lowering-the-Pen)
+1. [Raising and Lowering the Pen](#Raising-and-Lowering-the-Pen)
 1. [Square Spirals Examples](#Square-Spirals-Examples)
 1. [Drawing Very Fast](#Drawing-Very-Fast)
 1. [Interactive Drawing](#Interactive-Drawing)
@@ -205,7 +197,7 @@ When you run the program, it draws a smaller square because the lines are only 2
 Remember that you must change all four places with `forward(200)` to `forward(25)`, or else the square will come out wrong. For example, I made program named *square_smaller_bug.py* that only made the change in three places:
 
 ```python
-# square_smaller_buy.py
+# square_smaller_bug.py
 from turtle import *
 
 pensize(4)
@@ -233,10 +225,10 @@ It's okay to make mistakes! You can fix them. Your computer does exactly what yo
 
 As you write Python code, you may get error messages when you try to run the program. Pay attention to the error message, especially where it tells you what line number the error happens. Here are some common error messages you might see and what causes them:
 
-* **`ModuleNotFoundError: No module named 'trutle'`** - You made a typo in your `from turtle import *`. This specific error message was caused by the typo was `from trutle import *`.
-* **`NameError: name 'froward' is not defined`** - You made a typo with a function or variable name. This specific error message was caused by the typo was `froward(100)`.
+* **`ModuleNotFoundError: No module named 'trutle'`** - You made a typo in your `from turtle import *`. This specific error message was caused by the typo `from trutle import *`.
+* **`NameError: name 'froward' is not defined`** - You made a typo with a function or variable name. This specific error message was caused by the typo `froward(100)`.
 * **`TypeError: forward() missing 1 required positional argument: 'distance'`** - You made a function call but forgot to include an argument. This specific error message was caused by `forward()` which doesn't have the distance argument like in `forward(200)`
-* **`TypeError: left() takes 1 positional argument but 2 were given`** - You made a function call but used too many arguments. This specific error message was caused by `left(90, 45)` but the `left()` function expects only one argument like `left(90)`.
+* **`TypeError: left() takes 1 positional argument but 2 were given`** - You made a function call but used too many arguments. This specific error message was caused by calling `left()` with two arguments like `left(90, 45)` but the `left()` function expects only one argument like `left(90)`.
 * **`IndentationError: unexpected indent`** - There are too many spaces in front of the line of code.
 * **`IndentationError: expected an indented block after 'for' statement on line 5`** - You did not increase the amount of indentation after the beginning of a `for i in range(4):` loop.
 * **`SyntaxError: invalid syntax`** - There is a general problem with your code. Python can't understand it, but also doesn't know what correction to suggest. It can tell you the line number where it detected the problem though! If you write code by randomly mashing the keyboard, you will probably get this error message.
@@ -397,7 +389,7 @@ You can create comments with the `#` hashtag character:
 # This is a comment.
 ```
 
-Everything after the `#` hashtag until the end of a the line is a comment. Comments are notes you can write to remind yourself what the program does. You can write anything in a commnet. They do not change how your program works.
+Everything after the `#` hashtag until the end of a the line is a comment. Comments are notes you can write to remind yourself what the program does. You can write anything in a comment. They do not change how your program works.
 
 Your programs must always import the `turtle` module:
 
@@ -513,9 +505,9 @@ Create a program named *solution_hexagon.py* that draws the following picture. *
 
 
 
-Create a program named *solution_octogon.py* that draws the following picture. *Hint: All lines in the octogon are 100 steps long. All turns are 45 degrees.*
+Create a program named *solution_octagon.py* that draws the following picture. *Hint: All lines in the octagon are 100 steps long. All turns are 45 degrees.*
 
-[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_octogon.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_octogon.jpg)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_octagon.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_octagon.jpg)
 
 
 
@@ -585,14 +577,14 @@ When you run this program, it looks like this:
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_write_hello.jpg" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_write_hello.jpg)
 
-The bottom left corner of the text is at the turtle's location. For example, the code `write('Hello, world!')` appears at the center of the Turtle window where the turtle starts. Then the turtle moves with `forward(80)`, `right(45)`, and `forward(50)`. When `write('123456789', font=('Arial', 24, 'normal'))` runs, the text "123456789" appears at the turtle's new position.
+The bottom left corner of the text is at the turtle's location. For example, the code `write('Hello, world!')` appears at the center of the Turtle window where the turtle starts. Then the turtle moves with `forward(80)`, `right(45)`, and `forward(50)`. When `write('123456789', font=('Arial', 48, 'normal'))` runs, the text "123456789" appears at the turtle's new position.
 
-The function call `write('123456789', font=('Arial', 24, 'normal'))` also has a *keyword parameter* named  `font=`. We can pass an argument like `('Arial', 24, 'normal')` to change the font used to write the text in the Turtle window.
+The function call `write('123456789', font=('Arial', 48, 'normal'))` also has a *keyword parameter* named  `font=`. We can pass an argument like `('Arial', 48, 'normal')` to change the font used to write the text in the Turtle window.
 
 There are three parts to the `font=` parameter's argument: 
 
 * The name of the font. (`'Arial'`)
-* The size of the font. (`24`)
+* The size of the font. (`48`)
 * The style of the font. (`'normal'`)
 
 If you don't pass an argument, the default font is `('Arial', 8, 'normal')`. You can change the name of the font but it must be installed on your computer. The font size argument must be a number and not a text string: you must pass `8` but not `'8'`. The style argument can either be `'normal'`, `'bold'`, `'italic'`, `'underline'`, or any combination of those words like `'bold italic'`.
@@ -678,7 +670,7 @@ Just as degrees are numbers that can describe where the turtle is facing and how
 * A turtle in the bottom half of the window always has a negative Y coordinate.
 * A turtle in the top half of the window always has a positive Y coordinate.
 
-This image from Wikipedia shows a Cartesian coordiante system with some example points:
+This image from Wikipedia shows a Cartesian coordinate system with some example points:
 
 [<img src="cartesian.png" style="width: 400px"/>](cartesian.png)
 
@@ -741,9 +733,9 @@ The `x = randint(-400, 400)` instruction saves a random integer (that is, a rand
 
 The turtle draws lines as it moves, but there are several functions for erasing lines:
 
-* `home()` moves the turtle back to XY coordiantes 0, 0 and sets the heading to 0 degrees. This is the same as calling both `goto(0, 0)` and `setheading(0)`.
+* `home()` moves the turtle back to XY coordinates 0, 0 and sets the heading to 0 degrees. This is the same as calling both `goto(0, 0)` and `setheading(0)`.
 * `clear()` erases all the lines the turtle has drawn.
-* `reset()` moves the turtle home and erases all lines. This is the same as calling both `home()` and `reset()`.
+* `reset()` moves the turtle home and erases all lines. This is the same as calling both `home()` and `clear()`.
 * `undo()` erases the last line the turtle made. You can call this repeatedly to keep undoing lines.
 
 
@@ -1445,7 +1437,7 @@ Try changing some of the numbers and re-running this program to see how they aff
 
 Let's use everything we've learned to make a generative art program. This program draws blue flowers by making six circles in a random location, size, pen thickness, and color. The random color will be a shade of blue.
 
-This is a program that draws blue flowers:
+Here is a program that draws blue flowers:
 
 ```python
 from turtle import *
@@ -1710,7 +1702,7 @@ done()
 ```
 
 ```python
-# solution_octogon.py
+# solution_octagon.py
 from turtle import *
 pensize(4)
 
@@ -1843,7 +1835,7 @@ done()
 ```
 
 ```python
-# solution_cross.py
+# solution_cube.py
 from turtle import *
 pensize(4)
 
