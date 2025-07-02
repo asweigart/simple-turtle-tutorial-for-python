@@ -12,7 +12,7 @@ Turtorial: Learn to Program in Python with Turtle Graphics
 
 *A programming guide for students and their parents, teachers, and instructors.*
 
-This is a Turtle programming tutorial written by Al Sweigart, author of *Automate the Boring Stuff with Python* and other books. You can read all of his books for free online at [https://inventwithpython.com](https://inventwithpython.com)
+This is a Turtle programming tutorial written by Al Sweigart, author of *Automate the Boring Stuff with Python* and other programming books. You can read all of his books for free at [https://inventwithpython.com](https://inventwithpython.com)
 
 
 ## Table of Contents
@@ -49,16 +49,19 @@ This is a Turtle programming tutorial written by Al Sweigart, author of *Automat
 
 Turtle graphics is an easy way to learn programming by drawing with code. You program a virtual pen, called the *turtle*, to move around the screen and draw lines. You make pictures with a computer while learning how to program. You can think of the turtle as an [Etch A Sketch](https://en.wikipedia.org/wiki/Etch_A_Sketch) controlled by your Python program.
 
-This guide explains how to use Python's `turtle` module. It does not teach the Python language itself. It's good to already know some basic Python ideas, like variables, operators, loops, functions, importing modules, and random numbers. The free book [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/) is an introduction for complete beginners new to programming.
+This guide explains how to use Python's `turtle` module. It does not teach the Python language itself. It's good to already know some basic Python ideas, like variables, operators, loops, functions, importing modules, and random numbers. The free book *Automate the Boring Stuff with Python* at [https://automatetheboringstuff.com/](https://automatetheboringstuff.com/) is an introduction for complete beginners new to programming. If you are more interested in programming video games, you can read *Invent Your Own Computer Games with Python* at https://inventwithpython.com.
 
-Before starting, you need to download and install the *Python interpreter* (the software that runs Python code) from [python.org](https://python.org). You also need to install a code editor, like IDLE, [Mu](https://codewith.mu/), or [Visual Studio Code](https://code.visualstudio.com/download). 
+Before starting, you need to download and install the *Python interpreter* (the software that runs Python code) from [python.org](https://python.org). You also need to install a *code editor* such as:
 
-Programs written in Python are called Python programs. Not all Python programs use turtle graphics. But in this guide, we will call programs that use the `turtle` module "Turtle programs."
+* IDLE, which comes with the Python interpreter.
+* Mu, which is free at [https://codewith.mu/]](https://codewith.mu/).
+* Visual Studio Code, which is free at https://code.visualstudio.com/download. 
+
+Programs written in the Python language are called *Python programs*. Not all Python programs use turtle graphics. But in this guide, we will call programs that use Python's `turtle` module, "Turtle programs."
 
 Even if you don't know how to program in Python, you can still copy the code in this tutorial into your code editor and run them.
 
 ## Drawing a Square
-
 
 Let's make a program that draws a square. Create a new file in your code editor. Save it as *first_square.py*. Enter the following Python code:
 
@@ -225,8 +228,8 @@ It's okay to make mistakes! You can fix them. Your computer does exactly what yo
 
 As you write Python code, you may get error messages when you try to run the program. Pay attention to the error message, especially where it tells you what line number the error happens. Here are some common error messages you might see and what causes them:
 
-* **`ModuleNotFoundError: No module named 'trutle'`** - You made a typo in your `from turtle import *`. This specific error message was caused by the typo `from trutle import *`.
-* **`NameError: name 'froward' is not defined`** - You made a typo with a function or variable name. This specific error message was caused by the typo `froward(100)`.
+* **`ModuleNotFoundError: No module named 'trutle'`** - You made a typo in your `from turtle import *`. For example, `from trutle import *` causes this error message.
+* **`NameError: name 'froward' is not defined`** - You made a typo with a function or variable name. For example, `froward(100)` causes this error message.
 * **`TypeError: forward() missing 1 required positional argument: 'distance'`** - You made a function call but forgot to include an argument. This specific error message was caused by `forward()` which doesn't have the distance argument like in `forward(200)`
 * **`TypeError: left() takes 1 positional argument but 2 were given`** - You made a function call but used too many arguments. This specific error message was caused by calling `left()` with two arguments like `left(90, 45)` but the `left()` function expects only one argument like `left(90)`.
 * **`IndentationError: unexpected indent`** - There are too many spaces in front of the line of code.
@@ -1596,6 +1599,8 @@ This tutorial has just been the beginning of what you can do with Python's `turt
 * [Chapter 9 of The Recursive Book of Recursion, with recursive turtle drawings.](https://inventwithpython.com/recursion/chapter9.html)
 
 * [Chapter 13 of The Recursive Book of Recursion, with a recursive fractal drawing program.](https://inventwithpython.com/recursion/chapter13.html)
+
+* [PyCon US 2023 Talk: The Creative Art of Algorithmic Embroidery (Marie Roald, Yngve Mardal Moe)](https://www.youtube.com/watch?v=OcuhrDIrblo)
 
 Python also comes with the `turtledemo` program that has many more examples. Create a program with the following code:
 
