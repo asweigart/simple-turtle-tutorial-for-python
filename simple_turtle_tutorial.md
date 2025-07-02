@@ -4,6 +4,8 @@
 Add a part that explains how to take screenshots in all OSes?
 Keep high-resolution screenshots for print editions.
 
+Have links to TurtleSC and OscarsTurtle packages when they are ready.
+
 Possible titles:
 Turtorial: Learn to Program in Python with Turtle Graphics
 -->
