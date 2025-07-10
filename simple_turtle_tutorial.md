@@ -1,5 +1,6 @@
 <meta charset="UTF-8">
 
+<!-- Remove for web site.
 <script>
 // Add a / to the end of the current url so the # anchor links work:
 document.addEventListener('DOMContentLoaded', function() {
@@ -9,6 +10,7 @@ if (!url.pathname.endsWith('/')) {
   window.location.replace(url.href);
 }  });
 </script>
+-->
 
 <!-- TODO: Create HTML and PDF versions in all languages.
 Add a part that explains how to take screenshots in all OSes?
