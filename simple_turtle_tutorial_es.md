@@ -611,7 +611,7 @@ hecho()
 
 Al ejecutar este programa, verás algo así:
 
-[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/orig_screenshot_write_hello.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/orig_screenshot_write_hello.webp)
+[<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/orig_screenshot_write_hello_ES.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/orig_screenshot_write_hello_ES.webp)
 
 La esquina inferior izquierda del texto coincide con la posición de la tortuga. Por ejemplo, `escribir('¡Hola, mundo!')` aparece en el centro de la ventana, donde inicia la tortuga. Luego la tortuga avanza y gira con `adelante(80)`, `derecha(45)` y `adelante(50)`. Cuando se ejecuta `escribir('123456789', fuente=('Arial', 48, 'normal'))`, el texto “123456789” aparece en la nueva posición de la tortuga.
 
