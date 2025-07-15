@@ -150,7 +150,7 @@ Blank lines are skipped by the Python interpreter.
 from turtle import *
 ```
 
-You MUST have `from turtle import *` at the top of all of your turtle programs. It imports the `turtle` module so you can call the turtle functions in the rest of the programs. (The turtle functions include `pensize()`, `forward()`, `left()`, and `done()`.) If you forget this line, your program will stop with a `NameError: name is not defined` error.
+You **must** have `from turtle import *` at the top of all of your turtle programs. It imports the `turtle` module so you can call the turtle functions in the rest of the programs. (The turtle functions include `pensize()`, `forward()`, `left()`, and `done()`.) If you forget this line, your program will stop with a `NameError: '...' is not defined` error.
 
 ```python
 pensize(4)  # Make the lines thicker than normal.
@@ -173,7 +173,7 @@ forward(200)
 left(90)
 ```
 
-The `forward(100)` makes the turtle move forward in its current direction by 100 steps. As the turtle moves, it draws a line behind it. Imagine a turtle animal with a black marker in its mouth, drawing lines on the ground as it moves.
+The `forward(200)` makes the turtle move forward in its current direction by 100 steps. As the turtle moves, it draws a line behind it. Imagine a turtle animal with a black marker in its mouth, drawing lines on the ground as it moves.
 
 The `left()` function makes the turtle turn its direction its left. Imagine we are in the sky looking down at the turtle in the program's window. The turtle's left is counterclockwise. The `left(90)` function call in our program makes the turtle turn left 90 degrees.
 
@@ -221,7 +221,7 @@ left(90)
 done()
 ```
 
-When you run the program, it draws a smaller square because the lines are only 25 steps long instead of 100 steps.
+When you run the program, it draws a smaller square because the lines are only 25 steps long instead of 200 steps.
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_smaller.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_square_smaller.webp)
 
@@ -261,7 +261,7 @@ It's okay to make mistakes! You can fix them. Your computer does exactly what yo
 As you write Python code, you may get error messages when you try to run the program. Pay attention to the error message, especially where it tells you what line number the error happens. Here are some common error messages you might see and what causes them:
 
 * **`ModuleNotFoundError: No module named 'trutle'`** - You made a typo in your `from turtle import *`. For example, `from trutle import *` causes this error message.
-* **`NameError: name 'froward' is not defined`** - You made a typo with a function or variable name. For example, `froward(100)` causes this error message.
+* **`NameError: name 'froward' is not defined`** - You made a typo with a function or variable name. For example, `froward(200)` causes this error message.
 * **`TypeError: forward() missing 1 required positional argument: 'distance'`** - You made a function call but forgot to include an argument. This specific error message was caused by `forward()` which doesn't have the distance argument like in `forward(200)`
 * **`TypeError: left() takes 1 positional argument but 2 were given`** - You made a function call but used too many arguments. This specific error message was caused by calling `left()` with two arguments like `left(90, 45)` but the `left()` function expects only one argument like `left(90)`.
 * **`IndentationError: unexpected indent`** - There are too many spaces in front of the line of code.
@@ -311,8 +311,6 @@ However, now we only have one thing to change if we want to change the size of t
 ## Draw a Square with a Loop
 
 Let's write program to draw a square using a `for` loop. Create a new file in your code editor. Save it as *square_for_loop.py*. Enter the following Python code:
-
-Let's rewrite this program using a `for` loop instead. Save the file with the new name, *square_for_loop.py*. We can tell the program to call `forward(line_length)` and `left(90)` four times:
 
 ```python
 # square_for_loop.py
@@ -535,62 +533,61 @@ The function call `randint(1, 100)` returns a random number between 1 and 100. Y
 
 Create programs that draw the pictures in this section. The solutions are the end of this tutorial. Your code and your pictures don't have to match the pictures here exactly, but they should look about the same. There are many different ways to write the code for these programs.
 
+---
 
 Create a program named *solution_equilateral_triangle.py* that draws the following picture. *Hint: All lines in the equilateral triangle are 200 steps long. The first turn is a 60 degree right turn. The later turns are 120 degrees.*
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_equilateral_triangle.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_equilateral_triangle.webp)
 
-
+---
 
 Create a program named *solution_pentagon.py* that draws the following picture. *Hint: All lines in the pentagon are 200 steps long. All turns are 72 degrees.*
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_pentagon.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_pentagon.webp)
 
-
+---
 
 Create a program named *solution_hexagon.py* that draws the following picture. *Hint: All lines in the hexagon are 200 steps long. All turns are 60 degrees.*
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_hexagon.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_hexagon.webp)
 
-
+---
 
 Create a program named *solution_octagon.py* that draws the following picture. *Hint: All lines in the octagon are 100 steps long. All turns are 45 degrees.*
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_octagon.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_octagon.webp)
 
-
+---
 
 Create a program named *solution_right_triangle.py* that draws the following picture. *Hint: For the right triangle, one turn is 90 degrees and the other turn is 135 degrees. Two sides are 200 steps long. According to the Pythagorean Theorem, the third side is 282.8 steps long.*
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_right_triangle.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_right_triangle.webp)
 
-
+---
 
 Create a program named *solution_star.py* that draws the following picture. *Hint: All lines in the star are 200 steps long. All turns are 144 degree turns.*
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_star.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_star.webp)
 
+---
 
 Create a program named *solution_nested_squares.py* that draws the following picture. *Hint: Draw a square with sides of length `100`. Then draw another square with sides of length `150`, then `200`, then `250`, then `300`. You may put a `for` loop inside another `for` loop to do this.* 
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_nested_squares.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_nested_squares.webp)
 
-
-
+---
 
 Create a program named *solution_cross.py* that draws the following picture. *Hint: All lines in the cross are 100 steps long. All turns are 90 degrees, but you must make both left and right turns.*
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cross.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cross.webp)
 
-
-
+---
 
 Create a program named *solution_cube.py* that draws the following picture. *Hint: All lines are 100 steps long.All turns are either 45, 90, or 135 degrees. You might need to overlap some lines to draw the entire cube. You can always run `forward(100)` followed by `backward(100)` if you want to draw a line but return to the original position.*
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cube.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cube.webp)
 
-
-
+---
 
 Create a program named *solution_triforce.py* that draws the following picture. *Hint: There are many ways to draw this. You can overlap lines. All turns are either 60 degrees or 120 degrees. If the outside triangle's line lengths are 100 steps, you may want to sometimes only move the turtle by 50 steps.*
 
@@ -694,11 +691,11 @@ from random import *
 
 pensize(4)
 left(randint(0, 360))
-write(heading())
+write(heading(), font=('Arial', 48, 'normal'))
 forward(200)
 
 setheading(45)
-write(heading())
+write(heading(), font=('Arial', 48, 'normal'))
 forward(200)
 
 done()
@@ -744,7 +741,7 @@ from turtle import *
 from random import *
 
 for i in range(8):
-    write(position())
+    write(position(), font=('Arial', 18, 'normal'))
     left(randint(0, 90))
     forward(100)
 
