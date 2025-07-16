@@ -28,6 +28,7 @@ Turtorial: Learn to Program in Python with Turtle Graphics
 
 This is a Turtle programming tutorial written by Al Sweigart, author of *Automate the Boring Stuff with Python* and other programming books. You can read all of his books for free at [https://inventwithpython.com](https://inventwithpython.com).
 
+You can download this tutorial and all of the source code files from [https://inventwithpython.com/stt/stt.zip](https://inventwithpython.com/stt/stt.zip)
 
 ## Table of Contents
 
@@ -173,7 +174,7 @@ forward(200)
 left(90)
 ```
 
-The `forward(200)` makes the turtle move forward in its current direction by 100 steps. As the turtle moves, it draws a line behind it. Imagine a turtle animal with a black marker in its mouth, drawing lines on the ground as it moves.
+The `forward(200)` makes the turtle move forward in its current direction by 200 steps. As the turtle moves, it draws a line behind it. Imagine a turtle animal with a black marker in its mouth, drawing lines on the ground as it moves.
 
 The `left()` function makes the turtle turn its direction its left. Imagine we are in the sky looking down at the turtle in the program's window. The turtle's left is counterclockwise. The `left(90)` function call in our program makes the turtle turn left 90 degrees.
 
@@ -319,7 +320,7 @@ from turtle import *
 pensize(4)
 
 # The indented lines of code run 4 times:
-for i in range(4):  
+for i in range(4):
     forward(200)
     left(90)
 done()
@@ -332,7 +333,7 @@ Be sure to have exactly four spaces of indentation before the `forward(line_leng
 Here is that same code, but with periods to mark where the spaces are:
 
 ```
-for i in range(4):  
+for i in range(4):
 ....forward(200)
 ....left(90)
 done()
@@ -352,7 +353,7 @@ from turtle import *
 
 pensize(4)
 
-for i in range(4):  
+for i in range(4):
     forward(200)
     left(86)  # Turn left 86 degrees instead of 90.
 done()
@@ -489,7 +490,7 @@ This code stores `25`) in a variable named `line_length`. The code `forward(line
 A `for` loop allows you to repeat instructions:
 
 ```python
-for i in range(4):  
+for i in range(4):
     forward(200)
     left(90)
 ```
@@ -571,7 +572,7 @@ Create a program named *solution_star.py* that draws the following picture. *Hin
 
 ---
 
-Create a program named *solution_nested_squares.py* that draws the following picture. *Hint: Draw a square with sides of length `100`. Then draw another square with sides of length `150`, then `200`, then `250`, then `300`. You may put a `for` loop inside another `for` loop to do this.* 
+Create a program named *solution_nested_squares.py* that draws the following picture. *Hint: Draw a square with sides of length `100`. Then draw another square with sides of length `150`, then `200`, then `250`, then `300`. You may put a `for` loop inside another `for` loop to do this.*
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_nested_squares.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_nested_squares.webp)
 
@@ -583,7 +584,7 @@ Create a program named *solution_cross.py* that draws the following picture. *Hi
 
 ---
 
-Create a program named *solution_cube.py* that draws the following picture. *Hint: All lines are 100 steps long.All turns are either 45, 90, or 135 degrees. You might need to overlap some lines to draw the entire cube. You can always run `forward(100)` followed by `backward(100)` if you want to draw a line but return to the original position.*
+Create a program named *solution_cube.py* that draws the following picture. *Hint: All lines are 100 steps long. All turns are either 45, 90, or 135 degrees. You might need to overlap some lines to draw the entire cube. You can always run `forward(100)` followed by `backward(100)` if you want to draw a line but return to the original position.*
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cube.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_solution_cube.webp)
 
@@ -631,7 +632,7 @@ The bottom left corner of the text is at the turtle's location. For example, the
 
 The function call `write('123456789', font=('Arial', 48, 'normal'))` also has a *keyword parameter* named  `font=`. We can pass an argument like `('Arial', 48, 'normal')` to change the font used to write the text in the Turtle window.
 
-There are three parts to the `font=` parameter's argument: 
+There are three parts to the `font=` parameter's argument:
 
 * The name of the font. (`'Arial'`)
 * The size of the font. (`48`)
@@ -765,7 +766,7 @@ from random import *
 
 pensize(4)
 
-for i in range(6):    
+for i in range(6):
     x = randint(-400, 400)
     y = randint(-400, 400)
     goto(x, y)
@@ -947,7 +948,7 @@ For example, calling `shape('turtle')` makes the cursor look like a turtle anima
 ## Stamping
 
 
-While the `shape()` function changes the shape of turtle cursor, you can make a copy of this image on the window by calling the 
+While the `shape()` function changes the shape of turtle cursor, you can make a copy of this image on the window by calling the
 
 Let's create a program that draws a square spiral. Create a new file in your code editor. Save it as *stamp_lines.py*. Enter the following Python code:
 
@@ -1073,7 +1074,7 @@ for i in range(12):
         forward(10)  # Draw a line segment.
         penup()
         forward(10)  # Move without drawing a line segment.
-    
+
     # Make one last line segment:
     pendown()
     forward(10)
@@ -1117,7 +1118,7 @@ When you run this program, it looks like this:
 
 In our previous programs with `for` loops, we have ignored the `i` variable. But in this program, we use `i` variable in the line `forward(i)`.
 
-In this `for` loop, the variable `i` is set to `0` when it runs the code inside the loop. The instruction `forward(i)` is really running `forward(0)`. On the next time through the loop, `i` is set to `1` and `forward(i)` now means `forward(1)`. The `for` loop keeps increasing the `i` variable, making the turtle draw longer and longer lines. 
+In this `for` loop, the variable `i` is set to `0` when it runs the code inside the loop. The instruction `forward(i)` is really running `forward(0)`. On the next time through the loop, `i` is set to `1` and `forward(i)` now means `forward(1)`. The `for` loop keeps increasing the `i` variable, making the turtle draw longer and longer lines.
 
 The `i` variable goes up to, but not including, `300` because we wrote the code `for i in range(300):`. This means that on the last time through the loop, the `i` variable is set to `299`.
 
@@ -1325,7 +1326,7 @@ When we run this program, nothing happens at first. When we click on the window,
 
 Now that the turtle is in place, the `for` loop draws a square.
 
-When you click on the window several times, the window may look like this: 
+When you click on the window several times, the window may look like this:
 
 [<img src="https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_click_square.webp" style="width: 400px"/>](https://raw.githubusercontent.com/asweigart/simple-turtle-tutorial-for-python/refs/heads/master/screenshot_click_square.webp)
 
@@ -1337,7 +1338,7 @@ Instead of just squares, we could make spirals appear wherever we click on the w
 from turtle import *
 from random import *
 
-tracer(1000, 0)  # Draw 1,000 lines before updating 
+tracer(1000, 0)  # Draw 1,000 lines before updating
 
 def draw_spiral(x, y):
     # Move to the XY coordinates of the mouse click:

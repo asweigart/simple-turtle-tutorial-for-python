@@ -3,6 +3,8 @@
 
 Este es un tutorial de programación con Tortuga escrito por Al Sweigart, autor de *Automate the Boring Stuff with Python* y otros libros de programación. Puedes leer todos sus libros de forma gratuita en [https://inventwithpython.com](https://inventwithpython.com).
 
+Puede descargar este tutorial y todos los archivos de código fuente desde [https://inventwithpython.com/stt/stt.zip](https://inventwithpython.com/stt/stt.zip)
+
 Este tutorial fue originalmente escrito en inglés y traducido al español. Los enlaces externos corresponden a recursos en inglés. Si tienes correcciones para este tutorial, por favor envía un correo a [al@inventwithpython.com](mailto:al@inventwithpython.com).
 
 
